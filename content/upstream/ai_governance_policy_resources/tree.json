@@ -1,0 +1,39 @@
+{
+  "sha": "c49c0d71b44cd7c6b9446346d32c2c13061e9649",
+  "url": "https://api.github.com/repos/hallresearch-ai/ai_governance_policy_resources/git/trees/c49c0d71b44cd7c6b9446346d32c2c13061e9649",
+  "tree": [
+    {
+      "path": "Code-of-Conduct.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dace8318d7da8257e3cdf51343024ebafd98b3ac",
+      "size": 2861,
+      "url": "https://api.github.com/repos/hallresearch-ai/ai_governance_policy_resources/git/blobs/dace8318d7da8257e3cdf51343024ebafd98b3ac"
+    },
+    {
+      "path": "Contributing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5153bff489b5b1a2fb59d3f669db425efbc26781",
+      "size": 1791,
+      "url": "https://api.github.com/repos/hallresearch-ai/ai_governance_policy_resources/git/blobs/5153bff489b5b1a2fb59d3f669db425efbc26781"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ea99c213c5c0c005ae4e80df8e52169d06896ec",
+      "size": 18656,
+      "url": "https://api.github.com/repos/hallresearch-ai/ai_governance_policy_resources/git/blobs/4ea99c213c5c0c005ae4e80df8e52169d06896ec"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c399dd58ab388b1c4c407171214d6448851f3b0e",
+      "size": 307845,
+      "url": "https://api.github.com/repos/hallresearch-ai/ai_governance_policy_resources/git/blobs/c399dd58ab388b1c4c407171214d6448851f3b0e"
+    }
+  ],
+  "truncated": false
+}

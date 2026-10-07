@@ -1,0 +1,219 @@
+{
+  "sha": "711b23b69eee573eacb097e03e36a5503195a396",
+  "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/trees/711b23b69eee573eacb097e03e36a5503195a396",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caa7b3ef9ba88ac2735ce40c9b95a66ef33e7489",
+      "size": 3404,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/caa7b3ef9ba88ac2735ce40c9b95a66ef33e7489"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e70f85639106f37a6fa3c805fedd334a667ada92",
+      "size": 411,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/e70f85639106f37a6fa3c805fedd334a667ada92"
+    },
+    {
+      "path": "basic-chatbot-guidance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e42403a567fd0d7cabbc2026a7de70074fbdd6c",
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/trees/7e42403a567fd0d7cabbc2026a7de70074fbdd6c"
+    },
+    {
+      "path": "basic-chatbot-guidance/img",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ab1ee2c163093725598256d2183ac16d75fca03",
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/trees/6ab1ee2c163093725598256d2183ac16d75fca03"
+    },
+    {
+      "path": "basic-chatbot-guidance/img/bad_map.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb7aaaae7840f1b6fa570d9fe897e4f73b950daa",
+      "size": 1036510,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/cb7aaaae7840f1b6fa570d9fe897e4f73b950daa"
+    },
+    {
+      "path": "basic-chatbot-guidance/img/bad_search.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c18e51a6778300ae86cb2c38b893265dba2c4f5",
+      "size": 475077,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/4c18e51a6778300ae86cb2c38b893265dba2c4f5"
+    },
+    {
+      "path": "basic-chatbot-guidance/img/hrwater.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc3282b0b695b22b48bd952d1e08f78a51d36be1",
+      "size": 10391,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/bc3282b0b695b22b48bd952d1e08f78a51d36be1"
+    },
+    {
+      "path": "basic-chatbot-guidance/img/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a7c3e93a7518f90c934cdb5a8d1d1ff3b8aa9f4",
+      "size": 1626,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/8a7c3e93a7518f90c934cdb5a8d1d1ff3b8aa9f4"
+    },
+    {
+      "path": "basic-chatbot-guidance/main.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c6612e1fa83eb1c6b43ff81145632024d932ff5",
+      "size": 1485528,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/1c6612e1fa83eb1c6b43ff81145632024d932ff5"
+    },
+    {
+      "path": "basic-chatbot-guidance/main.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a306fcc34bda4553c6cc6c2ad74a237de6094295",
+      "size": 10343,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/a306fcc34bda4553c6cc6c2ad74a237de6094295"
+    },
+    {
+      "path": "basic-chatbot-guidance/references.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfcb611832fd14d694831e741933e32d42d9aefa",
+      "size": 1680,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/cfcb611832fd14d694831e741933e32d42d9aefa"
+    },
+    {
+      "path": "model-doc-outline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f25edd18ceaeb111a60d0bafbac72e95c4435554",
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/trees/f25edd18ceaeb111a60d0bafbac72e95c4435554"
+    },
+    {
+      "path": "model-doc-outline/model-doc-outline.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9003f0e98ec427029554c84a0ca152493439da23",
+      "size": 1084,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/9003f0e98ec427029554c84a0ca152493439da23"
+    },
+    {
+      "path": "model-doc-outline/model-doc-references.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8bfc33a3f147527cf7e45f967aca538783257bd",
+      "size": 2114,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/d8bfc33a3f147527cf7e45f967aca538783257bd"
+    },
+    {
+      "path": "prompt-library",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a868be617fe3d5edde32dbe9b566c3d84cc5093",
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/trees/4a868be617fe3d5edde32dbe9b566c3d84cc5093"
+    },
+    {
+      "path": "prompt-library/ai-guidance-proof.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8352b97f1af171913bb74dd92e90bb358a4b5ffc",
+      "size": 807,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/8352b97f1af171913bb74dd92e90bb358a4b5ffc"
+    },
+    {
+      "path": "prompt-library/basic-meta-prompt.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34da80d5d9d313bba8a3d68df47244197ca1551a",
+      "size": 44,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/34da80d5d9d313bba8a3d68df47244197ca1551a"
+    },
+    {
+      "path": "prompt-library/dannys-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98a23d511e26e4e2c1d0c3973a37b2b7483ef741",
+      "size": 15521,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/98a23d511e26e4e2c1d0c3973a37b2b7483ef741"
+    },
+    {
+      "path": "prompt-library/document-construction-meta-prompt.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "852eaeda5327728699ed934dac4c4b29a44b95a3",
+      "size": 217,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/852eaeda5327728699ed934dac4c4b29a44b95a3"
+    },
+    {
+      "path": "prompt-library/llm-as-a-judge-response-rubric.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "299fc2959d0b545f092ffbd9fb8c2e34b6b0be8c",
+      "size": 3532,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/299fc2959d0b545f092ffbd9fb8c2e34b6b0be8c"
+    },
+    {
+      "path": "prompt-library/natural-style-guide.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56e64bdcba3eb4b9a451885784e06f5ce3a5df81",
+      "size": 551,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/56e64bdcba3eb4b9a451885784e06f5ce3a5df81"
+    },
+    {
+      "path": "prompt-library/pretty-report.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b19e5c1ae3930b95a70ea751509ebd30acd8db2",
+      "size": 47,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/8b19e5c1ae3930b95a70ea751509ebd30acd8db2"
+    },
+    {
+      "path": "prompt-library/short-doc-proof.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c37548b2ff62b4e229b3543d1ea7cb4e1be1386",
+      "size": 276,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/5c37548b2ff62b4e229b3543d1ea7cb4e1be1386"
+    },
+    {
+      "path": "prompt-library/structured-document-review.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0b484b09f2c6b1d0a24f16b39b2000a0f12b244",
+      "size": 1724,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/c0b484b09f2c6b1d0a24f16b39b2000a0f12b244"
+    },
+    {
+      "path": "prompt-library/subject-report-card.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76c1cffbcc3333bddbb2e942c09b014fe3e0d82c",
+      "size": 545,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/76c1cffbcc3333bddbb2e942c09b014fe3e0d82c"
+    },
+    {
+      "path": "prompt-library/template-this-prompt.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5037acdca84d000fb3cc54e7432c0926348a1451",
+      "size": 89,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/5037acdca84d000fb3cc54e7432c0926348a1451"
+    },
+    {
+      "path": "prompt-library/word-tts-crash-course.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a12eb764cacfd567db8978d64cc730b5f12f9f31",
+      "size": 527,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-chatbot-guidance/git/blobs/a12eb764cacfd567db8978d64cc730b5f12f9f31"
+    }
+  ],
+  "truncated": false
+}

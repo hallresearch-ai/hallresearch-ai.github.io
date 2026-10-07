@@ -1,0 +1,66 @@
+[
+  {
+    "name": "home",
+    "device": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "file": "preview-home-desktop.png",
+    "overflow": false
+  },
+  {
+    "name": "home",
+    "device": "mobile",
+    "width": 375,
+    "height": 812,
+    "file": "preview-home-mobile.png",
+    "overflow": false
+  },
+  {
+    "name": "resources",
+    "device": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "file": "preview-resources-desktop.png",
+    "overflow": false
+  },
+  {
+    "name": "resources",
+    "device": "mobile",
+    "width": 375,
+    "height": 812,
+    "file": "preview-resources-mobile.png",
+    "overflow": false
+  },
+  {
+    "name": "guides",
+    "device": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "file": "preview-guides-desktop.png",
+    "overflow": false
+  },
+  {
+    "name": "guides",
+    "device": "mobile",
+    "width": 375,
+    "height": 812,
+    "file": "preview-guides-mobile.png",
+    "overflow": false
+  },
+  {
+    "name": "search",
+    "device": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "file": "preview-search-desktop.png",
+    "overflow": false
+  },
+  {
+    "name": "search",
+    "device": "mobile",
+    "width": 375,
+    "height": 812,
+    "file": "preview-search-mobile.png",
+    "overflow": false
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "site_url": "",
+  "site_name": "HallResearch.ai Library",
+  "description": "A public research library for AI governance, policy, assessment, and implementation.",
+  "note": "Set site_url to the actual HTTPS deployment URL, including a project subpath when applicable. The Pages workflow supplies it automatically. No production domain is assumed."
+}

@@ -1,0 +1,393 @@
+[
+  {
+    "path": "bib_files/lib-2026-07-17_1632.bib",
+    "sha256": "98fedb1f70e8d2494968db8ccdf10d46aaf70f910c2e124ccd25b9d50e76b5bc",
+    "bytes": 266322,
+    "entries": 641,
+    "sample_keys": [
+      "50YearsofDataScience001",
+      "50YearsofTestUnFairn002",
+      "ABriefHistoryofIntel003",
+      "Acollaborativehumanc004",
+      "AComparativeStudyofF005",
+      "ADeeperLookintoAleat006",
+      "AFrameworkforFederal007",
+      "AFrameworkforFewShot008"
+    ]
+  },
+  {
+    "path": "bib_files/old/aaai2026.bib",
+    "sha256": "ac576a0097f67b68ea7e61de6756d38822c975612ddc1029740eb37dfd8afb7f",
+    "bytes": 10298,
+    "entries": 33,
+    "sample_keys": [
+      "weidinger2023sociotechnical",
+      "wallach2024evaluating",
+      "schwartz2024assessing",
+      "laudon2004management",
+      "walker2008review",
+      "raji2021ai",
+      "ai2023artificial",
+      "ISO/IECTS5723:2022"
+    ]
+  },
+  {
+    "path": "bib_files/old/aria-references.bib",
+    "sha256": "4f32a31faa0a529431adbf76793a52de353e663357fd2190a69747937ec77910",
+    "bytes": 37567,
+    "entries": 91,
+    "sample_keys": [
+      "nist_600_1",
+      "nist_1270",
+      "mohapatra2024conversational",
+      "mila2018pragmatic",
+      "hutchby2008conversation",
+      "srivastava2022beyond",
+      "jones2015discourse",
+      "bou2018analyzing"
+    ]
+  },
+  {
+    "path": "bib_files/old/cri-memo-1-references.bib",
+    "sha256": "f45371d5fcb4dd63d0fdc21af9dc574898ef5c382c55279aba747d64ffc39b55",
+    "bytes": 9124,
+    "entries": 27,
+    "sample_keys": [
+      "ISO/IECTS5723:2022",
+      "ISO9000:2015",
+      "schwartz2022towards",
+      "hutto2014vader",
+      "lee1999learning",
+      "teaming2022state",
+      "openai2022textembedding",
+      "hall2023machine"
+    ]
+  },
+  {
+    "path": "bib_files/old/cv-bibliography.bib",
+    "sha256": "2c4b7572260ea2325a18e642a29c0cdcc7d22c320b6bffcb91684e254d735a48",
+    "bytes": 15743,
+    "entries": 48,
+    "sample_keys": [
+      "aria_eval_plan",
+      "ai600-1",
+      "mlhra",
+      "ai1003",
+      "airmf",
+      "iqt1",
+      "SP1270",
+      "audit1"
+    ]
+  },
+  {
+    "path": "bib_files/old/discover-bibliography.bib",
+    "sha256": "7a85d34a57a900f56725ffe32c56343e9a678816e3e3a6f51a6b61e0e5f5d181",
+    "bytes": 12480,
+    "entries": 36,
+    "sample_keys": [
+      "fairmlbook",
+      "schmidt2019introduction",
+      "been_kim1",
+      "hall2019proposed",
+      "hutchinson201950",
+      "cohen1988statistical",
+      "kamiran2012data",
+      "zhang2018mitigating"
+    ]
+  },
+  {
+    "path": "bib_files/old/hcml-bibliography.bib",
+    "sha256": "7720c46d744fdaaa16bf72c7ceb0c9222b5cef784a82ee256e7ed821b40cfcf4",
+    "bytes": 16263,
+    "entries": 43,
+    "sample_keys": [
+      "amershi2015modeltracker",
+      "agrawal2000privacy",
+      "dt_surrogate2",
+      "security_of_ml",
+      "calders2010three",
+      "calmon2017optimized",
+      "dwork2012fairness",
+      "feldman2015certifying"
+    ]
+  },
+  {
+    "path": "bib_files/old/jsm1-bibliography.bib",
+    "sha256": "50cfce5f0a61470aeea714e86234deadb42c6c66c398b106cfddcadd2d10f585",
+    "bytes": 4282,
+    "entries": 13,
+    "sample_keys": [
+      "been_kim1",
+      "gilpin2018explaining",
+      "lfd",
+      "dt_surrogate1",
+      "dt_surrogate2",
+      "lime-sup",
+      "lime",
+      "ice_plots"
+    ]
+  },
+  {
+    "path": "bib_files/old/jsm2-bibliography.bib",
+    "sha256": "76b0e14dc06dfcaa1113e092661fdd12d86b4109ac483fd383534c0d71f9aa05",
+    "bytes": 20097,
+    "entries": 55,
+    "sample_keys": [
+      "fair_washing",
+      "amershi2015modeltracker",
+      "angwin16",
+      "ale_plot",
+      "barocas-hardt-narayanan",
+      "security_of_ml",
+      "dt_surrogate2",
+      "viper"
+    ]
+  },
+  {
+    "path": "bib_files/old/kdd-bibliography.bib",
+    "sha256": "0e302d2d4e8f4c29391aed53b9a5fe9bd75336248bb4694bc91ba32d1aff8b32",
+    "bytes": 21966,
+    "entries": 60,
+    "sample_keys": [
+      "fair_washing",
+      "amershi2015modeltracker",
+      "angwin16",
+      "ale_plot",
+      "barocas-hardt-narayanan",
+      "security_of_ml",
+      "dt_surrogate2",
+      "viper"
+    ]
+  },
+  {
+    "path": "bib_files/old/lecture_1.bib",
+    "sha256": "8ca66777b07db53e937c072cb4523a212bd62b40372351986ee7694e6f066447",
+    "bytes": 8120,
+    "entries": 22,
+    "sample_keys": [
+      "broniatowski2021psychological",
+      "caruana2004kdd",
+      "this_looks_like_that",
+      "been_kim1",
+      "esl",
+      "rulefit",
+      "rml_workflow",
+      "ice_plots"
+    ]
+  },
+  {
+    "path": "bib_files/old/lecture_2.bib",
+    "sha256": "9cbf4ac0d755f315e1d514b92a19466f6bffb3346e259f850415e213b8a196ef",
+    "bytes": 23075,
+    "entries": 63,
+    "sample_keys": [
+      "fair_washing",
+      "amershi2015modeltracker",
+      "angwin16",
+      "ale_plot",
+      "broniatowski2021psychological",
+      "barocas-hardt-narayanan",
+      "security_of_ml",
+      "dt_surrogate2"
+    ]
+  },
+  {
+    "path": "bib_files/old/lecture_3.bib",
+    "sha256": "9e950e8a2f1faf62121c8dd3a8f6068d6da0b2babea5e71090a925bfcd2b91c9",
+    "bytes": 3968,
+    "entries": 11,
+    "sample_keys": [
+      "fair_washing",
+      "gender_shades",
+      "hall2019guidelines",
+      "kamiran2012data",
+      "kamiran2012decision",
+      "kangdebugging",
+      "obermeyer2019dissecting",
+      "scaffolding"
+    ]
+  },
+  {
+    "path": "bib_files/old/lecture_4.bib",
+    "sha256": "ebe40a6daf88a8a138f229bea5644733507e3001b250fcfc356e846bb2b9a132",
+    "bytes": 3480,
+    "entries": 9,
+    "sample_keys": [
+      "angwin16",
+      "security_of_ml",
+      "flores2016false",
+      "papernot2018marauder",
+      "pate",
+      "membership_inference",
+      "shokri2019privacy",
+      "model_stealing"
+    ]
+  },
+  {
+    "path": "bib_files/old/lecture_5.bib",
+    "sha256": "76b0e14dc06dfcaa1113e092661fdd12d86b4109ac483fd383534c0d71f9aa05",
+    "bytes": 20097,
+    "entries": 55,
+    "sample_keys": [
+      "fair_washing",
+      "amershi2015modeltracker",
+      "angwin16",
+      "ale_plot",
+      "barocas-hardt-narayanan",
+      "security_of_ml",
+      "dt_surrogate2",
+      "viper"
+    ]
+  },
+  {
+    "path": "bib_files/old/lecture_6.bib",
+    "sha256": "7720c46d744fdaaa16bf72c7ceb0c9222b5cef784a82ee256e7ed821b40cfcf4",
+    "bytes": 16263,
+    "entries": 43,
+    "sample_keys": [
+      "amershi2015modeltracker",
+      "agrawal2000privacy",
+      "dt_surrogate2",
+      "security_of_ml",
+      "calders2010three",
+      "calmon2017optimized",
+      "dwork2012fairness",
+      "feldman2015certifying"
+    ]
+  },
+  {
+    "path": "bib_files/old/lecture_7.bib",
+    "sha256": "c19c4ef32e933212db8fb6fd80fb56e4be5637b1a0bcacdf382313c8854755f3",
+    "bytes": 6889,
+    "entries": 16,
+    "sample_keys": [
+      "NIPS2013_9aa42b31",
+      "NIPS2014_a14ac55a",
+      "NIPS2017_3f5ee243",
+      "radford2019language",
+      "lewis2020retrieval",
+      "li2024llm",
+      "ai2024artificial",
+      "li2024task"
+    ]
+  },
+  {
+    "path": "bib_files/old/lib-2025-08-24_1113.bib",
+    "sha256": "3acb122f8de852edc72c981131ed5af0f6417f3e21ea7d35bf777bcba567e0ff",
+    "bytes": 209960,
+    "entries": 493,
+    "sample_keys": [
+      "50yearsofdatascience2",
+      "50YearsofTestUnFairn3",
+      "Acollaborativehumanc59",
+      "AFrameworkforFederal60",
+      "AFrameworkforFewShot61",
+      "Ametrologicalframewo62",
+      "Areviewofsociotechni64",
+      "Ascalableframeworkfo65"
+    ]
+  },
+  {
+    "path": "bib_files/old/lib-2025-12-29_1226.bib",
+    "sha256": "ff391baf07cf0485078efb79e7dbe147f0a07771f17a5ec2746733cc062d70f0",
+    "bytes": 239641,
+    "entries": 568,
+    "sample_keys": [
+      "50yearsofdatascience0001",
+      "50YearsofTestUnFairn0002",
+      "AccurateIntelligible0003",
+      "Acollaborativehumanc0004",
+      "AComparativeStudyofF0005",
+      "ActionableAuditingIn0006",
+      "ADADELTAAnAdaptiveLe0007",
+      "AddingStructuretoAIH0008"
+    ]
+  },
+  {
+    "path": "bib_files/old/lib.bib",
+    "sha256": "170290feccd0de59fdc1ca058b8ef92d3aeda0f3df94c67d0388df9af95523b1",
+    "bytes": 209747,
+    "entries": 492,
+    "sample_keys": [
+      "50yearsofdatascience2",
+      "50YearsofTestUnFairn3",
+      "AccurateIntelligible81",
+      "Acollaborativehumanc59",
+      "AComparativeStudyofF72",
+      "ActionableAuditingIn82",
+      "ADADELTAAnAdaptiveLe6",
+      "AddingStructuretoAIH83"
+    ]
+  },
+  {
+    "path": "bib_files/old/mli-bibliography.bib",
+    "sha256": "dfb4f11120f56a265a7f36442438e7e11912e3567f582727c83f938c15eff7bd",
+    "bytes": 17958,
+    "entries": 59,
+    "sample_keys": [
+      "been_kim1",
+      "oreillymli",
+      "lime",
+      "lfd",
+      "two_cultures",
+      "RF",
+      "conformal_reg",
+      "dt_surrogate"
+    ]
+  },
+  {
+    "path": "bib_files/old/neurips-25.bib",
+    "sha256": "c18491885fdaf2d60230b1fe775f552197cf39b1efbbdc43f7c56a855fcdcebf",
+    "bytes": 90327,
+    "entries": 180,
+    "sample_keys": [
+      "omarah_making_2024",
+      "appel_generative_2025",
+      "mccormick_exploring_2021",
+      "schafer_data-driven_2023",
+      "seh_healthcare_2020",
+      "ning_generative_2024",
+      "mcgenity_artificial_2024",
+      "DSIT_AI"
+    ]
+  },
+  {
+    "path": "bib_files/old/responsible_xai.bib",
+    "sha256": "d54799ce8d874ac474021d71879f81d6819a3f408cf5fa26c9de8a692fa18208",
+    "bytes": 18432,
+    "entries": 51,
+    "sample_keys": [
+      "fair_washing",
+      "modeltracker",
+      "grad_attr",
+      "angwin16",
+      "ale_plot",
+      "fairmlbook",
+      "dt_surrogate2",
+      "viper"
+    ]
+  },
+  {
+    "path": "bib_files/old/secureml-bibliography.bib",
+    "sha256": "ebe40a6daf88a8a138f229bea5644733507e3001b250fcfc356e846bb2b9a132",
+    "bytes": 3480,
+    "entries": 9,
+    "sample_keys": [
+      "angwin16",
+      "security_of_ml",
+      "flores2016false",
+      "papernot2018marauder",
+      "pate",
+      "membership_inference",
+      "shokri2019privacy",
+      "model_stealing"
+    ]
+  },
+  {
+    "path": "bib_files/to_add_update.bib",
+    "sha256": "4e67f6fc4f7797a1cf98491625bcc09363a100d7243f579624ab1604dab83842",
+    "bytes": 15,
+    "entries": 0,
+    "sample_keys": []
+  }
+]

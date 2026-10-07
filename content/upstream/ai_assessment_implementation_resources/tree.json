@@ -1,0 +1,39 @@
+{
+  "sha": "501c25936fade9c96bff91c17979c2b2a7b5b4e0",
+  "url": "https://api.github.com/repos/hallresearch-ai/ai_assessment_implementation_resources/git/trees/501c25936fade9c96bff91c17979c2b2a7b5b4e0",
+  "tree": [
+    {
+      "path": "Code-of-Conduct.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "876140f76ff5ea5c4ca74151a7aaf39b3be43df2",
+      "size": 2862,
+      "url": "https://api.github.com/repos/hallresearch-ai/ai_assessment_implementation_resources/git/blobs/876140f76ff5ea5c4ca74151a7aaf39b3be43df2"
+    },
+    {
+      "path": "Contributing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5153bff489b5b1a2fb59d3f669db425efbc26781",
+      "size": 1791,
+      "url": "https://api.github.com/repos/hallresearch-ai/ai_assessment_implementation_resources/git/blobs/5153bff489b5b1a2fb59d3f669db425efbc26781"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ea99c213c5c0c005ae4e80df8e52169d06896ec",
+      "size": 18656,
+      "url": "https://api.github.com/repos/hallresearch-ai/ai_assessment_implementation_resources/git/blobs/4ea99c213c5c0c005ae4e80df8e52169d06896ec"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42bd477d880b3e04e3fefac539e5161e240d79dd",
+      "size": 181665,
+      "url": "https://api.github.com/repos/hallresearch-ai/ai_assessment_implementation_resources/git/blobs/42bd477d880b3e04e3fefac539e5161e240d79dd"
+    }
+  ],
+  "truncated": false
+}

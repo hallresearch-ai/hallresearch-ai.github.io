@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Basic XAI Example · HallResearch.ai Library</title><meta name="description" content="Inspect LLM answers, model-provided reasoning summaries, and response embeddings projected with UMAP."><meta property="og:type" content="website"><meta property="og:site_name" content="HallResearch.ai Library"><meta property="og:title" content="Basic XAI Example"><meta property="og:description" content="Inspect LLM answers, model-provided reasoning summaries, and response embeddings projected with UMAP."><link rel="canonical" href="https://hallresearch-ai.github.io/projects/basic-xai-example.html"><meta property="og:url" content="https://hallresearch-ai.github.io/projects/basic-xai-example.html"><link rel="stylesheet" href="../assets/css/styles.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="nav"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">H</span><span class="brand-name">HallResearch<span class="brand-ai">.ai</span><span class="brand-library">Library</span></span></a><p class="masthead-note">Curated by Patrick Hall &amp; Daniel Atherton</p><button class="mobile-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Browse</button></div></header><div class="catalog-shell"><aside class="catalog-rail"><nav class="nav-links" id="main-navigation" aria-label="Main navigation"><p class="rail-label">The collection</p><a href="../index.html"><span>All collections</span></a><a href="../governance/index.html"><span>Governance</span><span class="rail-number" aria-hidden="true">01</span></a><a href="../assessment/index.html"><span>Assessment</span><span class="rail-number" aria-hidden="true">02</span></a><a href="../guides/index.html"><span>Research Guides</span><span class="rail-number" aria-hidden="true">03</span></a><p class="rail-label rail-separator">Companion materials</p><a href="index.html" aria-current="page" class="active"><span>Supporting projects</span></a><p class="rail-label rail-separator">Using the Library</p><a href="../about.html"><span>About</span></a><a href="../search.html"><span>Search</span></a><a href="../cite.html">How to cite</a><a href="../methodology.html">Methodology</a></nav><div class="rail-foot"><p>A working public collection.</p><a href="https://github.com/hallresearch-ai">Source repositories <span aria-hidden="true">↗</span></a></div></aside><div class="catalog-content"><main id="main-content" tabindex="-1"><section class="page-head"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Library</a></li><li><a href="index.html">Supporting projects</a></li><li><span aria-current="page">Basic XAI Example</span></li></ol></nav><p class="eyebrow">Supporting repository</p><h1>Basic XAI Example</h1><p class="lede">Inspect LLM answers, model-provided reasoning summaries, and response embeddings projected with UMAP.</p></section><div class="content-layout"><aside class="sidebar" aria-label="Project navigation"><details class="section-nav" open><summary>Project navigation</summary><nav aria-label="Project navigation sections"><a href="index.html">All supporting projects</a><a href="basic-xai-example.html" aria-current="page" class="current">Basic XAI Example</a></nav></details><details class="local-toc" open><summary>On this page</summary><nav aria-label="On this page"><a class="level-2" href="#project-files">Project files</a><a class="level-2" href="#repository-documentation">Repository documentation</a><a class="level-3" href="#background-reading">Background Reading</a><a class="level-3" href="#contents">Contents</a><a class="level-3" href="#what-the-notebook-demonstrates">What the Notebook Demonstrates</a><a class="level-3" href="#setup">Setup</a><a class="level-3" href="#supplying-an-openai-api-key">Supplying an OpenAI API Key</a><a class="level-3" href="#license">License</a></nav></details></aside><article class="prose"><dl class="project-facts"><dt>Artifact</dt><dd>Jupyter notebook using the OpenAI API</dd><dt>Useful for</dt><dd>Readers exploring basic inspection and explainability signals from generated text.</dd></dl><p><a class="button" href="https://github.com/hallresearch-ai/basic-xai-example">View on GitHub</a></p><h2 id="project-files">Project files</h2><ul class="file-list"><li><a href="https://github.com/hallresearch-ai/basic-xai-example/blob/df8a8fe82acc36ef8c2ff8eb3e068aab1b1f6def/CoT_Summary_Embeddings_Code_Apache2.ipynb">CoT_Summary_Embeddings_Code_Apache2.ipynb</a><span class="meta">View notebook</span></li><li><a href="https://github.com/hallresearch-ai/basic-xai-example/blob/df8a8fe82acc36ef8c2ff8eb3e068aab1b1f6def/LICENSE">LICENSE</a><span class="meta">View source file</span></li><li><a href="basic-xai-example.html">README.md</a><span class="meta">Read documentation</span></li><li><a href="https://github.com/hallresearch-ai/basic-xai-example/blob/df8a8fe82acc36ef8c2ff8eb3e068aab1b1f6def/requirements.txt">requirements.txt</a><span class="meta">View source file</span></li></ul><h2 id="repository-documentation">Repository documentation</h2><div class="source-content" data-source-document="basic-xai-example/README.md"><p>This repository is a small educational example for exploring explainability
+signals from LLM outputs. It uses the OpenAI API to ask two simple questions,
+prints the model's answers and reasoning summaries, embeds the answer text line
+by line, and visualizes the resulting embeddings with UMAP.</p>
+<p>The notebook is intentionally compact. It is meant to show how generated
+answers, model-provided reasoning summaries, and embedding plots can support
+basic inspection of model behavior. It does not expose hidden chain-of-thought,
+and it is not compliance or legal advice.</p>
+<h3 id="background-reading">Background Reading</h3>
+<p>This example is related to reasoning-oriented prompting, human review of model
+outputs, and embedding-based inspection of generated text. Useful background
+references include:</p>
+<ul>
+<li><p>Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi,
+Quoc V. Le, and Denny Zhou. "Chain-of-thought prompting elicits reasoning in
+large language models." <em>Advances in Neural Information Processing Systems</em>
+35 (2022): 24824-24837.</p>
+<p id="resource-086f4e27f0fe"><a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf">https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf</a></p>
+</li>
+<li><p>Sudjianto, Agus, Aijun Zhang, Srinivas Neppalli, Tarun Joshi, and Michal
+Malohlava. "Human-calibrated automated testing and validation of generative
+language models." arXiv preprint arXiv:2411.16391 (2024).</p>
+<p><a href="https://arxiv.org/pdf/2411.16391">https://arxiv.org/pdf/2411.16391</a></p>
+</li>
+</ul>
+<h3 id="contents">Contents</h3>
+<ul>
+<li><code>CoT_Summary_Embeddings_Code_Apache2.ipynb</code>: Jupyter notebook that requests
+model answers and reasoning summaries, embeds response lines, and plots the
+embedding projection.</li>
+<li><code>requirements.txt</code>: Python dependencies for running the notebook.</li>
+<li><code>LICENSE</code>: Apache License 2.0.</li>
+</ul>
+<h3 id="what-the-notebook-demonstrates">What the Notebook Demonstrates</h3>
+<p>The notebook walks through a basic XAI-oriented inspection workflow:</p>
+<ol>
+<li>Connect to the OpenAI API using <code>OPENAI_API_KEY</code> or a secure notebook prompt.</li>
+<li>Ask a simple arithmetic question and print the model answer.</li>
+<li>Print the model-provided reasoning summary for that answer.</li>
+<li>Ask a short conceptual comparison question and print the model answer.</li>
+<li>Print the model-provided reasoning summary for the second answer.</li>
+<li>Split both answer texts into lines and embed those lines with an OpenAI
+embedding model.</li>
+<li>Normalize the embeddings, project them into two dimensions with UMAP, and
+plot the two response sets for visual comparison.</li>
+</ol>
+<h3 id="setup">Setup</h3>
+<p>From the repository root, create and activate a Python virtual environment:</p>
+<pre tabindex="0"><code class="language-bash">python3 -m venv .venv
+source .venv/bin/activate
+</code></pre>
+<p>Install the dependencies:</p>
+<pre tabindex="0"><code class="language-bash">python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+</code></pre>
+<p>Start Jupyter:</p>
+<pre tabindex="0"><code class="language-bash">jupyter notebook
+</code></pre>
+<p>Then open <code>CoT_Summary_Embeddings_Code_Apache2.ipynb</code> and run the cells in
+order.</p>
+<h3 id="supplying-an-openai-api-key">Supplying an OpenAI API Key</h3>
+<p>The notebook looks for an API key in the <code>OPENAI_API_KEY</code> environment variable.
+If that variable is not set, the notebook asks you to paste the key into a
+secure prompt.</p>
+<h4 id="macos-or-linux">macOS or Linux</h4>
+<pre tabindex="0"><code class="language-bash">export OPENAI_API_KEY="your_api_key_here"
+</code></pre>
+<p>Then start Jupyter or run the notebook from the same terminal session.</p>
+<h4 id="windows-powershell">Windows PowerShell</h4>
+<pre tabindex="0"><code class="language-powershell">$env:OPENAI_API_KEY = "your_api_key_here"
+</code></pre>
+<p>Then start Jupyter or run the notebook from the same PowerShell session.</p>
+<h4 id="secure-notebook-prompt">Secure Notebook Prompt</h4>
+<p>If you do not set <code>OPENAI_API_KEY</code>, run the connection cell and paste your key
+when prompted:</p>
+<pre tabindex="0"><code class="language-python">api_key = os.getenv("OPENAI_API_KEY")
+
+if not api_key:
+    api_key = getpass("Enter your OpenAI API key: ")
+
+client = OpenAI(api_key=api_key)
+</code></pre>
+<p>Do not commit API keys to this repository.</p>
+<h3 id="license">License</h3>
+<p>Code in this repository is licensed under the Apache License, Version 2.0. See
+<code>LICENSE</code> for details.</p>
+</div><div class="provenance"><p><a href="https://github.com/hallresearch-ai/basic-xai-example/blob/df8a8fe82acc36ef8c2ff8eb3e068aab1b1f6def/README.md">View the source document on GitHub</a> · Sources checked 2026-10-05 (UTC).</p><p>Apache-2.0. Source text is preserved; navigation and formatting are adapted for this website.</p></div></article></div></main><footer class="footer"><div class="footer-inner"><div><strong>HallResearch.ai Library</strong><p>Maintained by Patrick Hall and Daniel Atherton.<br>Curation sponsored by <a href="https://hallresearch.ai/">HallResearch.ai</a>.</p></div><nav aria-label="Footer navigation"><a href="../about.html">About</a><a href="../methodology.html">Methodology</a><a href="../cite.html">How to cite</a><a href="https://github.com/hallresearch-ai">Source repositories on GitHub</a></nav></div></footer></div></div><script src="../assets/js/site.js" defer></script></body></html>

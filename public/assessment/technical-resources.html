@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Technical Resources · HallResearch.ai Library</title><meta name="description" content="Technical Resources. Curated resources from the AI Assessment and Implementation Resources branch of the HallResearch.ai Library."><meta property="og:type" content="website"><meta property="og:site_name" content="HallResearch.ai Library"><meta property="og:title" content="Technical Resources"><meta property="og:description" content="Technical Resources. Curated resources from the AI Assessment and Implementation Resources branch of the HallResearch.ai Library."><link rel="canonical" href="https://hallresearch-ai.github.io/assessment/technical-resources.html"><meta property="og:url" content="https://hallresearch-ai.github.io/assessment/technical-resources.html"><link rel="stylesheet" href="../assets/css/styles.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="nav"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">H</span><span class="brand-name">HallResearch<span class="brand-ai">.ai</span><span class="brand-library">Library</span></span></a><p class="masthead-note">Curated by Patrick Hall &amp; Daniel Atherton</p><button class="mobile-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Browse</button></div></header><div class="catalog-shell"><aside class="catalog-rail"><nav class="nav-links" id="main-navigation" aria-label="Main navigation"><p class="rail-label">The collection</p><a href="../index.html"><span>All collections</span></a><a href="../governance/index.html"><span>Governance</span><span class="rail-number" aria-hidden="true">01</span></a><a href="index.html" aria-current="page" class="active"><span>Assessment</span><span class="rail-number" aria-hidden="true">02</span></a><a href="../guides/index.html"><span>Research Guides</span><span class="rail-number" aria-hidden="true">03</span></a><p class="rail-label rail-separator">Companion materials</p><a href="../projects/index.html"><span>Supporting projects</span></a><p class="rail-label rail-separator">Using the Library</p><a href="../about.html"><span>About</span></a><a href="../search.html"><span>Search</span></a><a href="../cite.html">How to cite</a><a href="../methodology.html">Methodology</a></nav><div class="rail-foot"><p>A working public collection.</p><a href="https://github.com/hallresearch-ai">Source repositories <span aria-hidden="true">↗</span></a></div></aside><div class="catalog-content"><main id="main-content" tabindex="-1"><section class="page-head"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Library</a></li><li><a href="index.html">AI Assessment and Implementation Resources</a></li><li><span aria-current="page">Technical Resources</span></li></ol></nav><p class="eyebrow">AI Assessment and Implementation Resources</p><h1 id="technical-resources">Technical Resources</h1></section><div class="content-layout"><aside class="sidebar" aria-label="AI Assessment and Implementation Resources"><details class="section-nav" open><summary>AI Assessment and Implementation Resources</summary><nav aria-label="AI Assessment and Implementation Resources sections"><a href="index.html">Branch overview</a><a href="assessment-and-implementation-guidance.html">Assessment and Implementation Guidance</a><a href="education-resources.html">Education Resources</a><a href="technical-resources.html" aria-current="page" class="current">Technical Resources</a><a href="archived.html">Archived</a></nav></details><details class="local-toc" open><summary>On this page</summary><nav aria-label="On this page"><a class="level-2" href="#benchmarks-and-evaluation-frameworks">Benchmarks and Evaluation Frameworks</a><a class="level-2" href="#common-or-useful-datasets">Common or Useful Datasets</a><a class="level-3" href="#data-repositories">Data Repositories</a><a class="level-2" href="#domain-specific-software">Domain-specific Software</a><a class="level-3" href="#health-care-and-clinical-ai">Health care and clinical AI</a><a class="level-3" href="#financial-services">Financial services</a><a class="level-3" href="#autonomous-and-safety-critical-systems">Autonomous and safety-critical systems</a><a class="level-3" href="#environmental-accountability">Environmental accountability</a><a class="level-3" href="#cybersecurity">Cybersecurity</a><a class="level-2" href="#machine-learning-environment-management-tools">Machine Learning Environment Management Tools</a><a class="level-2" href="#personal-data-protection-tools">Personal Data Protection Tools</a><a class="level-2" href="#secure-and-privacy-preserving-computation-infrastructure">Secure and Privacy-Preserving Computation Infrastructure</a><a class="level-2" href="#open-sourceaccess-responsible-ai-software-packages">Open Source/Access Responsible AI Software Packages</a><a class="level-3" href="#browser">Browser</a><a class="level-3" href="#cc">C/C++</a><a class="level-3" href="#javascript-and-typescript">JavaScript and TypeScript</a><a class="level-3" href="#python">Python</a><a class="level-3" href="#r">R</a></nav></details></aside><article class="prose"><div class="source-content" data-source-document="ai_assessment_implementation_resources/README.md"><h2 id="benchmarks-and-evaluation-frameworks">Benchmarks and Evaluation Frameworks</h2>
+<p>This section contains benchmarks or datasets used for benchmarks for ML systems, particularly those related to responsible ML desiderata.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Resource</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td id="resource-855fd430cfe0"><a href="https://github.com/szilard/benchm-ml">benchm-ml</a>-</td>
+<td>"A minimal benchmark for scalability, speed and accuracy of commonly used open source implementations (R packages, Python scikit-learn, H2O, xgboost, Spark MLlib etc.) of the top machine learning algorithms for binary classification (random forests, gradient boosted trees, deep neural networks etc.)."</td>
+</tr>
+<tr>
+<td id="resource-d4c1db14f3ca"><a href="https://github.com/nyu-mll/bbq">Bias Benchmark for QA dataset-BBQ</a>-</td>
+<td>"Repository for the Bias Benchmark for QA dataset."</td>
+</tr>
+<tr>
+<td id="resource-96c813e08172"><a href="https://github.com/IMDA-BTG/LLM-Evals-Catalogue">Cataloguing LLM Evaluations</a>-</td>
+<td>"This repository stems from our paper, 'Cataloguing LLM Evaluations,' and serves as a living, collaborative catalogue of LLM evaluation frameworks, benchmarks and papers."</td>
+</tr>
+<tr>
+<td id="resource-edf83f0e88ed"><a href="https://github.com/AI-secure/DecodingTrust">DecodingTrust</a>-</td>
+<td>"A Comprehensive Assessment of Trustworthiness in GPT Models."</td>
+</tr>
+<tr>
+<td id="resource-294d6e26823e"><a href="https://github.com/EleutherAI/lm-evaluation-harness">EleutherAI, Language Model Evaluation Harness</a>-</td>
+<td>"A framework for few-shot evaluation of language models."</td>
+</tr>
+<tr>
+<td id="resource-8f578233e044"><a href="https://www.evidentlyai.com/llm-evaluation-benchmarks-datasets">Evidently AI 100+ LLM benchmarks and evaluation datasets</a></td>
+<td>"A database of LLM benchmarks and datasets to evaluate the performance of language models."</td>
+</tr>
+<tr>
+<td id="resource-c55aa9bdd5cc"><a href="https://gem-benchmark.com/">GEM</a></td>
+<td>"GEM is a benchmark environment for Natural Language Generation with a focus on its Evaluation, both through human annotations and automated Metrics."</td>
+</tr>
+<tr>
+<td id="resource-d33c1601123f"><a href="https://crfm.stanford.edu/helm/latest/">HELM</a></td>
+<td>"A holistic framework for evaluating foundation models."</td>
+</tr>
+<tr>
+<td id="resource-40937745fafc"><a href="https://github.com/huggingface/evaluate">Hugging Face, evaluate</a>-</td>
+<td>"Evaluate: A library for easily evaluating machine learning models and datasets."</td>
+</tr>
+<tr>
+<td id="resource-9667a93f8c11"><a href="https://github.com/i-gallegos/Fair-LLM-Benchmark">i-gallegos, Fair-LLM-Benchmark</a>-</td>
+<td>Benchmark from "Bias and Fairness in Large Language Models: A Survey"</td>
+</tr>
+<tr>
+<td id="resource-6fd188dda6cf"><a href="https://github.com/UKGovernmentBEIS/inspect_ai">Inspect AI</a>-</td>
+<td>"Inspect: A framework for large language model evaluations."</td>
+</tr>
+<tr>
+<td id="resource-6aff09481bc0"><a href="https://github.com/jphall663/gai_risk_management">jphall663, Generative AI Risk Management Resources</a>-</td>
+<td>"A place for ideas and drafts related to GAI risk management."</td>
+</tr>
+<tr>
+<td id="resource-5f023a6a761a"><a href="https://mlcommons.org/ailuminate/">MLCommons, AI Luminate: A collaborative, transparent approach to safer AI</a></td>
+<td>"The AILuminate v1.1 benchmark suite is the first AI risk assessment benchmark developed with broad involvement from leading AI companies, academia, and civil society."</td>
+</tr>
+<tr>
+<td id="resource-85677d292952"><a href="https://arxiv.org/pdf/2404.12241.pdf">MLCommons, Introducing v0.5 of the AI Safety Benchmark from MLCommons</a></td>
+<td>A paper about the MLCommons AI Safety Benchmark v0.5.</td>
+</tr>
+<tr>
+<td id="resource-f170c4e3abf2"><a href="https://mlcommons.org/2024/04/mlc-aisafety-v0-5-poc/">MLCommons, MLCommons AI Safety v0.5 Proof of Concept</a></td>
+<td>"The MLCommons AI Safety Benchmark aims to assess the safety of AI systems in order to guide development, inform purchasers and consumers, and support standards bodies and policymakers."</td>
+</tr>
+<tr>
+<td id="resource-25732692c644"><a href="https://ml.energy/leaderboard/?__theme=light">ML.ENERGY Leaderboard</a></td>
+<td>"Large language models (LLMs), especially the instruction-tuned ones, can generate human-like responses to chat prompts. Using Zeus for energy measurement, we created a leaderboard for LLM chat energy consumption."</td>
+</tr>
+<tr>
+<td id="resource-6f098f7bbd8a"><a href="https://modelslant.com/#tab=topics">ModelSlant.com</a></td>
+<td>"How politically slanted are Large Language Models?"</td>
+</tr>
+<tr>
+<td id="resource-f8a3b4ebe064"><a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/">Nvidia MLPerf</a></td>
+<td>"MLPerf™ benchmarks—developed by MLCommons, a consortium of AI leaders from academia, research labs, and industry—are designed to provide unbiased evaluations of training and inference performance for hardware, software, and services."</td>
+</tr>
+<tr>
+<td id="resource-bb21bf0309c0"><a href="https://www.openml.org/search?type=benchmark&amp;study_type=task">OpenML Benchmarking Suites</a></td>
+<td>OpenML's collection of over two dozen benchmarking suites.</td>
+</tr>
+<tr>
+<td id="resource-42d6a21a8104"><a href="https://allenai.org/data/real-toxicity-prompts">Real Toxicity Prompts - Allen Institute for AI</a></td>
+<td>"A dataset of 100k sentence snippets from the web for researchers to further address the risk of neural toxic degeneration in models."</td>
+</tr>
+<tr>
+<td id="resource-9c9d83a7fe97"><a href="https://safetyprompts.com/">SafetyPrompts.com</a></td>
+<td>"A Living Catalogue of Open Datasets for LLM Safety."</td>
+</tr>
+<tr>
+<td id="resource-761f16d64fb8"><a href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQObeTxvXtOs--zd98qG2xBHHuTTJOyNISBJPthZFr3at2LCrs3rcv73d4of1A78JV2eLuxECFXJY43/pubhtml">Sociotechnical Safety Evaluation Repository</a></td>
+<td>An extensive spreadsheet of sociotechnical safety evaluations in a spreadsheet.</td>
+</tr>
+<tr>
+<td id="resource-47ccacfbc3d6"><a href="https://trustllmbenchmark.github.io/TrustLLM-Website/leaderboard.html">Trust-LLM-Benchmark Leaderboard</a></td>
+<td>A series of sortable leaderboards of LLMs based on different trustworthiness criteria.</td>
+</tr>
+<tr>
+<td id="resource-b7b1bd8ad0e4"><a href="https://trustllmbenchmark.github.io/TrustLLM-Website/index.html">TrustLLM-Benchmark</a></td>
+<td>"A Comprehensive Study of Trustworthiness in Large Language Models."</td>
+</tr>
+<tr>
+<td id="resource-14fc9f4cf826"><a href="https://github.com/sylinrl/TruthfulQA">TruthfulQA</a>-</td>
+<td>"TruthfulQA: Measuring How Models Imitate Human Falsehoods."</td>
+</tr>
+<tr>
+<td id="resource-06a549bd87c6"><a href="https://wavesbench.github.io/">WAVES: Benchmarking the Robustness of Image Watermarks</a></td>
+<td>"This paper investigates the weaknesses of image watermarking techniques."</td>
+</tr>
+<tr>
+<td id="resource-bd40cfdff5eb"><a href="https://github.com/huaxiuyao/Wild-Time">Wild-Time: A Benchmark of in-the-Wild Distribution Shifts over Time</a>-</td>
+<td>"Benchmark for Natural Temporal Distribution Shift (NeurIPS 2022)."</td>
+</tr>
+<tr>
+<td id="resource-e451c927b4ab"><a href="https://github.com/rudinger/winogender-schemas">Winogender Schemas</a>-</td>
+<td>"Data for evaluating gender bias in coreference resolution systems."</td>
+</tr>
+<tr>
+<td id="resource-7d7b81ed48bc"><a href="https://github.com/yandex-research/tabred">yandex-research - tabred</a>-</td>
+<td>"A Benchmark of Tabular Machine Learning in-the-Wild with real-world industry-grade tabular datasets."</td>
+</tr>
+</tbody></table>
+</div><h2 id="common-or-useful-datasets">Common or Useful Datasets</h2>
+<p>This section contains datasets commonly used in responsible ML evaluations, along with repositories of important or useful data sources.</p>
+<ul>
+<li id="resource-4c52040f7686"><a href="https://www.kaggle.com/datasets/wenruliu/adult-income-dataset">Adult Income Dataset</a></li>
+<li id="resource-134eb3bfaf84"><a href="https://github.com/amazon-science/application-eval-data">Amazon Application Evaluation Data</a></li>
+<li id="resource-ea0c2ecc34f8"><a href="https://www.bruegel.org/dataset/dataset-eu-legislation-digital-world">A Dataset on EU Legislation for the Digital World</a> | Bruegel</li>
+<li id="resource-6bc2d5e0d08c"><a href="https://github.com/visionjo/facerec-bias-bfw">Balanced Faces in the Wild</a></li>
+<li id="resource-aed858f97374"><a href="https://github.com/microsoft/BIPIA">BIPIA: Benchmarking and Defending Against Indirect Prompt Injection Attacks</a></li>
+<li id="resource-bdc97519d5ce"><a href="https://github.com/amazon-science/bold">BOLD: Dataset and Metrics for Measuring Biases in Open-Ended Language Generation</a></li>
+<li id="resource-749b5ebf5634"><a href="https://github.com/nyu-mll/BBQ">BBQ: Bias Benchmark for Question Answering</a></li>
+<li id="resource-48e89d3393f9"><a href="https://ai.meta.com/research/publications/the-casual-conversations-v2-dataset/">Casual Conversations v2</a> | Meta</li>
+<li id="resource-dd8167a84914"><a href="https://github.com/yuezunli/celeb-deepfakeforensics">Celeb-DF</a></li>
+<li id="resource-17d71cc259ee"><a href="https://huggingface.co/datasets/google/civil_comments">Civil Comments</a> | Google</li>
+<li id="resource-451f03481af6"><a href="https://www.propublica.org/datastore/dataset/compas-recidivism-risk-score-data-and-analysis">COMPAS Recidivism Risk Score Data and Analysis</a> | ProPublica</li>
+<li id="resource-e138179d5827"><a href="https://github.com/facebookresearch/CRAG">CRAG: Comprehensive RAG Benchmark</a></li>
+<li id="resource-5a44804b2eba"><a href="https://ai.meta.com/datasets/facet/">FACET</a> | Meta</li>
+<li id="resource-9d98942dfff5"><a href="https://github.com/ondyari/FaceForensics">FaceForensics++</a></li>
+<li id="resource-2af2cbc97c11"><a href="https://github.com/joojs/fairface">FairFace</a></li>
+<li id="resource-f85228b9a38c"><a href="https://capitalmarkets.fanniemae.com/credit-risk-transfer/single-family-credit-risk-transfer/fannie-mae-single-family-loan-performance-data">Fannie Mae Single-Family Loan Performance Data</a></li>
+<li id="resource-01fc6e61082f"><a href="https://github.com/socialfoundations/folktables">Folktables</a></li>
+<li id="resource-e55abd248a72"><a href="https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data">German Credit Data</a> | UCI Machine Learning Repository</li>
+<li id="resource-d999c3719b72"><a href="https://github.com/facebookresearch/HalluLens">HalluLens</a></li>
+<li id="resource-ce8d76c25844"><a href="https://github.com/centerforaisafety/HarmBench">HarmBench</a></li>
+<li id="resource-bcd8bd405673"><a href="https://haveibeentrained.com/">Have I Been Trained?</a></li>
+<li id="resource-e96ef916790a"><a href="https://github.com/nikhgarg/EmbeddingDynamicStereotypes">Embedding Dynamic Stereotypes</a></li>
+<li id="resource-900122dad085"><a href="https://www.nyc.gov/site/nypd/stats/reports-analysis/stopfrisk.page">NYPD Stop, Question and Frisk Data</a></li>
+<li id="resource-2dab3a0ecff2"><a href="https://www.media.mit.edu/publications/presidential-deepfakes-dataset/">Presidential Deepfakes Dataset</a> | MIT Media Lab</li>
+<li id="resource-cff1a5a2cf28"><a href="https://github.com/allenai/real-toxicity-prompts">RealToxicityPrompts</a></li>
+<li id="resource-40af26e08607"><a href="https://github.com/moinnadeem/StereoSet">StereoSet</a> — An older benchmark for measuring stereotypical associations in language models.</li>
+<li id="resource-1c86ae95d4ec"><a href="https://github.com/microsoft/TOXIGEN">ToxiGen</a></li>
+<li id="resource-c3e9fdc7e22d"><a href="https://github.com/google-research-datasets/tydiqa">TyDi QA</a></li>
+<li id="resource-de349db37aae"><a href="https://www.kaggle.com/datasets/jigsaw-team/wikipedia-talk-labels-personal-attacks">Wikipedia Talk Labels: Personal Attacks</a></li>
+<li id="resource-6fb2391e8ff4"><a href="https://github.com/p-lambda/wilds">WILDS</a></li>
+</ul>
+<h3 id="data-repositories">Data Repositories</h3>
+<ul>
+<li id="resource-7a61d364e263"><a href="https://registry.opendata.aws/">Amazon Open Data Registry</a></li>
+<li id="resource-72592c94973e"><a href="https://data.gov/">Data.gov</a></li>
+<li id="resource-8a03d04bc497"><a href="https://www.consumerfinance.gov/data-research/hmda/">Home Mortgage Disclosure Act Data</a></li>
+<li id="resource-da67cd004573"><a href="https://www.kaggle.com/datasets/wordsforthewise/lending-club">Lending Club Loan Data</a></li>
+<li id="resource-32f7788a4fd1"><a href="https://physionet.org/content/mimiciii/1.4/">MIMIC-III Clinical Database</a></li>
+<li id="resource-49151d5293fb"><a href="https://archive.ics.uci.edu/">UCI Machine Learning Repository</a></li>
+</ul>
+<h2 id="domain-specific-software">Domain-specific Software</h2>
+<p>This section curates specialized software tools aimed at responsible ML within specific domains, such as in healthcare, finance, or social sciences.</p>
+<h3 id="health-care-and-clinical-ai">Health care and clinical AI</h3>
+<ul>
+<li id="resource-d0586d735412"><a href="https://github.com/epic-open-source/seismometer">Epic Seismometer</a></li>
+<li id="resource-85011e0c09bd"><a href="https://github.com/microsoft/healthcare-ai-model-evaluator">Healthcare AI Model Evaluator</a></li>
+<li id="resource-72db54a02f2d"><a href="https://github.com/mlcommons/medperf">MedPerf</a></li>
+<li id="resource-0391adb953b6"><a href="https://github.com/Project-MONAI/monai-deploy-app-sdk">MONAI Deploy App SDK</a></li>
+<li id="resource-21a9453cb81e"><a href="https://github.com/OHDSI/PatientLevelPrediction">OHDSI PatientLevelPrediction</a></li>
+<li id="resource-d4f0b67b3423"><a href="https://www.opensafely.org/">OpenSAFELY</a></li>
+<li id="resource-b757d1f8329a"><a href="https://github.com/synthetichealth/synthea">Synthea</a></li>
+</ul>
+<h3 id="financial-services">Financial services</h3>
+<ul>
+<li id="resource-0e977003b6c7"><a href="https://github.com/FINRAOS/model-validation-toolkit">FINRA Model Validation Toolkit</a></li>
+<li id="resource-9044eef95c75"><a href="https://github.com/ing-bank/skorecard">skorecard</a></li>
+<li id="resource-14f6e8aeaa34"><a href="https://github.com/mas-veritas2/veritastool">Veritas Diagnosis Toolkit</a></li>
+</ul>
+<h3 id="autonomous-and-safety-critical-systems">Autonomous and safety-critical systems</h3>
+<ul>
+<li id="resource-473119ccad60"><a href="https://github.com/carla-simulator/carla">CARLA</a></li>
+<li id="resource-1761d1de76c4"><a href="https://github.com/motional/nuplan-devkit">nuPlan Devkit</a></li>
+<li id="resource-da911aa65265"><a href="https://github.com/trust-ai/SafeBench">SafeBench</a></li>
+<li id="resource-7e3f9c5ba54d"><a href="https://github.com/BerkeleyLearnVerify/Scenic">Scenic</a></li>
+<li id="resource-550e637a6fef"><a href="https://github.com/BerkeleyLearnVerify/VerifAI">VerifAI</a></li>
+</ul>
+<h3 id="environmental-accountability">Environmental accountability</h3>
+<ul>
+<li id="resource-a2bd94f43554"><a href="https://github.com/saintslab/carbontracker">carbontracker</a></li>
+<li id="resource-4908e64d522b"><a href="https://github.com/mlco2/codecarbon">CodeCarbon</a></li>
+<li id="resource-c97cfb9ae784"><a href="https://github.com/mlco2/ecologits">EcoLogits</a></li>
+</ul>
+<h3 id="cybersecurity">Cybersecurity</h3>
+<ul>
+<li id="resource-02c520af78f9"><a href="https://github.com/nv-morpheus/Morpheus">NVIDIA Morpheus</a></li>
+<li id="resource-ffc4825d3acc"><a href="https://github.com/pralab/secml_malware">secml-malware</a></li>
+</ul>
+<h2 id="machine-learning-environment-management-tools">Machine Learning Environment Management Tools</h2>
+<p>This section contains open source or open access ML environment management software.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Resource</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td id="resource-97f14ddbe3e8"><a href="https://dvc.org/">dvc</a></td>
+<td>"Manage and version images, audio, video, and text files in storage and organize your ML modeling process into a reproducible workflow."</td>
+</tr>
+<tr>
+<td id="resource-06fad6e82b8d"><a href="https://github.com/gigantum">gigantum</a>-<span class="badge">gigantum stars</span></td>
+<td>"Building a better way to create, collaborate, and share data-driven science."</td>
+</tr>
+<tr>
+<td id="resource-a5d365c5af72"><a href="https://mlflow.org/">mlflow</a></td>
+<td>"An open source platform for the machine learning lifecycle."</td>
+</tr>
+<tr>
+<td id="resource-3d9d0f8e92f5"><a href="https://github.com/google/ml-metadata">mlmd</a>-<span class="badge">mlmd stars</span></td>
+<td>"For recording and retrieving metadata associated with ML developer and data scientist workflows."</td>
+</tr>
+<tr>
+<td id="resource-0c9983e9184f"><a href="https://github.com/VertaAI/modeldb">modeldb</a>-<span class="badge">modeldb stars</span></td>
+<td>"Open Source ML Model Versioning, Metadata, and Experiment Management."</td>
+</tr>
+<tr>
+<td id="resource-54630280a4f5"><a href="https://neptune.ai/researchers">neptune</a></td>
+<td>"A single place to manage all your model metadata."</td>
+</tr>
+<tr>
+<td id="resource-2678e175176a"><a href="https://github.com/comet-ml/opik">Opik</a>-</td>
+<td>"Evaluate, test, and ship LLM applications across your dev and production lifecycles."</td>
+</tr>
+</tbody></table>
+</div><h2 id="personal-data-protection-tools">Personal Data Protection Tools</h2>
+<p>This section contains open source or open access tools for detecting, protecting, auditing, and removing personal data in machine learning systems.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td id="resource-99258b48f6d9"><a href="https://github.com/statice/anonymeter">Anonymeter</a>-</td>
+<td>A unified framework for quantifying privacy risk in synthetic data through singling-out, linkability, and inference attacks.</td>
+</tr>
+<tr>
+<td id="resource-3e26233a4f80"><a href="https://github.com/zama-ai/concrete-ml">Concrete ML</a>-</td>
+<td>A privacy-preserving machine learning framework using fully homomorphic encryption, with bindings to traditional machine learning frameworks.</td>
+</tr>
+<tr>
+<td id="resource-982903e1c4cd"><a href="https://github.com/IBM/differential-privacy-library">diffprivlib</a>-</td>
+<td>A general-purpose Python library for experimenting with, investigating, and developing applications in differential privacy.</td>
+</tr>
+<tr>
+<td id="resource-1880e598734b"><a href="https://github.com/opendp/dp-wizard">DP Wizard</a>-</td>
+<td>A web application for creating data releases that satisfy differential privacy using the OpenDP Library.</td>
+</tr>
+<tr>
+<td id="resource-36e84be8a262"><a href="https://github.com/google/differential-privacy">Google Differential Privacy</a>-</td>
+<td>Google's libraries for differential privacy, including privacy accounting, statistical algorithms, and data-processing integrations.</td>
+</tr>
+<tr>
+<td id="resource-a02f7d7c1cca"><a href="https://github.com/google-deepmind/jax_privacy">JAX Privacy</a>-</td>
+<td>Algorithms for privacy-preserving machine learning in JAX.</td>
+</tr>
+<tr>
+<td id="resource-7a2e1af77fad"><a href="https://github.com/pratyushmaini/llm_dataset_inference/">LLM Dataset Inference: Did you train on my dataset?</a>-</td>
+<td>Code for testing whether a dataset was used to train a large language model.</td>
+</tr>
+<tr>
+<td id="resource-af019c89d5f7"><a href="https://github.com/cleverhans-lab/machine-unlearning">Machine Unlearning with SISA</a>-</td>
+<td>A reference implementation of the SISA training approach for efficiently removing the influence of specified data from trained models.</td>
+</tr>
+<tr>
+<td id="resource-540e009ef8c1"><a href="https://github.com/privacytrustlab/ml_privacy_meter">ML Privacy Meter</a>-</td>
+<td>An open-source library for auditing data privacy in statistical and machine learning algorithms.</td>
+</tr>
+<tr>
+<td id="resource-d6fcfc8460cd"><a href="https://github.com/openai/privacy-filter">OpenAI Privacy Filter</a>-</td>
+<td>A locally deployable model and library for detecting and masking personally identifiable information in text.</td>
+</tr>
+<tr>
+<td id="resource-727f40000602"><a href="https://github.com/opendp/opendp">OpenDP</a>-</td>
+<td>A modular library of differential privacy algorithms implemented in Rust, with Python and R bindings.</td>
+</tr>
+<tr>
+<td id="resource-bfcffc324203"><a href="https://github.com/OpenPipe/pii-redaction">OpenPipe PII Redaction</a>-</td>
+<td>A Python package for locally detecting and redacting personally identifiable information in text and JSONL conversation datasets.</td>
+</tr>
+<tr>
+<td id="resource-da369ddb5481"><a href="https://github.com/locuslab/open-unlearning">OpenUnlearning</a>-</td>
+<td>A unified framework for developing and evaluating large language model unlearning methods.</td>
+</tr>
+<tr>
+<td id="resource-a9c56e2da279"><a href="https://github.com/meta-pytorch/opacus">Opacus</a>-</td>
+<td>A PyTorch library for training machine learning models with differential privacy.</td>
+</tr>
+<tr>
+<td id="resource-6890f6186dbb"><a href="https://github.com/data-privacy-stack/presidio">Presidio</a>-</td>
+<td>A framework for detecting, redacting, masking, and anonymizing sensitive data across text, images, and structured data.</td>
+</tr>
+<tr>
+<td id="resource-7349c46186be"><a href="https://github.com/sdv-dev/SDMetrics">SDMetrics</a>-</td>
+<td>A library of metrics for evaluating the quality, efficacy, and privacy of synthetic datasets.</td>
+</tr>
+<tr>
+<td id="resource-82d8cd052e2d"><a href="https://github.com/opendp/smartnoise-sdk">SmartNoise SDK</a>-</td>
+<td>Tools and services for differentially private processing of tabular and relational data.</td>
+</tr>
+<tr>
+<td id="resource-db3a52dc349d"><a href="https://github.com/tensorflow/privacy">TensorFlow Privacy</a>-</td>
+<td>A library for training TensorFlow models with differential privacy and analyzing the privacy guarantees of training procedures.</td>
+</tr>
+<tr>
+<td id="resource-b432f324edfd"><a href="https://github.com/opendp/tumult-analytics">Tumult Analytics</a>-</td>
+<td>A Python library for executing differentially private operations on data, with an emphasis on usability and scalability.</td>
+</tr>
+</tbody></table>
+</div><h2 id="secure-and-privacy-preserving-computation-infrastructure">Secure and Privacy-Preserving Computation Infrastructure</h2>
+<p>This section contains open source or open access infrastructure for secure multiparty computation, homomorphic encryption, federated learning, private set operations, and privacy-preserving data analysis and machine learning.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td id="resource-a97617d6e1ec"><a href="https://github.com/encryptogroup/ABY">ABY</a>-</td>
+<td>A C++ framework for mixed-protocol secure two-party computation using arithmetic sharing, Boolean sharing, and garbled circuits.</td>
+</tr>
+<tr>
+<td id="resource-61f7622307f7"><a href="https://github.com/zama-ai/concrete">Concrete</a>-</td>
+<td>A compiler and runtime for converting Python programs into computations that can run over fully homomorphically encrypted data.</td>
+</tr>
+<tr>
+<td id="resource-5be57cc7dbcb"><a href="https://github.com/emp-toolkit/emp-tool">EMP-tool</a>-</td>
+<td>A C++ toolkit providing low-level cryptographic primitives and circuit infrastructure for secure multiparty computation.</td>
+</tr>
+<tr>
+<td id="resource-a193409e275c"><a href="https://github.com/FederatedAI/FATE">FATE</a>-</td>
+<td>A federated learning platform supporting privacy-preserving model training and serving through techniques including homomorphic encryption and secure multiparty computation.</td>
+</tr>
+<tr>
+<td id="resource-6edd12c9bb2f"><a href="https://github.com/google/private-join-and-compute">Google Private Join and Compute</a>-</td>
+<td>An implementation of a private intersection-sum protocol for identifying overlapping records and computing aggregate values without revealing complete datasets.</td>
+</tr>
+<tr>
+<td id="resource-c5e4784dd504"><a href="https://github.com/secretflow/kuscia">Kuscia</a>-</td>
+<td>A Kubernetes-based orchestration framework for deploying and managing privacy-preserving computing tasks across organizations.</td>
+</tr>
+<tr>
+<td id="resource-1054abb3463c"><a href="https://github.com/tuneinsight/lattigo">Lattigo</a>-</td>
+<td>A Go library implementing homomorphic encryption and multiparty homomorphic encryption schemes for secure distributed computation.</td>
+</tr>
+<tr>
+<td id="resource-870584df5003"><a href="https://github.com/encryptogroup/MOTION">MOTION</a>-</td>
+<td>A modular C++ framework for mixed-protocol secure multiparty computation involving two or more parties.</td>
+</tr>
+<tr>
+<td id="resource-71c315c0cae8"><a href="https://github.com/encryptogroup/MOTION2NX">MOTION2NX</a>-</td>
+<td>An extension of MOTION for hybrid secure two-party computation and privacy-preserving neural network inference.</td>
+</tr>
+<tr>
+<td id="resource-881db35fb3cf"><a href="https://github.com/data61/MP-SPDZ">MP-SPDZ</a>-</td>
+<td>A framework implementing numerous secure multiparty computation protocols, with support for privacy-preserving machine learning and neural network inference.</td>
+</tr>
+<tr>
+<td id="resource-b3f292a09fd9"><a href="https://github.com/lschoe/mpyc">MPyC</a>-</td>
+<td>A Python framework for secure multiparty computation using threshold secret sharing, with support for secure numerical and machine learning operations.</td>
+</tr>
+<tr>
+<td id="resource-67b0b2e20539"><a href="https://github.com/OpenMined/PySyft">PySyft</a>-</td>
+<td>Infrastructure for executing approved computations on private data while the data remains under the control of its owner.</td>
+</tr>
+<tr>
+<td id="resource-3eb279e76558"><a href="https://github.com/secretflow/secretflow">SecretFlow</a>-</td>
+<td>A framework for privacy-preserving data analysis and machine learning using secure multiparty computation, federated learning, trusted execution environments, homomorphic encryption, and differential privacy.</td>
+</tr>
+<tr>
+<td id="resource-91c5da672874"><a href="https://github.com/secretflow/psi">SecretFlow PSI</a>-</td>
+<td>An implementation of private set intersection and private information retrieval protocols for privacy-preserving data collaboration.</td>
+</tr>
+<tr>
+<td id="resource-a0dadfb7c46d"><a href="https://github.com/secretflow/scql">SecretFlow SCQL</a>-</td>
+<td>A system that translates SQL queries into secure multiparty computation so organizations can jointly analyze databases without disclosing their underlying records.</td>
+</tr>
+<tr>
+<td id="resource-2d51a77b248c"><a href="https://github.com/secretflow/spu">SecretFlow SPU</a>-</td>
+<td>A secure computation runtime for privacy-preserving data analysis and machine learning, including private neural network inference.</td>
+</tr>
+</tbody></table>
+</div><h2 id="open-sourceaccess-responsible-ai-software-packages">Open Source/Access Responsible AI Software Packages</h2>
+<p>This section contains open source or open access software used to implement responsible ML. As much as possible, descriptions are quoted verbatim from the respective repositories themselves. In rare instances, we provide our own descriptions (unmarked by quotes).</p>
+<h3 id="browser">Browser</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td id="resource-ae823c2f82b2"><a href="https://github.com/wangqianwen0418/DiscriLens">DiscriLens</a>-</td>
+<td>"Discrimination in Machine Learning."</td>
+</tr>
+<tr>
+<td id="resource-37ed67f3419c"><a href="https://huggingface.co/spaces/avid-ml/biasaware">Hugging Face, BiasAware: Dataset Bias Detection</a></td>
+<td>"BiasAware is a specialized tool for detecting and quantifying biases within datasets used for Natural Language Processing (NLP) tasks."</td>
+</tr>
+<tr>
+<td id="resource-1ed1f28ed257"><a href="https://github.com/uber/manifold">manifold</a>-</td>
+<td>"A model-agnostic visual debugging tool for machine learning."</td>
+</tr>
+<tr>
+<td id="resource-865c829ad4ef"><a href="https://github.com/PAIR-code/datacardsplaybook">PAIR-code - datacardsplaybook</a>-</td>
+<td>"The Data Cards Playbook helps dataset producers and publishers adopt a people-centered approach to transparency in dataset documentation."</td>
+</tr>
+<tr>
+<td id="resource-7258a9c36f52"><a href="https://github.com/PAIR-code/facets">PAIR-code - facets</a>-</td>
+<td>"Visualizations for machine learning datasets."</td>
+</tr>
+<tr>
+<td id="resource-38245cf1af20"><a href="https://github.com/pair-code/knowyourdata">PAIR-code - knowyourdata</a>-</td>
+<td>"A tool to help researchers and product teams understand datasets with the goal of improving data quality, and mitigating fairness and bias issues."</td>
+</tr>
+<tr>
+<td id="resource-90a02617a166"><a href="http://projector.tensorflow.org">TensorBoard Projector</a></td>
+<td>"Using the TensorBoard Embedding Projector, you can graphically represent high dimensional embeddings. This can be helpful in visualizing, examining, and understanding your embedding layers."</td>
+</tr>
+<tr>
+<td id="resource-4d7579c8f4fe"><a href="https://pair-code.github.io/what-if-tool/index.html#about">What-if Tool</a></td>
+<td>"Visually probe the behavior of trained machine learning models, with minimal coding."</td>
+</tr>
+</tbody></table>
+</div><h3 id="cc">C/C++</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td id="resource-00adedc019e4"><a href="https://github.com/vidalt/BA-Trees">Born-again Tree Ensembles</a>-</td>
+<td>Transforms a random forest into a single minimal-size decision tree with the same prediction function across the feature space.</td>
+</tr>
+<tr>
+<td id="resource-0fbbe2f850ca"><a href="https://github.com/nlarusstone/corels">Certifiably Optimal RulE ListS</a>-</td>
+<td>A discrete optimization method for constructing certifiably optimal rule lists over categorical feature spaces.</td>
+</tr>
+<tr>
+<td id="resource-00bfb0494a84"><a href="https://github.com/eth-sri/ELINA">ELINA</a>-</td>
+<td>A C/C++ numerical analysis library that includes abstract domains used for neural network robustness analysis and verification.</td>
+</tr>
+<tr>
+<td id="resource-835d246162a7"><a href="https://github.com/mpc-msri/ezpc">EzPC</a>-</td>
+<td>A system for compiling and executing privacy-preserving machine learning training and inference using secure multiparty computation.</td>
+</tr>
+<tr>
+<td id="resource-1ae8a4f00f48"><a href="https://github.com/ubc-systopia/gosdt-guesses">GOSDT with Guesses</a>-</td>
+<td>A C++-backed implementation for constructing globally optimized sparse decision trees.</td>
+</tr>
+<tr>
+<td id="resource-1572c1c78b08"><a href="https://github.com/google/heir">HEIR</a>-</td>
+<td>An MLIR-based compiler toolchain for homomorphic encryption that targets privacy-preserving computation backends.</td>
+</tr>
+<tr>
+<td id="resource-63aed78e1a7d"><a href="https://github.com/homenc/HElib">HElib</a>-</td>
+<td>A C++ library implementing homomorphic encryption schemes for computation over encrypted data.</td>
+</tr>
+<tr>
+<td id="resource-f4b70ba282a2"><a href="https://github.com/NeuralNetworkVerification/Marabou">Marabou</a>-</td>
+<td>A formal verification framework for proving properties of neural networks or identifying counterexamples.</td>
+</tr>
+<tr>
+<td id="resource-011a4d3f2382"><a href="https://github.com/microsoft/SEAL">Microsoft SEAL</a>-</td>
+<td>A modern C++ homomorphic encryption library that supports computation, including machine learning inference, over encrypted data.</td>
+</tr>
+<tr>
+<td id="resource-94ce8c202edc"><a href="https://github.com/openfheorg/openfhe-development">OpenFHE</a>-</td>
+<td>A C++ library implementing major fully homomorphic encryption schemes for privacy-preserving computation.</td>
+</tr>
+<tr>
+<td id="resource-2ab867a6da0e"><a href="https://github.com/eth-sri/phoenix">Phoenix</a>-</td>
+<td>A C++ system for privacy-preserving neural network inference with reliability guarantees.</td>
+</tr>
+<tr>
+<td id="resource-0298f981fa90"><a href="https://github.com/shreya-28/Secure-ML">Secure-ML</a>-</td>
+<td>An implementation of secure linear regression in a semi-honest two-party setting.</td>
+</tr>
+<tr>
+<td id="resource-c62fa9f81aac"><a href="https://github.com/OpenMined/TenSEAL">TenSEAL</a>-</td>
+<td>A library for homomorphic encryption operations on tensors, with a C++ core and applications to encrypted machine learning.</td>
+</tr>
+</tbody></table>
+</div><h3 id="javascript-and-typescript">JavaScript and TypeScript</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td id="resource-3515a23c22f7"><a href="https://github.com/braintrustdata/autoevals">AutoEvals</a>-</td>
+<td>A TypeScript and Python library for evaluating AI model outputs using model-graded, heuristic, statistical, safety, factuality, and retrieval-augmented generation evaluators.</td>
+</tr>
+<tr>
+<td id="resource-edf939e3035d"><a href="https://github.com/contentauth/c2pa-js">C2PA JavaScript</a>-</td>
+<td>JavaScript and TypeScript libraries for reading, validating, and working with C2PA content-provenance metadata in browsers and web applications.</td>
+</tr>
+<tr>
+<td id="resource-e526d5624f47"><a href="https://github.com/helicone/helicone">Helicone</a>-</td>
+<td>An open-source platform for tracing, monitoring, evaluating, debugging, and experimenting with large language model applications.</td>
+</tr>
+<tr>
+<td id="resource-6aabe22c67c4"><a href="https://github.com/langfuse/langfuse">Langfuse</a>-</td>
+<td>An open-source LLM engineering platform for observability, evaluation, prompt management, datasets, experimentation, and application debugging.</td>
+</tr>
+<tr>
+<td id="resource-f549e745788c"><a href="https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words">List of Dirty, Naughty, Obscene, and Otherwise Bad Words</a>-</td>
+<td>A collection of potentially offensive terms in multiple languages for use in content filtering and moderation systems.</td>
+</tr>
+<tr>
+<td id="resource-7a626fc03cec"><a href="https://github.com/promptfoo/promptfoo">Promptfoo</a>-</td>
+<td>A command-line tool and library for evaluating, comparing, red-teaming, and vulnerability-testing prompts, agents, retrieval systems, and other LLM applications.</td>
+</tr>
+<tr>
+<td id="resource-15377f01b827"><a href="https://github.com/microsoft/responsible-ai-toolbox">Responsible AI Toolbox</a>-</td>
+<td>A suite of model-assessment interfaces and libraries for error analysis, interpretability, fairness assessment, causal analysis, and responsible model development.</td>
+</tr>
+<tr>
+<td id="resource-1a2ed5dde754"><a href="https://github.com/microsoft/responsible-ai-toolbox-tracker">Responsible AI Toolbox Tracker</a>-</td>
+<td>A TypeScript-based JupyterLab extension for tracking, managing, and comparing responsible-AI experiments, mitigations, models, and disaggregated evaluation results.</td>
+</tr>
+</tbody></table>
+</div><h3 id="python">Python</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td id="resource-0efde3878d63"><a href="https://github.com/csinva/hierarchical_dnn_interpretations">acd</a>-</td>
+<td>"Produces hierarchical interpretations for a single prediction made by a pytorch neural network. Official code for <em>Hierarchical interpretations for neural network predictions</em>.”</td>
+</tr>
+<tr>
+<td id="resource-d6e09863e8bf"><a href="https://github.com/dssg/aequitas">aequitas</a>-</td>
+<td>"Aequitas is an open-source bias audit toolkit for data scientists, machine learning researchers, and policymakers to audit machine learning models for discrimination and bias, and to make informed and equitable decisions around developing and deploying predictive tools.”</td>
+</tr>
+<tr>
+<td id="resource-0c78bb07fde9"><a href="https://github.com/Trusted-AI/AIX360">AI Explainability 360</a>-</td>
+<td>"Interpretability and explainability of data and machine learning models.”</td>
+</tr>
+<tr>
+<td id="resource-0f732e5a7081"><a href="https://github.com/Trusted-AI/AIF360">AI Fairness 360</a>-</td>
+<td>"A comprehensive set of fairness metrics for datasets and machine learning models, explanations for these metrics, and algorithms to mitigate bias in datasets and models.”</td>
+</tr>
+<tr>
+<td id="resource-358cd459f41a"><a href="https://github.com/blent-ai/ALEPython">ALEPython</a>-</td>
+<td>"Python Accumulated Local Effects package.”</td>
+</tr>
+<tr>
+<td id="resource-2ea4676a840f"><a href="https://github.com/SelfExplainML/Aletheia">Aletheia</a>-</td>
+<td>"A Python package for unwrapping ReLU DNNs.”</td>
+</tr>
+<tr>
+<td id="resource-b4f4de110a7a"><a href="https://github.com/SeldonIO/alibi">Alibi</a>-</td>
+<td>"Alibi is an open source Python library aimed at machine learning model inspection and interpretation. The focus of the library is to provide high-quality implementations of black-box, white-box, local and global explanation methods for classification and regression models.”</td>
+</tr>
+<tr>
+<td id="resource-c4bc4c3f4434"><a href="https://github.com/allenai/allennlp">allennlp</a>-</td>
+<td>"An open-source NLP research library, built on PyTorch.”</td>
+</tr>
+<tr>
+<td id="resource-59ab06ddc61d"><a href="https://github.com/marcotcr/anchor">anchor</a>-</td>
+<td>"Code for 'High-Precision Model-Agnostic Explanations' paper.”</td>
+</tr>
+<tr>
+<td id="resource-6ad91a2b5850"><a href="https://github.com/wangtongada/BOA">Bayesian Ors-Of-Ands</a>-</td>
+<td>"This code implements the Bayesian or-of-and algorithm as described in the BOA paper. We include the tictactoe dataset in the correct formatting to be used by this code.”</td>
+</tr>
+<tr>
+<td id="resource-d95a47c4d452"><a href="https://github.com/algofairness/BlackBoxAuditing">BlackBoxAuditing</a>-</td>
+<td>"Research code for auditing and exploring black box machine-learning models.”</td>
+</tr>
+<tr>
+<td id="resource-67c6f46c41c6"><a href="https://github.com/calculatedcontent/weightwatcher">CalculatedContent, WeightWatcher</a>-</td>
+<td>"The WeightWatcher tool for predicting the accuracy of Deep Neural Networks."</td>
+</tr>
+<tr>
+<td id="resource-047796c65c11"><a href="https://github.com/meta-pytorch/captum">captum</a>-</td>
+<td>"Model interpretability and understanding for PyTorch.”</td>
+</tr>
+<tr>
+<td id="resource-e4d3fedcc572"><a href="https://github.com/kondiz/casme">casme</a>-</td>
+<td>"contains the code originally forked from the ImageNet training in PyTorch that is modified to present the performance of classifier-agnostic saliency map extraction, a practical algorithm to train a classifier-agnostic saliency mapping by simultaneously training a classifier and a saliency mapping.”</td>
+</tr>
+<tr>
+<td id="resource-d5b09170a461"><a href="https://github.com/FenTechSolutions/CausalDiscoveryToolbox">Causal Discovery Toolbox</a>-</td>
+<td>"Package for causal inference in graphs and in the pairwise settings. Tools for graph structure recovery and dependencies are included.”</td>
+</tr>
+<tr>
+<td id="resource-ddaea4f28574"><a href="https://github.com/uber/causalml">causalml</a>-</td>
+<td>"Uplift modeling and causal inference with machine learning algorithms.”</td>
+</tr>
+<tr>
+<td id="resource-6d76d6fe8501"><a href="https://github.com/marcotcr/checklist">checklist</a>-</td>
+<td>"Beyond Accuracy: Behavioral Testing of NLP models with CheckList.”</td>
+</tr>
+<tr>
+<td id="resource-729c0b39ee59"><a href="https://github.com/cleverhans-lab/cleverhans">cleverhans</a>-</td>
+<td>"An adversarial example library for constructing attacks, building defenses, and benchmarking both.”</td>
+</tr>
+<tr>
+<td id="resource-48358768dfa7"><a href="https://github.com/SAP-archive/contextual-ai">contextual-AI</a>-</td>
+<td>"Contextual AI adds explainability across data, training, and inference stages of machine learning pipelines through a human-centered approach."</td>
+</tr>
+<tr>
+<td id="resource-51905cb9824c"><a href="https://github.com/MarcelRobeer/ContrastiveExplanation">ContrastiveExplanation - Foil Trees</a>-</td>
+<td>"provides an explanation for why an instance had the current outcome (fact) rather than a targeted outcome of interest (foil). These counterfactual explanations limit the explanation to the features relevant in distinguishing fact from foil, thereby disregarding irrelevant features.”</td>
+</tr>
+<tr>
+<td id="resource-5cd8afc3c759"><a href="https://github.com/Azure/counterfit/">counterfit</a>-</td>
+<td>"a CLI that provides a generic automation layer for assessing the security of ML models.”</td>
+</tr>
+<tr>
+<td id="resource-2157b879bc8b"><a href="https://github.com/ModelOriented/DALEX">dalex</a>-</td>
+<td>"moDel Agnostic Language for Exploration and eXplanation.”</td>
+</tr>
+<tr>
+<td id="resource-a96d9971d987"><a href="https://github.com/tolga-b/debiaswe">debiaswe</a>-</td>
+<td>"Remove problematic gender bias from word embeddings.”</td>
+</tr>
+<tr>
+<td id="resource-033c69e0b0e7"><a href="https://github.com/marcoancona/DeepExplain">DeepExplain</a>-</td>
+<td>"provides a unified framework for state-of-the-art gradient and perturbation-based attribution methods. It can be used by researchers and practitioners for better undertanding the recommended existing models, as well for benchmarking other attribution methods.”</td>
+</tr>
+<tr>
+<td id="resource-c1fb60081a75"><a href="https://github.com/kundajelab/deeplift">DeepLIFT</a>-</td>
+<td>"This repository implements the methods in 'Learning Important Features Through Propagating Activation Differences' by Shrikumar, Greenside &amp; Kundaje, as well as other commonly-used methods such as gradients, gradient-times-input (equivalent to a version of Layerwise Relevance Propagation for ReLU networks), guided backprop and integrated gradients.”</td>
+</tr>
+<tr>
+<td id="resource-77c7fa505868"><a href="https://github.com/yosinski/deep-visualization-toolbox">deepvis</a>-</td>
+<td>"the code required to run the Deep Visualization Toolbox, as well as to generate the neuron-by-neuron visualizations using regularized optimization.”</td>
+</tr>
+<tr>
+<td id="resource-8094d4e1ec8c"><a href="https://github.com/dianna-ai/dianna">DIANNA</a>-</td>
+<td>"DIANNA is a Python package that brings explainable AI (XAI) to your research project. It wraps carefully selected XAI methods in a simple, uniform interface. It's built by, with and for (academic) researchers and research software engineers working on machine learning projects.”</td>
+</tr>
+<tr>
+<td id="resource-ec9bf95e7fb0"><a href="https://github.com/interpretml/DiCE">DiCE</a>-</td>
+<td>"Generate Diverse Counterfactual Explanations for any machine learning model.”</td>
+</tr>
+<tr>
+<td id="resource-f80e38d4cf39"><a href="https://github.com/py-why/dowhy">DoWhy</a>-</td>
+<td>"DoWhy is a Python library for causal inference that supports explicit modeling and testing of causal assumptions. DoWhy is based on a unified language for causal inference, combining causal graphical models and potential outcomes frameworks.”</td>
+</tr>
+<tr>
+<td id="resource-7838b4520fe0"><a href="https://github.com/parrt/dtreeviz">dtreeviz</a>-</td>
+<td>"A python library for decision tree visualization and model interpretation.”</td>
+</tr>
+<tr>
+<td id="resource-3903b52c4e61"><a href="https://github.com/jalammar/ecco">ecco</a>-</td>
+<td>"Explain, analyze, and visualize NLP language models. Ecco creates interactive visualizations directly in Jupyter notebooks explaining the behavior of Transformer-based language models (like GPT2, BERT, RoBERTA, T5, and T0).”</td>
+</tr>
+<tr>
+<td id="resource-4c0c5daf322e"><a href="https://github.com/givasile/effector">effector</a>-</td>
+<td>"eXplainable AI for Tabular Data"</td>
+</tr>
+<tr>
+<td id="resource-e1af83080a02"><a href="https://github.com/TeamHG-Memex/eli5">eli5</a>-</td>
+<td>"A library for debugging/inspecting machine learning classifiers and explaining their predictions.”</td>
+</tr>
+<tr>
+<td id="resource-cae31144ad38"><a href="https://github.com/eth-sri/eran">ERAN</a>-</td>
+<td>"The ETH Robustness Analyzer verifies robustness and other properties of feed-forward, convolutional, and residual neural networks."</td>
+</tr>
+<tr>
+<td id="resource-7be34e453a43"><a href="https://github.com/MarcelRobeer/explabox">explabox</a>-</td>
+<td>"aims to support data scientists and machine learning (ML) engineers in explaining, testing and documenting AI/ML models, developed in-house or acquired externally. The explabox turns your ingestibles (AI/ML model and/or dataset) into digestibles (statistics, explanations or sensitivity insights).”</td>
+</tr>
+<tr>
+<td id="resource-979e8e934ef1"><a href="https://github.com/neulab/ExplainaBoard">ExplainaBoard</a>-</td>
+<td>"a tool that inspects your system outputs, identifies what is working and what is not working, and helps inspire you with ideas of where to go next.”</td>
+</tr>
+<tr>
+<td id="resource-21a0ce3e83e6"><a href="https://github.com/oegedijk/explainerdashboard">explainerdashboard</a>-</td>
+<td>"Quickly build Explainable AI dashboards that show the inner workings of so-called "blackbox" machine learning models.”</td>
+</tr>
+<tr>
+<td id="resource-1003debd481a"><a href="https://github.com/explainX/explainx">explainX</a>-</td>
+<td>"Explainable AI framework for data scientists. Explain &amp; debug any blackbox machine learning model with a single line of code.”</td>
+</tr>
+<tr>
+<td id="resource-0b8bd418b231"><a href="https://github.com/mbilalzafar/fair-classification">fair-classification</a>-</td>
+<td>"Python code for training fair logistic regression classifiers.”</td>
+</tr>
+<tr>
+<td id="resource-add477998969"><a href="https://github.com/fairlearn/fairlearn">fairlearn</a>-</td>
+<td>"a Python package that empowers developers of artificial intelligence (AI) systems to assess their system's fairness and mitigate any observed unfairness issues. Fairlearn contains mitigation algorithms as well as metrics for model assessment. Besides the source code, this repository also contains Jupyter notebooks with examples of Fairlearn usage.”</td>
+</tr>
+<tr>
+<td id="resource-eab25dd14b55"><a href="https://github.com/adebayoj/fairml">fairml</a>-</td>
+<td>"a python toolbox auditing the machine learning models for bias.”</td>
+</tr>
+<tr>
+<td id="resource-f9c26b53186e"><a href="https://github.com/megantosh/fairness_measures_code">fairness_measures_code</a>-</td>
+<td>"contains implementations of measures used to quantify discrimination.”</td>
+</tr>
+<tr>
+<td id="resource-c05be77cf798"><a href="https://github.com/algofairness/fairness-comparison">fairness-comparison</a>-</td>
+<td>"meant to facilitate the benchmarking of fairness aware machine learning algorithms.”</td>
+</tr>
+<tr>
+<td id="resource-3cb9918d9aec"><a href="https://users.cs.duke.edu/~cynthia/code/falling_rule_list.zip">Falling Rule List - FRL</a></td>
+<td>Rudin group at Duke falling rule list implementation</td>
+</tr>
+<tr>
+<td id="resource-0b0d3e4b709b"><a href="https://github.com/bethgelab/foolbox">foolbox</a>-</td>
+<td>"A Python toolbox to create adversarial examples that fool neural networks in PyTorch, TensorFlow, and JAX.”</td>
+</tr>
+<tr>
+<td id="resource-af1b6dccd305"><a href="https://github.com/Giskard-AI/giskard-oss">Giskard</a>-</td>
+<td>"An open-source evaluation and testing library for large language models and agents."</td>
+</tr>
+<tr>
+<td id="resource-26eee86fc71f"><a href="https://github.com/trevorstephens/gplearn">gplearn</a>-</td>
+<td>"implements Genetic Programming in Python, with a scikit-learn inspired and compatible API.”</td>
+</tr>
+<tr>
+<td id="resource-f4bbcf8b69dd"><a href="http://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/modeling.html#h2ogradientboostingestimator">H2O-3 Monotonic GBM</a></td>
+<td>"Builds gradient boosted classification trees and gradient boosted regression trees on a parsed data set."</td>
+</tr>
+<tr>
+<td id="resource-a81f3102397c"><a href="http://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/modeling.html#h2ogeneralizedlinearestimator">H2O-3 Penalized Generalized Linear Models</a></td>
+<td>"Fits a generalized linear model, specified by a response variable, a set of predictors, and a description of the error distribution."</td>
+</tr>
+<tr>
+<td id="resource-54c3dcf4821b"><a href="http://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/modeling.html#h2ogeneralizedlowrankestimator">H2O-3 Sparse Principal Components</a></td>
+<td>"Builds a generalized low rank decomposition of an H2O data frame."</td>
+</tr>
+<tr>
+<td id="resource-7c43356099e3"><a href="https://github.com/h2oai/h2o-LLM-eval">h2o-LLM-eval</a>-</td>
+<td>"Large-language Model Evaluation framework with Elo Leaderboard and A-B testing."</td>
+</tr>
+<tr>
+<td id="resource-6c2853f9b371"><a href="https://github.com/paul-rottger/hatecheck-data">HateCheck: Functional Tests for Hate Speech Detection Models</a>-</td>
+<td>HateCheck: A dataset and test suite from an ACL 2021 paper, offering functional tests for hate speech detection models, including extensive case annotations and testing functionalities.</td>
+</tr>
+<tr>
+<td id="resource-0943a5d91a48"><a href="https://github.com/csinva/imodels">imodels</a>-</td>
+<td>"Python package for concise, transparent, and accurate predictive modeling. All sklearn-compatible and easy to use.”</td>
+</tr>
+<tr>
+<td id="resource-613b688c810a"><a href="https://github.com/albermax/innvestigate">iNNvestigate neural nets</a>-</td>
+<td>A comprehensive Python library to analyze and interpret neural network behaviors in Keras, featuring a variety of methods like Gradient, LRP, and Deep Taylor.</td>
+</tr>
+<tr>
+<td id="resource-9b9f88d6478a"><a href="https://github.com/ankurtaly/Integrated-Gradients">Integrated-Gradients</a>-</td>
+<td>"a variation on computing the gradient of the prediction output w.r.t. features of the input. It requires no modification to the original network, is simple to implement, and is applicable to a variety of deep models (sparse and dense, text and vision).”</td>
+</tr>
+<tr>
+<td id="resource-cd0e2a333091"><a href="https://github.com/clips/interpret_with_rules">interpret_with_rules</a>-</td>
+<td>"induces rules to explain the predictions of a trained neural network, and optionally also to explain the patterns that the model captures from the training data, and the patterns that are present in the original dataset.”</td>
+</tr>
+<tr>
+<td id="resource-5f755398a3cc"><a href="https://github.com/interpretml/interpret">interpret</a>-</td>
+<td>"an open-source package that incorporates state-of-the-art machine learning interpretability techniques under one roof.”</td>
+</tr>
+<tr>
+<td id="resource-724a915498c0"><a href="https://github.com/SDM-TIB/InterpretME">InterpretME</a>-</td>
+<td>"integrates knowledge graphs (KG) with machine learning methods to generate interesting meaningful insights. It helps to generate human- and machine-readable decisions to provide assistance to users and enhance efficiency.”</td>
+</tr>
+<tr>
+<td id="resource-513307a6ea89"><a href="https://github.com/philipperemy/keract/">keract</a>-</td>
+<td>Keract is a tool for visualizing activations and gradients in Keras models; it's meant to support a wide range of Tensorflow versions and to offer an intuitive API with Python examples.</td>
+</tr>
+<tr>
+<td id="resource-591d6777391e"><a href="https://github.com/raghakot/keras-vis">Keras-vis</a>-</td>
+<td>"a high-level toolkit for visualizing and debugging your trained keras neural net models.”</td>
+</tr>
+<tr>
+<td id="resource-287b65362461"><a href="https://github.com/Jianbo-Lab/L2X">L2X</a>-</td>
+<td id="resource-0722b5f4228e">"Code for replicating the experiments in the paper <a href="https://arxiv.org/pdf/1802.07814.pdf">Learning to Explain: An Information-Theoretic Perspective on Model Interpretation</a> at ICML 2018, by Jianbo Chen, Mitchell Stern, Martin J. Wainwright, Michael I. Jordan.”</td>
+</tr>
+<tr>
+<td id="resource-0be3c5f67997"><a href="https://github.com/cvs-health/langfair">LangFair</a>-</td>
+<td>"LangFair is a Python library for conducting use-case level LLM bias and fairness assessments"</td>
+</tr>
+<tr>
+<td id="resource-be315921d38a"><a href="https://github.com/PacificAI/langtest">langtest</a>-</td>
+<td>"LangTest: Deliver Safe &amp; Effective Language Models"</td>
+</tr>
+<tr>
+<td id="resource-68b4ddbbf521"><a href="https://github.com/zjelveh/learning-fair-representations">learning-fair-representations</a>-</td>
+<td id="resource-d2a934d28c1c">"Python numba implementation of Zemel et al. 2013 <a href="http://www.cs.toronto.edu/~toni/Papers/icml-final.pdf">http://www.cs.toronto.edu/~toni/Papers/icml-final.pdf</a>"</td>
+</tr>
+<tr>
+<td id="resource-c2a55f881ee9"><a href="https://github.com/alea-institute/leeky">leeky: Leakage/contamination testing for black box language models</a>-</td>
+<td>"leeky - training data contamination techniques for blackbox models"</td>
+</tr>
+<tr>
+<td id="resource-776e78e28736"><a href="https://github.com/NVIDIA/garak">garak, LLM vulnerability scanner</a>-</td>
+<td>"LLM vulnerability scanner"</td>
+</tr>
+<tr>
+<td id="resource-eb86a6956373"><a href="https://github.com/marcotcr/lime">lime</a>-</td>
+<td>"explaining what machine learning classifiers (or models) are doing. At the moment, we support explaining individual predictions for text classifiers or classifiers that act on tables (numpy arrays of numerical or categorical data) or images, with a package called lime (short for local interpretable model-agnostic explanations).”</td>
+</tr>
+<tr>
+<td id="resource-e0e5a938c836"><a href="https://github.com/pair-code/lit">lit</a>-</td>
+<td>"The Learning Interpretability Tool (LIT, formerly known as the Language Interpretability Tool) is a visual, interactive ML model-understanding tool that supports text, image, and tabular data. It can be run as a standalone server, or inside of notebook environments such as Colab, Jupyter, and Google Cloud Vertex AI notebooks.”</td>
+</tr>
+<tr>
+<td id="resource-9d11f9cc6de0"><a href="https://github.com/pratyushmaini/llm_dataset_inference/">LLM Dataset Inference: Did you train on my dataset?</a>-</td>
+<td>"Official Repository for Dataset Inference for LLMs"</td>
+</tr>
+<tr>
+<td id="resource-cc7e326df2a3"><a href="https://github.com/aerdem4/lofo-importance">lofo-importance</a>-</td>
+<td>"LOFO (Leave One Feature Out) Importance calculates the importances of a set of features based on a metric of choice, for a model of choice, by iteratively removing each feature from the set, and evaluating the performance of the model, with a validation scheme of choice, based on the chosen metric.”</td>
+</tr>
+<tr>
+<td id="resource-87d25d90c1c9"><a href="https://github.com/sebastian-lapuschkin/lrp_toolbox">lrp_toolbox</a>-</td>
+<td>"The Layer-wise Relevance Propagation (LRP) algorithm explains a classifer's prediction specific to a given data point by attributing relevance scores to important components of the input by using the topology of the learned model itself.”</td>
+</tr>
+<tr>
+<td id="resource-bd1342a334ee"><a href="https://github.com/mindsdb/mindshub">MindsHub</a>-</td>
+<td>"An open-source platform for connecting AI models, agents, and organizational data sources."</td>
+</tr>
+<tr>
+<td id="resource-3ccce2fd3d55"><a href="https://github.com/privacytrustlab/ml_privacy_meter">ml_privacy_meter</a>-</td>
+<td>"an open-source library to audit data privacy in statistical and machine learning algorithms. The tool can help in the data protection impact assessment process by providing a quantitative analysis of the fundamental privacy risks of a (machine learning) model.”</td>
+</tr>
+<tr>
+<td id="resource-6c93a6aad447"><a href="https://github.com/google/ml-fairness-gym">ml-fairness-gym</a>-</td>
+<td>"a set of components for building simple simulations that explore the potential long-run impacts of deploying machine learning-based decision systems in social environments.”</td>
+</tr>
+<tr>
+<td id="resource-19a940339947"><a href="http://rasbt.github.io/mlxtend/">MLextend</a></td>
+<td>"Mlxtend (machine learning extensions) is a Python library of useful tools for the day-to-day data science tasks.”</td>
+</tr>
+<tr>
+<td id="resource-34ed26a67b58"><a href="https://github.com/12wang3/mllp">mllp</a>-</td>
+<td id="resource-f3dbccc1f190">"This is a PyTorch implementation of Multilayer Logical Perceptrons (MLLP) and Random Binarization (RB) method to learn Concept Rule Sets (CRS) for transparent classification tasks, as described in our paper: <a href="https://arxiv.org/abs/1912.04695">Transparent Classification with Multilayer Logical Perceptrons and Random Binarization</a>.”</td>
+</tr>
+<tr>
+<td id="resource-87e10f924b4b"><a href="http://xgboost.readthedocs.io/en/latest/tutorials/monotonic.html">Monotonic Constraints</a></td>
+<td>Guide on implementing and understanding monotonic constraints in XGBoost models to enhance predictive performance with practical Python examples.</td>
+</tr>
+<tr>
+<td id="resource-794bb18c8a1d"><a href="https://github.com/guillermo-navas-palencia/optbinning">OptBinning</a>-</td>
+<td>"a library written in Python implementing a rigorous and flexible mathematical programming formulation to solve the optimal binning problem for a binary, continuous and multiclass target type, incorporating constraints not previously addressed.”</td>
+</tr>
+<tr>
+<td id="resource-5c4e16e5db35"><a href="https://github.com/xiyanghu/OSDT">Optimal Sparse Decision Trees</a>-</td>
+<td id="resource-e26ceecc42f3">"This accompanies the paper, <a href="https://arxiv.org/abs/1904.12847">"Optimal Sparse Decision Trees"</a> by Xiyang Hu, Cynthia Rudin, and Margo Seltzer.”</td>
+</tr>
+<tr>
+<td id="resource-da1df5caa458"><a href="https://pypi.org/project/parity-fairness/">parity-fairness</a></td>
+<td>"This repository contains codes that demonstrate the use of fairness metrics, bias mitigations and explainability tool.”</td>
+</tr>
+<tr>
+<td id="resource-4cd2621ad0b6"><a href="https://github.com/sosuneko/PDPbox">PDPbox</a>-</td>
+<td>"Python Partial Dependence Plot toolbox. Visualize the influence of certain features on model predictions for supervised machine learning algorithms, utilizing partial dependence plots.”</td>
+</tr>
+<tr>
+<td id="resource-d379a955a1eb"><a href="https://github.com/SelfExplainML/PiML-Toolbox">PiML-Toolbox</a>-</td>
+<td>"a new Python toolbox for interpretable machine learning model development and validation. Through low-code interface and high-code APIs, PiML supports a growing list of inherently interpretable ML models.”</td>
+</tr>
+<tr>
+<td id="resource-3e7a0b646d56"><a href="https://github.com/pjaselin/Cubist?tab=readme-ov-file">pjsaelin / Cubist</a>-</td>
+<td>"A Python package for fitting Quinlan's Cubist regression model"</td>
+</tr>
+<tr>
+<td id="resource-a92ac1fcb60b"><a href="https://github.com/abhinav-bohra/Privacy-Preserving-ML">Privacy-Preserving-ML</a>-</td>
+<td>"Implementation of privacy-preserving SVM assuming public model private data scenario (data in encrypted but model parameters are unencrypted) using adequate partial homomorphic encryption.”</td>
+</tr>
+<tr>
+<td id="resource-fca5a6105c23"><a href="https://github.com/cfchen-duke/ProtoPNet">ProtoPNet</a>-</td>
+<td>"Implements the prototypical part network from the paper <em>This Looks Like That: Deep Learning for Interpretable Image Recognition</em>."</td>
+</tr>
+<tr>
+<td id="resource-f01a1717ad89"><a href="https://github.com/MI2DataLab/pyBreakDown">pyBreakDown</a>-</td>
+<td id="resource-c0bdd89c1438">See <a href="https://dalex.drwhy.ai/">dalex</a>.</td>
+</tr>
+<tr>
+<td id="resource-0123042e0a17"><a href="https://github.com/AustinRochford/PyCEbox">PyCEbox</a>-</td>
+<td>"Python Individual Conditional Expectation Plot Toolbox.”</td>
+</tr>
+<tr>
+<td id="resource-62db369ae419"><a href="https://github.com/dswah/pyGAM">pyGAM</a>-</td>
+<td>"Generalized Additive Models in Python.”</td>
+</tr>
+<tr>
+<td id="resource-f561ef9ca479"><a href="https://github.com/pymc-devs/pymc">PyMC</a>-</td>
+<td>"PyMC (formerly PyMC3) is a Python package for Bayesian statistical modeling focusing on advanced Markov chain Monte Carlo (MCMC) and variational inference (VI) algorithms. Its flexibility and extensibility make it applicable to a large suite of problems.”</td>
+</tr>
+<tr>
+<td id="resource-e8036a098ede"><a href="https://github.com/sergioburdisso/pyss3">pySS3</a>-</td>
+<td>"The SS3 text classifier is a novel and simple supervised machine learning model for text classification which is interpretable, that is, it has the ability to naturally (self)explain its rationale.”</td>
+</tr>
+<tr>
+<td id="resource-b093df4ba0da"><a href="https://github.com/jacobgil/pytorch-grad-cam">pytorch-grad-cam</a>-</td>
+<td>"a package with state of the art methods for Explainable AI for computer vision. This can be used for diagnosing model predictions, either in production or while developing models. The aim is also to serve as a benchmark of algorithms and metrics for research of new explainability methods.”</td>
+</tr>
+<tr>
+<td id="resource-4859ed0b857f"><a href="https://github.com/fgxaos/pytorch-innvestigate">pytorch-innvestigate</a>-</td>
+<td id="resource-7acf9d0d3576">"PyTorch implementation of Keras already existing project: <a href="https://github.com/albermax/innvestigate/">https://github.com/albermax/innvestigate/</a>.”</td>
+</tr>
+<tr>
+<td id="resource-2c48408ebe84"><a href="https://github.com/understandable-machine-intelligence-lab/Quantus">Quantus</a>-</td>
+<td>"Quantus is an eXplainable AI toolkit for responsible evaluation of neural network explanations."</td>
+</tr>
+<tr>
+<td id="resource-14c535dbfb4e"><a href="https://github.com/taolei87/rcnn/tree/master/code/rationale">rationale</a>-</td>
+<td id="resource-9fe5a35b6210">"This directory contains the code and resources of the following paper: <em>"Rationalizing Neural Predictions". Tao Lei, Regina Barzilay and Tommi Jaakkola. EMNLP 2016. <a href="https://people.csail.mit.edu/taolei/papers/emnlp16_rationale.pdf">PDF</a> <a href="https://people.csail.mit.edu/taolei/papers/emnlp16_rationale_slides.pdf">Slides</a></em>. The method learns to provide justifications, i.e. rationales, as supporting evidence of neural networks' prediction.”</td>
+</tr>
+<tr>
+<td id="resource-152a23726896"><a href="https://github.com/ResponsiblyAI/responsibly">responsibly</a>-</td>
+<td>"Toolkit for Auditing and Mitigating Bias and Fairness of Machine Learning Systems.”</td>
+</tr>
+<tr>
+<td id="resource-1e271b86594f"><a href="https://github.com/princetonvisualai/revise-tool">REVISE: REvealing VIsual biaSEs</a>-</td>
+<td>"A tool that automatically detects possible forms of bias in a visual dataset along the axes of object-based, attribute-based, and geography-based patterns, and from which next steps for mitigation are suggested.”</td>
+</tr>
+<tr>
+<td id="resource-dccc67c147fb"><a href="https://github.com/eclique/RISE">RISE</a>-</td>
+<td id="resource-28235291fe20">"contains source code necessary to reproduce some of the main results in the paper: <a href="http://cs-people.bu.edu/vpetsiuk/">Vitali Petsiuk</a>, <a href="http://cs-people.bu.edu/dasabir/">Abir Das</a>, <a href="http://ai.bu.edu/ksaenko.html">Kate Saenko</a> (BMVC, 2018) [and] <a href="https://arxiv.org/abs/1806.07421">RISE: Randomized Input Sampling for Explanation of Black-box Models</a>.”</td>
+</tr>
+<tr>
+<td id="resource-f9b3b742aa45"><a href="https://github.com/ustunb/risk-slim">Risk-SLIM</a>-</td>
+<td>"a machine learning method to fit simple customized risk scores in python.”</td>
+</tr>
+<tr>
+<td id="resource-0c3bfa722f32"><a href="https://github.com/MadryLab/robustness">robustness</a>-</td>
+<td id="resource-a126ee3724bd">"a package we (students in the <a href="http://madry-lab.ml/">MadryLab</a>) created to make training, evaluating, and exploring neural networks flexible and easy.”</td>
+</tr>
+<tr>
+<td id="resource-003ee38a4c3b"><a href="https://github.com/iancovert/sage/">SAGE</a>-</td>
+<td>"SAGE (Shapley Additive Global importancE) is a game-theoretic approach for understanding black-box machine learning models. It quantifies each feature's importance based on how much predictive power it contributes, and it accounts for complex feature interactions using the Shapley value.”</td>
+</tr>
+<tr>
+<td id="resource-7b4a3ce61729"><a href="https://github.com/SALib/SALib">SALib</a>-</td>
+<td>"Python implementations of commonly used sensitivity analysis methods. Useful in systems modeling to calculate the effects of model inputs or exogenous factors on outputs of interest.”</td>
+</tr>
+<tr>
+<td id="resource-bf75543f53c3"><a href="https://scikit-explain.readthedocs.io/en/latest/index.html">Scikit-Explain</a></td>
+<td>"User-friendly Python module for machine learning explainability," featuring PD and ALE plots, LIME, SHAP, permutation importance and Friedman's H, among other methods.</td>
+</tr>
+<tr>
+<td id="resource-d22c779403bf"><a href="https://scikit-learn.org/stable/">Scikit-learn</a> <a href="http://scikit-learn.org/stable/modules/tree.html">Decision Trees</a></td>
+<td>"a non-parametric supervised learning method used for classification and regression.”</td>
+</tr>
+<tr>
+<td id="resource-8a9916b3e0ac"><a href="https://scikit-learn.org/stable/">Scikit-learn</a> <a href="http://scikit-learn.org/stable/modules/linear_model.html">Generalized Linear Models</a></td>
+<td>"a set of methods intended for regression in which the target value is expected to be a linear combination of the features.”</td>
+</tr>
+<tr>
+<td id="resource-cd5236d776c5"><a href="https://scikit-learn.org/stable/">Scikit-learn</a> <a href="http://scikit-learn.org/stable/modules/decomposition.html#sparse-principal-components-analysis-sparsepca-and-minibatchsparsepca">Sparse Principal Components</a></td>
+<td>"a variant of [principal component analysis, PCA], with the goal of extracting the set of sparse components that best reconstruct the data.”</td>
+</tr>
+<tr>
+<td id="resource-25a80e6ce7e8"><a href="https://scikit-multiflow.github.io/">scikit-multiflow</a></td>
+<td>"a machine learning package for streaming data in Python.”</td>
+</tr>
+<tr>
+<td id="resource-8e8637a6d971"><a href="https://github.com/shap/shap">shap</a>-</td>
+<td>"a game theoretic approach to explain the output of any machine learning model. It connects optimal credit allocation with local explanations using the classic Shapley values from game theory and their related extensions"</td>
+</tr>
+<tr>
+<td id="resource-ca9e391d3664"><a href="https://github.com/benedekrozemberczki/shapley">shapley</a>-</td>
+<td>"a Python library for evaluating binary classifiers in a machine learning ensemble.”</td>
+</tr>
+<tr>
+<td id="resource-4065916381eb"><a href="https://github.com/tmadl/sklearn-expertsys">sklearn-expertsys</a>-</td>
+<td>"a scikit-learn compatible wrapper for the Bayesian Rule List classifier developed by Letham et al., 2015, extended by a minimum description length-based discretizer (Fayyad &amp; Irani, 1993) for continuous data, and by an approach to subsample large datasets for better performance.”</td>
+</tr>
+<tr>
+<td id="resource-5111cc9f7933"><a href="https://github.com/scikit-learn-contrib/skope-rules">skope-rules</a>-</td>
+<td>"a Python machine learning module built on top of scikit-learn and distributed under the 3-Clause BSD license.”</td>
+</tr>
+<tr>
+<td id="resource-c4a3a4ad500a"><a href="https://github.com/SolasAI/solas-ai-disparity">solas-ai-disparity</a>-</td>
+<td>"a collection of tools that allows modelers, compliance, and business stakeholders to test outcomes for bias or discrimination using widely accepted fairness metrics.”</td>
+</tr>
+<tr>
+<td id="resource-a03b4c0b227a"><a href="https://github.com/ustunb/slim-python">Super-sparse Linear Integer models - SLIMs</a>-</td>
+<td>"a package to learn customized scoring systems for decision-making problems.”</td>
+</tr>
+<tr>
+<td id="resource-e329ac08cf6c"><a href="https://github.com/tensorflow/fairness-indicators">tensorflow/fairness-indicators</a>-</td>
+<td>"designed to support teams in evaluating, improving, and comparing models for fairness concerns in partnership with the broader Tensorflow toolkit.”</td>
+</tr>
+<tr>
+<td id="resource-bc959d925e32"><a href="https://github.com/tensorflow/lattice">tensorflow/lattice</a>-</td>
+<td>"a library that implements constrained and interpretable lattice based models. It is an implementation of Monotonic Calibrated Interpolated Look-Up Tables in TensorFlow.”</td>
+</tr>
+<tr>
+<td id="resource-229e85ce845d"><a href="https://github.com/tensorflow/lucid">tensorflow/lucid</a>-</td>
+<td>"a collection of infrastructure and tools for research in neural network interpretability.”</td>
+</tr>
+<tr>
+<td id="resource-80181808be6a"><a href="https://github.com/tensorflow/model-analysis">tensorflow/model-analysis</a>-</td>
+<td>"a library for evaluating TensorFlow models. It allows users to evaluate their models on large amounts of data in a distributed manner, using the same metrics defined in their trainer. These metrics can be computed over different slices of data and visualized in Jupyter notebooks.”</td>
+</tr>
+<tr>
+<td id="resource-af737f2d1400"><a href="https://github.com/tensorflow/model-card-toolkit">tensorflow/model-card-toolkit</a>-</td>
+<td>"streamlines and automates generation of Model Cards, machine learning documents that provide context and transparency into a model's development and performance. Integrating the MCT into your ML pipeline enables you to share model metadata and metrics with researchers, developers, reporters, and more.”</td>
+</tr>
+<tr>
+<td id="resource-ed7b2fa60bfe"><a href="https://github.com/tensorflow/model-remediation">tensorflow/model-remediation</a>-</td>
+<td>"a library that provides solutions for machine learning practitioners working to create and train models in a way that reduces or eliminates user harm resulting from underlying performance biases.”</td>
+</tr>
+<tr>
+<td id="resource-b2d2d770218d"><a href="https://github.com/tensorflow/privacy">tensorflow/privacy</a>-</td>
+<td>"the source code for TensorFlow Privacy, a Python library that includes implementations of TensorFlow optimizers for training machine learning models with differential privacy. The library comes with tutorials and analysis tools for computing the privacy guarantees provided.”</td>
+</tr>
+<tr>
+<td id="resource-c9ad86762ccb"><a href="https://github.com/tensorflow/tcav">tensorflow/tcav</a>-</td>
+<td>"Testing with Concept Activation Vectors (TCAV) is a new interpretability method to understand what signals your neural networks models uses for prediction.”</td>
+</tr>
+<tr>
+<td id="resource-fcda2130cce4"><a href="https://github.com/brain-research/tensorfuzz">tensorfuzz</a>-</td>
+<td>"a library for performing coverage guided fuzzing of neural networks.”</td>
+</tr>
+<tr>
+<td id="resource-63be25e16ad9"><a href="https://github.com/microsoft/tensorwatch">TensorWatch</a>-</td>
+<td>"a debugging and visualization tool designed for data science, deep learning and reinforcement learning from Microsoft Research. It works in Jupyter Notebook to show real-time visualizations of your machine learning training and perform several other key analysis tasks for your models and data.”</td>
+</tr>
+<tr>
+<td id="resource-d4bef425f54c"><a href="https://text-explainability.readthedocs.io/">text_explainability</a></td>
+<td>"text_explainability provides a generic architecture from which well-known state-of-the-art explainability approaches for text can be composed.”</td>
+</tr>
+<tr>
+<td id="resource-e289e550ac4d"><a href="https://text-sensitivity.readthedocs.io/">text_sensitivity</a></td>
+<td>"Uses the generic architecture of text_explainability to also include tests of safety (how safe it the model in production, i.e. types of inputs it can handle), robustness (how generalizable the model is in production, e.g. stability when adding typos, or the effect of adding random unrelated data) and fairness (if equal individuals are treated equally by the model, e.g. subgroup fairness on sex and nationality).”</td>
+</tr>
+<tr>
+<td id="resource-8cce5de9eabe"><a href="https://github.com/jind11/TextFooler">TextFooler</a>-</td>
+<td>"A Model for Natural Language Attack on Text Classification and Inference"</td>
+</tr>
+<tr>
+<td id="resource-fb07f9920491"><a href="https://github.com/sicara/tf-explain">tf-explain</a>-</td>
+<td>"Implements interpretability methods as Tensorflow 2.x callbacks to ease neural network's understanding.”</td>
+</tr>
+<tr>
+<td id="resource-db7ae070381c"><a href="https://github.com/cosmicBboy/themis-ml">themis-ml</a>-</td>
+<td>"A Python library built on top of pandas and sklearnthat implements fairness-aware machine learning algorithms.”</td>
+</tr>
+<tr>
+<td id="resource-7986da86837f"><a href="https://github.com/LASER-UMASS/Themis">Themis</a>-</td>
+<td>"A testing-based approach for measuring discrimination in a software system.”</td>
+</tr>
+<tr>
+<td id="resource-bac381e1aab1"><a href="https://github.com/torch-uncertainty/torch-uncertainty">TorchUncertainty</a>-</td>
+<td>"A package designed to help you leverage uncertainty quantification techniques and make your deep neural networks more reliable.”</td>
+</tr>
+<tr>
+<td id="resource-3a573c3fea6a"><a href="https://github.com/andosa/treeinterpreter">treeinterpreter</a>-</td>
+<td>"Package for interpreting scikit-learn's decision tree and random forest predictions.”</td>
+</tr>
+<tr>
+<td id="resource-35324b36c71b"><a href="https://github.com/seedatnabeel/TRIAGE">TRIAGE</a>-</td>
+<td>"This repository contains the implementation of TRIAGE, a "Data-Centric AI" framework for data characterization tailored for regression.”</td>
+</tr>
+<tr>
+<td id="resource-197cb6a570a2"><a href="https://github.com/boredbird/woe">woe</a>-</td>
+<td>"Tools for WoE Transformation mostly used in ScoreCard Model for credit rating.”</td>
+</tr>
+<tr>
+<td id="resource-5b8c382b3b37"><a href="https://github.com/EthicalML/xai">xai</a>-</td>
+<td>"A Machine Learning library that is designed with AI explainability in its core.”</td>
+</tr>
+<tr>
+<td id="resource-c03b5e309282"><a href="https://github.com/datamllab/xdeep">xdeep</a>-</td>
+<td>"An open source Python library for Interpretable Machine Learning.”</td>
+</tr>
+<tr>
+<td id="resource-a34b0db3927f"><a href="http://xgboost.readthedocs.io/en/latest/">XGBoost</a></td>
+<td>"an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable.”</td>
+</tr>
+<tr>
+<td id="resource-093fbfb75221"><a href="https://github.com/deel-ai/xplique">xplique</a>-</td>
+<td>"A Python toolkit dedicated to explainability. The goal of this library is to gather the state of the art of Explainable AI to help you understand your complex neural network models.”</td>
+</tr>
+<tr>
+<td id="resource-1c21a3744df2"><a href="https://github.com/Data-Centric-AI-Community/fg-data-profiling">FG Data Profiling (formerly ydata-profiling)</a>-</td>
+<td>"Provides automated data-quality profiling and exploratory data analysis for pandas and Spark DataFrames."</td>
+</tr>
+<tr>
+<td id="resource-7332e8850af7"><a href="https://github.com/DistrictDataLabs/yellowbrick">yellowbrick</a>-</td>
+<td>"A suite of visual diagnostic tools called "Visualizers" that extend the scikit-learn API to allow human steering of the model selection process.”</td>
+</tr>
+</tbody></table>
+</div><h3 id="r">R</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td id="resource-86f6d47099fb"><a href="https://cran.r-project.org/web/packages/ALEPlot/index.html">ALEPlot</a></td>
+<td>"Visualizes the main effects of individual predictor variables and their second-order interaction effects in black-box supervised learning models."</td>
+</tr>
+<tr>
+<td id="resource-03906cf9a5ac"><a href="https://cran.r-project.org/web/packages/arules/index.html">arules</a></td>
+<td>"Provides the infrastructure for representing, manipulating and analyzing transaction data and patterns (frequent itemsets and association rules). Also provides C implementations of the association mining algorithms Apriori and Eclat. Hahsler, Gruen and Hornik (2005)."</td>
+</tr>
+<tr>
+<td id="resource-74ef92d1e688"><a href="https://github.com/shangtai/githubcausalsvm">Causal SVM</a>-</td>
+<td>"We present a new machine learning approach to estimate whether a treatment has an effect on an individual, in the setting of the classical potential outcomes framework with binary outcomes."</td>
+</tr>
+<tr>
+<td id="resource-ecc4abd32782"><a href="https://github.com/ModelOriented/DALEX">DALEX</a>-</td>
+<td>"moDel Agnostic Language for Exploration and eXplanation."</td>
+</tr>
+<tr>
+<td id="resource-930008de7675"><a href="https://cran.r-project.org/web/packages/DALEXtra/index.html">DALEXtra: Extension for 'DALEX' Package</a></td>
+<td>"Provides wrapper of various machine learning models."</td>
+</tr>
+<tr>
+<td id="resource-3f84103d2a12"><a href="https://github.com/ModelOriented/DrWhy">DrWhyAI</a>-</td>
+<td>"DrWhy is [a] collection of tools for eXplainable AI (XAI). It's based on shared principles and simple grammar for exploration, explanation and visualisation of predictive models."</td>
+</tr>
+<tr>
+<td id="resource-b6c321538d44"><a href="https://cran.r-project.org/web/packages/elasticnet/index.html">elasticnet</a></td>
+<td>"Provides functions for fitting the entire solution path of the Elastic-Net and also provides functions for doing sparse PCA."</td>
+</tr>
+<tr>
+<td id="resource-23f1e77953dd"><a href="https://cran.r-project.org/web/packages/interpret/index.html">Explainable Boosting Machine - EBM/GA2M</a></td>
+<td>"Package for training interpretable machine learning models."</td>
+</tr>
+<tr>
+<td id="resource-00a1e330f24a"><a href="https://github.com/rmarko/ExplainPrediction">ExplainPrediction</a>-</td>
+<td>"Generates explanations for classification and regression models and visualizes them."</td>
+</tr>
+<tr>
+<td id="resource-44ab5e30ba16"><a href="https://github.com/ModelOriented/fairmodels">fairmodels</a>-</td>
+<td>"Flexible tool for bias detection, visualization, and mitigation. Use models explained with DALEX and calculate fairness classification metrics based on confusion matrices using fairness_check() or try newly developed module for regression models using fairness_check_regression()."</td>
+</tr>
+<tr>
+<td id="resource-5d5b85789c25"><a href="https://cran.r-project.org/web/packages/fairness/index.html">fairness</a></td>
+<td>"Offers calculation, visualization and comparison of algorithmic fairness metrics."</td>
+</tr>
+<tr>
+<td id="resource-80f1a3d974ce"><a href="https://github.com/bgreenwell/fastshap">fastshap</a>-</td>
+<td>"The goal of fastshap is to provide an efficient and speedy approach (at least relative to other implementations) for computing approximate Shapley values, which help explain the predictions from any machine learning model."</td>
+</tr>
+<tr>
+<td id="resource-4a4c2e95fa50"><a href="https://github.com/giuseppec/featureImportance">featureImportance</a>-</td>
+<td>"An extension for the mlr package and allows to compute the permutation feature importance in a model-agnostic manner."</td>
+</tr>
+<tr>
+<td id="resource-0f30a9d3cc46"><a href="https://github.com/mayer79/flashlight">flashlight</a>-</td>
+<td>"The goal of this package is [to] shed light on black box machine learning models."</td>
+</tr>
+<tr>
+<td id="resource-0fad144ed602"><a href="https://cran.r-project.org/web/packages/forestmodel/index.html">forestmodel</a></td>
+<td>"Produces forest plots using 'ggplot2' from models produced by functions such as stats::lm(), stats::glm() and survival::coxph()."</td>
+</tr>
+<tr>
+<td id="resource-2805f3de9f76"><a href="https://cran.r-project.org/web/packages/fscaret/">fscaret</a></td>
+<td>"Automated feature selection using variety of models provided by 'caret' package."</td>
+</tr>
+<tr>
+<td id="resource-e343e94fcbaa"><a href="https://cran.r-project.org/web/packages/gam/index.html">gam</a></td>
+<td>"Functions for fitting and working with generalized additive models, as described in chapter 7 of "Statistical Models in S" (Chambers and Hastie (eds), 1991), and "Generalized Additive Models" (Hastie and Tibshirani, 1990)."</td>
+</tr>
+<tr>
+<td id="resource-933d9b2e2f07"><a href="https://cran.r-project.org/web/packages/glm2/">glm2</a></td>
+<td>"Fits generalized linear models using the same model specification as glm in the stats package, but with a modified default fitting method that provides greater stability for models that may fail to converge using glm."</td>
+</tr>
+<tr>
+<td id="resource-debb51c79018"><a href="https://cran.r-project.org/web/packages/glmnet/index.html">glmnet</a></td>
+<td>"Extremely efficient procedures for fitting the entire lasso or elastic-net regularization path for linear regression, logistic and multinomial regression models, Poisson regression, Cox model, multiple-response Gaussian, and the grouped multinomial regression."</td>
+</tr>
+<tr>
+<td id="resource-bc5fdaec2e2e"><a href="http://docs.h2o.ai/h2o/latest-stable/h2o-r/docs/reference/h2o.gbm.html">H2O-3 Monotonic GBM</a></td>
+<td>"Builds gradient boosted classification trees and gradient boosted regression trees on a parsed data set."</td>
+</tr>
+<tr>
+<td id="resource-392c8aac9666"><a href="http://docs.h2o.ai/h2o/latest-stable/h2o-r/docs/reference/h2o.glm.html">H2O-3 Penalized Generalized Linear Models</a></td>
+<td>"Fits a generalized linear model, specified by a response variable, a set of predictors, and a description of the error distribution."</td>
+</tr>
+<tr>
+<td id="resource-79d602793b38"><a href="http://docs.h2o.ai/h2o/latest-stable/h2o-r/docs/reference/h2o.glrm.html">H2O-3 Sparse Principal Components</a></td>
+<td>"Builds a generalized low rank decomposition of an H2O data frame."</td>
+</tr>
+<tr>
+<td id="resource-ea7a8a91b8ac"><a href="https://github.com/ModelOriented/iBreakDown">iBreakDown</a>-</td>
+<td>"A model agnostic tool for explanation of predictions from black boxes ML models."</td>
+</tr>
+<tr>
+<td id="resource-074bf540a998"><a href="https://cran.r-project.org/web/packages/ICEbox/index.html">ICEbox: Individual Conditional Expectation Plot Toolbox</a></td>
+<td>"Implements Individual Conditional Expectation (ICE) plots, a tool for visualizing the model estimated by any supervised learning algorithm."</td>
+</tr>
+<tr>
+<td id="resource-032354ad4371"><a href="https://github.com/christophM/iml">iml</a>-</td>
+<td>"An R package that interprets the behavior and explains predictions of machine learning models."</td>
+</tr>
+<tr>
+<td id="resource-a8ddb296e1ea"><a href="https://github.com/ModelOriented/ingredients">ingredients</a>-</td>
+<td>"A collection of tools for assessment of feature importance and feature effects."</td>
+</tr>
+<tr>
+<td id="resource-51cdd7ef3c12"><a href="https://cran.r-project.org/web/packages/interpret/index.html">interpret: Fit Interpretable Machine Learning Models</a></td>
+<td>"Package for training interpretable machine learning models."</td>
+</tr>
+<tr>
+<td id="resource-9d804b72b89e"><a href="https://github.com/lantanacamara/lightgbmExplainer">lightgbmExplainer</a>-</td>
+<td>"An R package that makes LightGBM models fully interpretable."</td>
+</tr>
+<tr>
+<td id="resource-0e480bfc22bd"><a href="https://github.com/thomasp85/lime">lime</a>-</td>
+<td>"R port of the Python lime package."</td>
+</tr>
+<tr>
+<td id="resource-c3c6107c5b11"><a href="https://cran.r-project.org/web/packages/live/index.html">live</a></td>
+<td>"Helps to understand key factors that drive the decision made by complicated predictive model (black box model)."</td>
+</tr>
+<tr>
+<td id="resource-d160fc7ff67a"><a href="https://github.com/aaronjfisher/mcr">mcr</a>-</td>
+<td>"An R package for Model Reliance and Model Class Reliance."</td>
+</tr>
+<tr>
+<td id="resource-abf3f7c9cc62"><a href="https://cran.r-project.org/web/packages/modelDown/index.html">modelDown</a></td>
+<td>"Website generator with HTML summaries for predictive models."</td>
+</tr>
+<tr>
+<td id="resource-465188401c3e"><a href="https://github.com/ModelOriented">modelOriented</a>-</td>
+<td>GitHub repositories of Warsaw-based MI².AI.</td>
+</tr>
+<tr>
+<td id="resource-deb6222fd470"><a href="https://github.com/ModelOriented/modelStudio">modelStudio</a>-</td>
+<td>"Automates the explanatory analysis of machine learning predictive models."</td>
+</tr>
+<tr>
+<td id="resource-bf344b33f169"><a href="http://xgboost.readthedocs.io/en/latest/tutorials/monotonic.html">Monotonic</a> <a href="http://xgboost.readthedocs.io/en/latest/">XGBoost</a></td>
+<td>Enforces consistent, directional relationships between features and predicted outcomes, enhancing model performance by aligning with prior data expectations.</td>
+</tr>
+<tr>
+<td id="resource-49e41acc0633"><a href="https://cran.r-project.org/web/packages/quantreg/index.html">quantreg</a></td>
+<td>"Estimation and inference methods for models for conditional quantile functions."</td>
+</tr>
+<tr>
+<td id="resource-083c6b475676"><a href="https://cran.r-project.org/web/packages/rpart/index.html">rpart</a></td>
+<td>"Recursive partitioning for classification, regression and survival trees."</td>
+</tr>
+<tr>
+<td id="resource-4f765b95740d"><a href="http://statweb.stanford.edu/~jhf/R_RuleFit.html">RuleFit</a></td>
+<td>"Implements the learning method and interpretational tools described in <em>Predictive Learning via Rule Ensembles</em>."</td>
+</tr>
+<tr>
+<td id="resource-3c02cdfb11ed"><a href="https://users.cs.duke.edu/~cynthia/code/sbrl_1.0.tar.gz">Scalable Bayesian Rule Lists -SBRL</a></td>
+<td>A more scalable implementation of Bayesian rule list from the Rudin group at Duke.</td>
+</tr>
+<tr>
+<td id="resource-eb635333ed7a"><a href="https://github.com/nredell/shapFlex">shapFlex</a>-</td>
+<td>Computes stochastic Shapley values for machine learning models to interpret them and evaluate fairness, including causal constraints in the feature space.</td>
+</tr>
+<tr>
+<td id="resource-c5993e507ceb"><a href="https://github.com/redichh/ShapleyR">shapleyR</a>-</td>
+<td>"An R package that provides some functionality to use mlr tasks and models to generate shapley values."</td>
+</tr>
+<tr>
+<td id="resource-0193bd0a6c98"><a href="https://cran.r-project.org/web/packages/shapper/index.html">shapper</a></td>
+<td>"Provides SHAP explanations of machine learning models."</td>
+</tr>
+<tr>
+<td id="resource-0b4abd9f21ee"><a href="https://cran.r-project.org/web/packages/smbinning/index.html">smbinning</a></td>
+<td>"A set of functions to build a scoring model from beginning to end."</td>
+</tr>
+<tr>
+<td id="resource-fa15fa5df7ec"><a href="https://github.com/koalaverse/vip">vip</a>-</td>
+<td>"An R package for constructing variable importance plots (VIPs)."</td>
+</tr>
+<tr>
+<td id="resource-945d0bd5cfb3"><a href="https://github.com/AppliedDataSciencePartners/xgboostExplainer">xgboostExplainer</a>-</td>
+<td>"An R package that makes xgboost models fully interpretable.</td>
+</tr>
+</tbody></table>
+</div></div><div class="provenance"><p><a href="https://github.com/hallresearch-ai/ai_assessment_implementation_resources/blob/501c25936fade9c96bff91c17979c2b2a7b5b4e0/README.md">View the source document on GitHub</a> · Sources checked 2026-10-05 (UTC).</p><p>CC-BY-4.0. Source text is preserved; navigation and formatting are adapted for this website.</p></div><nav class="pagination" aria-label="Adjacent sections"><a href="education-resources.html">← Education Resources</a><a href="archived.html">Archived →</a></nav></article></div></main><footer class="footer"><div class="footer-inner"><div><strong>HallResearch.ai Library</strong><p>Maintained by Patrick Hall and Daniel Atherton.<br>Curation sponsored by <a href="https://hallresearch.ai/">HallResearch.ai</a>.</p></div><nav aria-label="Footer navigation"><a href="../about.html">About</a><a href="../methodology.html">Methodology</a><a href="../cite.html">How to cite</a><a href="https://github.com/hallresearch-ai">Source repositories on GitHub</a></nav></div></footer></div></div><script src="../assets/js/site.js" defer></script></body></html>

@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "view": "home",
+      "device": "desktop",
+      "width": 1440,
+      "alt": "Homepage in the desktop layout"
+    },
+    {
+      "view": "home",
+      "device": "mobile",
+      "width": 375,
+      "alt": "Homepage in the mobile layout"
+    },
+    {
+      "view": "resources",
+      "device": "desktop",
+      "width": 1440,
+      "alt": "AI Incidents and Accountability resource directory in the desktop layout"
+    },
+    {
+      "view": "resources",
+      "device": "mobile",
+      "width": 375,
+      "alt": "AI Incidents and Accountability resource directory in the mobile layout"
+    },
+    {
+      "view": "guides",
+      "device": "desktop",
+      "width": 1440,
+      "alt": "Research Guide catalog in the desktop layout"
+    },
+    {
+      "view": "guides",
+      "device": "mobile",
+      "width": 375,
+      "alt": "Research Guide catalog in the mobile layout"
+    },
+    {
+      "view": "search",
+      "device": "desktop",
+      "width": 1440,
+      "alt": "Search results for prompt injection in the desktop layout"
+    },
+    {
+      "view": "search",
+      "device": "mobile",
+      "width": 375,
+      "alt": "Search results for prompt injection in the mobile layout"
+    }
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "violations": [],
+  "passed": true
+}

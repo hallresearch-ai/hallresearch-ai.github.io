@@ -1,0 +1,12 @@
+{
+  "name": "ai_research_guides",
+  "html_url": "https://github.com/hallresearch-ai/ai_research_guides",
+  "description": "HallResearch.ai AI Research Guides offers curated, topic-focused pathways through the HallResearch.ai Library. Each guide brings together selected sources, questions, and orientation material to help users explore AI governance, policy, assessment, and implementation topics.",
+  "default_branch": "main",
+  "archived": false,
+  "license": null,
+  "homepage": null,
+  "pushed_at": "2026-09-02T06:37:10Z",
+  "commit": "d18daaf8c1c4f28b27c942f67dd1e458505a1c18",
+  "commit_date": "2026-09-02T06:37:10Z"
+}

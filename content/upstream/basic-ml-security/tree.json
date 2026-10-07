@@ -1,0 +1,55 @@
+{
+  "sha": "99918959e3aaa0d5640108d98b39ccef9e1deaeb",
+  "url": "https://api.github.com/repos/hallresearch-ai/basic-ml-security/git/trees/99918959e3aaa0d5640108d98b39ccef9e1deaeb",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83972fadc2724842e111d0d3e2829a59ae3d3f45",
+      "size": 4628,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-ml-security/git/blobs/83972fadc2724842e111d0d3e2829a59ae3d3f45"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-ml-security/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdcc4102b03529ef565ad41a716ed75bcc93ae06",
+      "size": 2569,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-ml-security/git/blobs/bdcc4102b03529ef565ad41a716ed75bcc93ae06"
+    },
+    {
+      "path": "Red_Teaming_an_XGBoost_model_Code_Apache2.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43790ab79bd94822881655b9779a313f5003b670",
+      "size": 394451,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-ml-security/git/blobs/43790ab79bd94822881655b9779a313f5003b670"
+    },
+    {
+      "path": "credit_line_increase.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e78d8185781a0dbeb3c200ee8a19ca45af1a0c36",
+      "size": 2987198,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-ml-security/git/blobs/e78d8185781a0dbeb3c200ee8a19ca45af1a0c36"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0506b5b9a7a77dac16c11882970aaf2d5702cb4a",
+      "size": 63,
+      "url": "https://api.github.com/repos/hallresearch-ai/basic-ml-security/git/blobs/0506b5b9a7a77dac16c11882970aaf2d5702cb4a"
+    }
+  ],
+  "truncated": false
+}

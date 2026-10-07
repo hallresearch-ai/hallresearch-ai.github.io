@@ -1,0 +1,15 @@
+{
+  "sha": "d18daaf8c1c4f28b27c942f67dd1e458505a1c18",
+  "url": "https://api.github.com/repos/hallresearch-ai/ai_research_guides/git/trees/d18daaf8c1c4f28b27c942f67dd1e458505a1c18",
+  "tree": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac3d7f4fce77afd6ab77ea632fadf71905b4b6c0",
+      "size": 8872,
+      "url": "https://api.github.com/repos/hallresearch-ai/ai_research_guides/git/blobs/ac3d7f4fce77afd6ab77ea632fadf71905b4b6c0"
+    }
+  ],
+  "truncated": false
+}

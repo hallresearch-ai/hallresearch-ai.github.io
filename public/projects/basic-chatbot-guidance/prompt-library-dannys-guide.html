@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>High-Functioning Prompting · Chatbots for Knowledge Work · HallResearch.ai Library</title><meta name="description" content="High-Functioning Prompting: source documentation from Chatbots for Knowledge Work."><meta property="og:type" content="website"><meta property="og:site_name" content="HallResearch.ai Library"><meta property="og:title" content="High-Functioning Prompting · Chatbots for Knowledge Work"><meta property="og:description" content="High-Functioning Prompting: source documentation from Chatbots for Knowledge Work."><link rel="canonical" href="https://hallresearch-ai.github.io/projects/basic-chatbot-guidance/prompt-library-dannys-guide.html"><meta property="og:url" content="https://hallresearch-ai.github.io/projects/basic-chatbot-guidance/prompt-library-dannys-guide.html"><link rel="stylesheet" href="../../assets/css/styles.css"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="nav"><a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">H</span><span class="brand-name">HallResearch<span class="brand-ai">.ai</span><span class="brand-library">Library</span></span></a><p class="masthead-note">Curated by Patrick Hall &amp; Daniel Atherton</p><button class="mobile-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Browse</button></div></header><div class="catalog-shell"><aside class="catalog-rail"><nav class="nav-links" id="main-navigation" aria-label="Main navigation"><p class="rail-label">The collection</p><a href="../../index.html"><span>All collections</span></a><a href="../../governance/index.html"><span>Governance</span><span class="rail-number" aria-hidden="true">01</span></a><a href="../../assessment/index.html"><span>Assessment</span><span class="rail-number" aria-hidden="true">02</span></a><a href="../../guides/index.html"><span>Research Guides</span><span class="rail-number" aria-hidden="true">03</span></a><p class="rail-label rail-separator">Companion materials</p><a href="../index.html" aria-current="page" class="active"><span>Supporting projects</span></a><p class="rail-label rail-separator">Using the Library</p><a href="../../about.html"><span>About</span></a><a href="../../search.html"><span>Search</span></a><a href="../../cite.html">How to cite</a><a href="../../methodology.html">Methodology</a></nav><div class="rail-foot"><p>A working public collection.</p><a href="https://github.com/hallresearch-ai">Source repositories <span aria-hidden="true">↗</span></a></div></aside><div class="catalog-content"><main id="main-content" tabindex="-1"><section class="page-head"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../index.html">Library</a></li><li><a href="../basic-chatbot-guidance.html">Chatbots for Knowledge Work</a></li><li><span aria-current="page">High-Functioning Prompting</span></li></ol></nav><p class="eyebrow">Chatbots for Knowledge Work</p><h1>High-Functioning Prompting</h1></section><section class="wrap"><article class="prose"><div class="source-content" data-source-document="basic-chatbot-guidance/prompt-library/dannys-guide.md"><h2 id="a-practical-framework-for-ai-assisted-knowledge-work">A practical framework for AI-assisted knowledge work</h2>
+<p><strong>Research · Analysis · Writing · Software Work · Knowledge Management</strong></p>
+<br>
+
+<p><a href="prompt-library-dannys-guide.html"><span class="badge">Format</span></a>
+<a href="prompt-library-dannys-guide.html#reusable-prompt-patterns"><span class="badge">Templates</span></a>
+<a href="prompt-library-dannys-guide.html#prompting-as-workflow-design"><span class="badge">Focus</span></a>
+<a href="prompt-library-dannys-guide.html#building-a-prompt-library"><span class="badge">Use</span></a></p>
+<br>
+
+<blockquote>
+<p><strong>Core pattern</strong></p>
+<p><strong>Context → operation → standards → constraints → deliverable → verification → repackaging</strong></p>
+</blockquote>
+<hr>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="prompt-library-dannys-guide.html#prompting-as-workflow-design">Prompting as workflow design</a></li>
+<li><a href="prompt-library-dannys-guide.html#the-recurring-method">The recurring method</a></li>
+<li><a href="prompt-library-dannys-guide.html#what-makes-these-prompts-effective">What makes these prompts effective</a></li>
+<li><a href="prompt-library-dannys-guide.html#reusable-prompt-patterns">Reusable prompt patterns</a></li>
+<li><a href="prompt-library-dannys-guide.html#building-a-prompt-library">Building a prompt library</a></li>
+<li><a href="prompt-library-dannys-guide.html#responsible-use">Responsible use</a></li>
+</ul>
+<hr>
+<h2 id="prompting-as-workflow-design">Prompting as workflow design</h2>
+<p>High-functioning prompts do more than request an answer. They establish the working corpus, name the intellectual operation, define the evidentiary standard, specify the form of the deliverable, and create an explicit path for verification and revision.</p>
+<p>The most productive use of conversational AI is therefore iterative. A first response is often a <strong>diagnostic object</strong>: it reveals hidden assumptions, missing constraints, weak categories, and opportunities for refinement. The prompt evolves as the task becomes better understood.</p>
+<blockquote class="source-note">
+<p>Note.
+The aim is not to produce more text. It is to make each stage of intellectual work visible, testable, and reusable.</p>
+</blockquote>
+<hr>
+<h2 id="the-recurring-method">The recurring method</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th align="right" scope="col">Step</th>
+<th scope="col">Practice</th>
+<th scope="col">What it accomplishes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right"><strong>1</strong></td>
+<td><strong>Create a bounded world</strong></td>
+<td>Supply the relevant files, links, examples, prior decisions, definitions, and constraints. Ask the model to map the material before narrowing the task.</td>
+</tr>
+<tr>
+<td align="right"><strong>2</strong></td>
+<td><strong>Name the operation</strong></td>
+<td>Use precise verbs: <em>audit, distill, classify, compare, verify, revise, map, extract, merge,</em> or <em>repackage</em>. Different verbs imply different standards of work.</td>
+</tr>
+<tr>
+<td align="right"><strong>3</strong></td>
+<td><strong>Provide house rules</strong></td>
+<td>State the criteria that govern judgment. Explicit rules about evidence, tone, naming, uncertainty, and inclusion are more useful than generic requests for quality.</td>
+</tr>
+<tr>
+<td align="right"><strong>4</strong></td>
+<td><strong>Explain the downstream use</strong></td>
+<td>Describe what will happen after the response. A result intended for a spreadsheet, public website, meeting, or text-to-speech system should be shaped differently.</td>
+</tr>
+<tr>
+<td align="right"><strong>5</strong></td>
+<td><strong>Compress in stages</strong></td>
+<td>Move material through useful representations: source corpus, analysis, decision, table, link list, and final artifact. Compression should serve the next action.</td>
+</tr>
+<tr>
+<td align="right"><strong>6</strong></td>
+<td><strong>Use iteration diagnostically</strong></td>
+<td>Treat follow-up prompts as specification work. Identify the habit causing a weak result and revise the underlying instruction, not only one sentence.</td>
+</tr>
+<tr>
+<td align="right"><strong>7</strong></td>
+<td><strong>Separate generation from review</strong></td>
+<td>Ask for a dedicated second pass that looks for unsupported claims, duplicated records, inconsistency, stale sources, and fluent but weak reasoning.</td>
+</tr>
+<tr>
+<td align="right"><strong>8</strong></td>
+<td><strong>Repackage for action</strong></td>
+<td>Once the analysis is accepted, request only the operational form needed: HTML, Markdown, TSV, a checklist, a clean table, or a list of links.</td>
+</tr>
+</tbody></table>
+</div><hr>
+<h2 id="what-makes-these-prompts-effective">What makes these prompts effective</h2>
+<blockquote class="source-note">
+<p>Tip.
+<strong>Editorial authority replaces theatrical role-play.</strong><br>Instead of asking the model to impersonate an expert, supply the real conditions of expertise: a source corpus, decision rules, institutional context, evidentiary standards, and consequences of error.</p>
+</blockquote>
+<h2 id="two-complementary-movements">Two complementary movements</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Movement</th>
+<th scope="col">Purpose</th>
+<th scope="col">Typical requests</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Down-leveling</strong></td>
+<td>Break a difficult task into inspectable parts.</td>
+<td>Extract fields, create records, separate stages, list tests, identify cases.</td>
+</tr>
+<tr>
+<td><strong>Up-leveling</strong></td>
+<td>Determine the larger pattern or architecture.</td>
+<td>Find themes, define categories, map an ontology, identify an intervention, redesign a workflow.</td>
+</tr>
+</tbody></table>
+</div><p>Strong knowledge work moves repeatedly between these levels. Decomposition makes the task manageable; abstraction makes the result meaningful.</p>
+<hr>
+<h2 id="reusable-prompt-patterns">Reusable prompt patterns</h2>
+<p>These templates are designed to be adapted. Replace bracketed text with project-specific information, examples, criteria, and constraints.</p>
+<blockquote class="source-note">
+<p>Important.
+GitHub collapses each template below using standard <code>&lt;details&gt;</code> elements. Open only the prompt you need, then copy the text from its code block.</p>
+</blockquote>
+<hr>
+<details>
+<summary><strong>1. Corpus Distillation</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> several documents, links, or records need to be understood as one system.</p>
+<pre tabindex="0"><code class="language-text">Distill everything you can determine from the materials below. Begin by identifying the overall structure, purpose, principal components, and implicit assumptions. Then explain the most important details, tensions, gaps, and opportunities. Do not merely summarize each item in sequence; reconstruct the larger system they collectively form.
+
+Materials:
+[Insert links, files, or pasted text.]
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>2. Evidence-Constrained Evaluation</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> a decision must distinguish evidence from inference and uncertainty.</p>
+<pre tabindex="0"><code class="language-text">Evaluate this material according to the following decision criteria:
+
+[Insert criteria or house rules.]
+
+Distinguish clearly among:
+- what the evidence establishes;
+- what is probable but uncertain;
+- what would be an unsupported inference;
+- what additional evidence would change the judgment.
+
+Give the preferred determination, explain the decisive reason, and provide the exact fields or language needed for implementation.
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>3. Comprehensive Audit</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> a product needs a systematic second pass for errors, omissions, and drift.</p>
+<pre tabindex="0"><code class="language-text">Run a systematic audit of the material below. Assume that earlier reviews may have missed something.
+
+Check for:
+- factual or evidentiary errors;
+- internal inconsistencies;
+- duplicate or overlapping entries;
+- naming and terminology drift;
+- broken, stale, or inappropriate links;
+- formatting problems;
+- unsupported or overstated claims;
+- omissions that materially weaken the product.
+
+Verify questionable points against authoritative or primary sources where possible. Report what you found, explain why it matters, and provide the corrected version. Do not invent problems merely to make the audit appear productive.
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>4. Public-Facing Product Review</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> an internal draft must become intelligible and trustworthy to an outside reader.</p>
+<pre tabindex="0"><code class="language-text">Review this as though it were a public-facing product rather than an internal draft. Evaluate its usefulness, navigability, intellectual coherence, transparency, tone, accessibility, and likely points of misunderstanding. Preserve methodological candor without exposing internal working history that would not benefit the public.
+
+Recommend concrete revisions and then implement them in the requested format.
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>5. Classification and Triage</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> a collection of cases must be categorized consistently and conservatively.</p>
+<pre tabindex="0"><code class="language-text">Process each item according to these categories:
+
+[Insert categories.]
+
+Apply the categories conservatively and consistently. For each item, provide:
+- the preferred classification;
+- the evidence supporting it;
+- any duplication or relationship to existing records;
+- the action to take;
+- a concise rationale.
+
+Keep uncertainty visible. Do not force an item into a category when the evidence is insufficient.
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>6. Architecture and Ontology Review</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> categories have accumulated and the underlying conceptual structure needs revision.</p>
+<pre tabindex="0"><code class="language-text">Step back from the individual entries and determine what conceptual structure is emerging. Identify the recurring classes, boundary problems, inconsistent levels of abstraction, and categories that are doing too much work.
+
+Propose an ontology that is broad enough to be reusable but precise enough to guide actual classification. Explain where existing terms should be merged, divided, renamed, or subordinated.
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>7. Source Verification</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> factual claims and citations must be checked against reliable sources.</p>
+<pre tabindex="0"><code class="language-text">Verify every important factual claim, date, title, institutional name, and citation in this draft. Prefer primary or authoritative sources. Confirm that each source actually supports the claim attached to it and distinguish the date of an event from the date of publication.
+
+Flag anything you cannot verify. Do not silently fill gaps with plausible language.
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>8. Exact Operational Output</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> the analysis is settled and only the final usable format remains.</p>
+<pre tabindex="0"><code class="language-text">The underlying analysis has been accepted. Repackage it for the following use:
+
+Purpose:
+[Explain what will be done with it.]
+
+Output format:
+[HTML, PDF, raw Markdown, TSV rows, bare URLs, table, and so forth.]
+
+Include:
+[Required fields.]
+
+Exclude:
+[Anything that would obstruct the workflow.]
+
+Preserve:
+[Accepted wording, quotations, hierarchy, citations, or metadata.]
+
+Do not add explanatory material outside the requested format.
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>9. Iterative Style Correction</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> a draft repeatedly exhibits the same stylistic habit.</p>
+<pre tabindex="0"><code class="language-text">Revise the draft while preserving its substantive argument. The current version repeatedly falls into this stylistic habit:
+
+[Describe or quote the unwanted pattern.]
+
+Correct the generative tendency throughout the piece rather than repairing only the examples identified. Use the following prose principles:
+
+[Insert preferred principles.]
+
+After revising, reread the whole piece for places where the old habit remains.
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>10. Continuation by Established Pattern</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> new material should follow a workflow already established in prior examples.</p>
+<pre tabindex="0"><code class="language-text">Continue using the method, fields, house style, and output structure established in the preceding examples. Treat those examples as the template, but adapt the substance to the new material rather than copying language mechanically.
+
+New material:
+[Insert material.]
+
+Changes for this batch:
+[Insert any changed dates, limits, fields, or exceptions.]
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>11. Adversarial Second Pass</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> a polished answer may be concealing weak reasoning or unsupported confidence.</p>
+<pre tabindex="0"><code class="language-text">Review the previous answer as a skeptical editor. Look especially for anything that sounds convincing because it is smoothly written rather than because it is well supported.
+
+Check:
+- whether the conclusion follows from the evidence;
+- whether alternative interpretations were considered;
+- whether any source was misread;
+- whether categories were applied consistently;
+- whether inconvenient evidence was omitted;
+- whether uncertainty was flattened.
+
+Revise the answer wherever the second pass changes the judgment.
+</code></pre>
+</details>
+
+<hr>
+<details>
+<summary><strong>12. Research-to-Artifact Workflow</strong></summary>
+
+<br>
+
+<p><strong>Best used when:</strong> a task should move from source inspection through research and verification to a finished deliverable.</p>
+<pre tabindex="0"><code class="language-text">Carry this task through all necessary stages:
+
+1. inspect and organize the source material;
+2. research missing or unstable information;
+3. formulate the analysis;
+4. verify factual and bibliographic details;
+5. convert the result into the requested artifact;
+6. inspect the finished artifact for usability and presentation problems.
+
+The final product should be self-contained and ready for direct use. Include a concise account of any limitations or unresolved uncertainties.
+</code></pre>
+</details>
+
+<hr>
+<h2 id="building-a-prompt-library">Building a prompt library</h2>
+<p>A durable prompt library should document <strong>working methods</strong>, not collect decontextualized incantations. Each record should explain when the prompt is useful, what information it requires, how its output should be checked, and how the prompt changed after real use.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<thead>
+<tr>
+<th scope="col">Field</th>
+<th scope="col">Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Prompt name</strong></td>
+<td>A stable, descriptive title.</td>
+</tr>
+<tr>
+<td><strong>Intended operation</strong></td>
+<td>Audit, distillation, classification, revision, research, or another cognitive task.</td>
+</tr>
+<tr>
+<td><strong>Best used when</strong></td>
+<td>The conditions under which the prompt performs well.</td>
+</tr>
+<tr>
+<td><strong>Required context</strong></td>
+<td>Files, examples, prior rules, definitions, or source corpus.</td>
+</tr>
+<tr>
+<td><strong>Prompt template</strong></td>
+<td>The reusable instruction language.</td>
+</tr>
+<tr>
+<td><strong>Variables</strong></td>
+<td>Dates, limits, categories, formats, and project-specific substitutions.</td>
+</tr>
+<tr>
+<td><strong>Expected output</strong></td>
+<td>The shape and level of detail of the deliverable.</td>
+</tr>
+<tr>
+<td><strong>Verification step</strong></td>
+<td>How the result should be tested or reviewed.</td>
+</tr>
+<tr>
+<td><strong>Failure modes</strong></td>
+<td>Typical ways a model misinterprets or weakens the task.</td>
+</tr>
+<tr>
+<td><strong>Revision history</strong></td>
+<td>Changes made after actual use.</td>
+</tr>
+<tr>
+<td><strong>Example application</strong></td>
+<td>A real, anonymized, or synthetic case.</td>
+</tr>
+<tr>
+<td><strong>Tool notes</strong></td>
+<td>Whether browsing, code execution, files, databases, or other tools are required.</td>
+</tr>
+</tbody></table>
+</div><h2 id="suggested-record-structure">Suggested record structure</h2>
+<pre tabindex="0"><code class="language-yaml">prompt_name: ""
+intended_operation: ""
+best_used_when: ""
+required_context: []
+prompt_template: |
+  ...
+variables: []
+expected_output: ""
+verification_step: ""
+failure_modes: []
+revision_history: []
+example_application: ""
+tool_notes: []
+</code></pre>
+<hr>
+<h2 id="responsible-use">Responsible use</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable source table"><table>
+<tr>
+<td width="50%" valign="top">
+
+<h2 id="keep-uncertainty-visible">Keep uncertainty visible</h2>
+<p>Require the model to distinguish evidence, inference, assumptions, and unresolved questions. Fluent prose should never substitute for support.</p>
+</td>
+<td width="50%" valign="top">
+
+<h2 id="use-the-right-tool">Use the right tool</h2>
+<p>Conversational AI is not always the appropriate instrument. Search, databases, calculators, code environments, editors, and domain tools may be better suited to part of the task.</p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<h2 id="protect-sensitive-information">Protect sensitive information</h2>
+<p>Apply data minimization, anonymization, access controls, disclosure policies, and secrets management before sharing material with any AI system.</p>
+</td>
+<td width="50%" valign="top">
+
+<h2 id="retain-human-approval">Retain human approval</h2>
+<p>Separate diagnosis from execution when changes are consequential. Ask the model to identify proposed actions before authorizing edits, submissions, or publication.</p>
+</td>
+</tr>
+</table>
+
+</div><blockquote class="source-note">
+<p>Warning.
+A high-functioning prompt is not judged by how impressive it sounds. It is judged by whether it makes the work more transparent, reproducible, verifiable, and useful.</p>
+</blockquote>
+<hr>
+<h2 id="adapt-test-revise">Adapt, test, revise</h2>
+<p>This guide is designed for adaptation, teaching, and internal workflow development. AI systems and tool capabilities change over time; verify important outputs and revise templates to match the risks of the task.</p>
+<br>
+
+<p><strong>High-Functioning Prompting for AI-Assisted Knowledge Work</strong></p>
+</div><div class="provenance"><p><a href="https://github.com/hallresearch-ai/basic-chatbot-guidance/blob/711b23b69eee573eacb097e03e36a5503195a396/prompt-library/dannys-guide.md">View the source document on GitHub</a> · Sources checked 2026-10-05 (UTC).</p><p>No repository-wide license identified. Source text is preserved; navigation and formatting are adapted for this website.</p></div></article></section></main><footer class="footer"><div class="footer-inner"><div><strong>HallResearch.ai Library</strong><p>Maintained by Patrick Hall and Daniel Atherton.<br>Curation sponsored by <a href="https://hallresearch.ai/">HallResearch.ai</a>.</p></div><nav aria-label="Footer navigation"><a href="../../about.html">About</a><a href="../../methodology.html">Methodology</a><a href="../../cite.html">How to cite</a><a href="https://github.com/hallresearch-ai">Source repositories on GitHub</a></nav></div></footer></div></div><script src="../../assets/js/site.js" defer></script></body></html>

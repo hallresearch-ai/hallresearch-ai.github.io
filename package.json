@@ -1,0 +1,16 @@
+{
+  "name": "hallresearch-library-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Static presentation of the authoritative HallResearch.ai repositories",
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "check": "python3 scripts/audit.py",
+    "refresh": "python3 scripts/update_sources.py",
+    "preview": "python3 scripts/preview.py"
+  },
+  "engines": {"node": ">=20"},
+  "dependencies": {"marked": "17.0.5"},
+  "devDependencies": {"axe-core": "4.10.3", "playwright": "1.62.1"}
+}

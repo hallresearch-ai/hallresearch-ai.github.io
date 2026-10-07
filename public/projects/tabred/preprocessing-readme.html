@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Preprocessing and Canonical Splits · TabReD: A Benchmark of Tabular Machine Learning in-the-Wild · HallResearch.ai Library</title><meta name="description" content="Preprocessing and Canonical Splits: source documentation from TabReD: A Benchmark of Tabular Machine Learning in-the-Wild."><meta property="og:type" content="website"><meta property="og:site_name" content="HallResearch.ai Library"><meta property="og:title" content="Preprocessing and Canonical Splits · TabReD: A Benchmark of Tabular Machine Learning in-the-Wild"><meta property="og:description" content="Preprocessing and Canonical Splits: source documentation from TabReD: A Benchmark of Tabular Machine Learning in-the-Wild."><link rel="canonical" href="https://hallresearch-ai.github.io/projects/tabred/preprocessing-readme.html"><meta property="og:url" content="https://hallresearch-ai.github.io/projects/tabred/preprocessing-readme.html"><link rel="stylesheet" href="../../assets/css/styles.css"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="nav"><a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">H</span><span class="brand-name">HallResearch<span class="brand-ai">.ai</span><span class="brand-library">Library</span></span></a><p class="masthead-note">Curated by Patrick Hall &amp; Daniel Atherton</p><button class="mobile-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Browse</button></div></header><div class="catalog-shell"><aside class="catalog-rail"><nav class="nav-links" id="main-navigation" aria-label="Main navigation"><p class="rail-label">The collection</p><a href="../../index.html"><span>All collections</span></a><a href="../../governance/index.html"><span>Governance</span><span class="rail-number" aria-hidden="true">01</span></a><a href="../../assessment/index.html"><span>Assessment</span><span class="rail-number" aria-hidden="true">02</span></a><a href="../../guides/index.html"><span>Research Guides</span><span class="rail-number" aria-hidden="true">03</span></a><p class="rail-label rail-separator">Companion materials</p><a href="../index.html" aria-current="page" class="active"><span>Supporting projects</span></a><p class="rail-label rail-separator">Using the Library</p><a href="../../about.html"><span>About</span></a><a href="../../search.html"><span>Search</span></a><a href="../../cite.html">How to cite</a><a href="../../methodology.html">Methodology</a></nav><div class="rail-foot"><p>A working public collection.</p><a href="https://github.com/hallresearch-ai">Source repositories <span aria-hidden="true">↗</span></a></div></aside><div class="catalog-content"><main id="main-content" tabindex="-1"><section class="page-head"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../index.html">Library</a></li><li><a href="../tabred.html">TabReD: A Benchmark of Tabular Machine Learning in-the-Wild</a></li><li><span aria-current="page">Preprocessing and Canonical Splits</span></li></ol></nav><p class="eyebrow">TabReD: A Benchmark of Tabular Machine Learning in-the-Wild</p><h1>Preprocessing and Canonical Splits</h1></section><section class="wrap"><article class="prose"><div class="source-content" data-source-document="tabred/preprocessing/README.md"><p><strong>General preprocessing steps</strong></p>
+<ul>
+<li>Load the data (All Datasets are hosted on Kaggle, for some you need to accept the competition
+rules to be able to load them).</li>
+<li>Make sure there are consistent time features (e.g. <code>hour_of_day, day_of_week, day_of_month, month, year[optional]</code> where appropriate)</li>
+<li><code>[optional]</code> Feature engineering with joins and aggregations if multiple tables were present at the start</li>
+<li><code>[optional]</code> Merge infrequent categories into one (&lt; 1% of instances). Reasoning: such features are prone to overfitting, we've encountered some mehtods (GBDTs, ResNet in particular) failing when using infrequent unique id-like cat. features in the cooking-time datasest.</li>
+<li><code>[optional]</code> Uniformly downsample large datasets to the 100k+ sizes. This is done to make benchmarking less compute intensive (preliminary experiments on larger datasets did not demonstrate differences except compute)</li>
+<li>Create the canonical train/val/test splits (see next sections).</li>
+</ul>
+<blockquote class="source-note">
+<p>Note.
+Some preprocessing scripts may require up to 30-40 GB of RAM and disk space (e.g. the Ecom Offers datasets with 360 million aggregations)</p>
+</blockquote>
+<p>To create a specific dataset run the following from the repo root:</p>
+<pre tabindex="0"><code class="language-sh">mkdir -p data
+python preprocessing/&lt;script&gt;.py
+</code></pre>
+<p><strong>Default Time-Based Split</strong></p>
+<p>The default splits is the one used for benchmarking. For each task we split samples based on time.</p>
+<pre tabindex="0"><code>     train time range    val time range  test time range
+|-----------------------|---------------|---------------|
+</code></pre>
+<p><strong>Splits for the Analysis</strong></p>
+<p>We include N samples in the validation and test sets and make three datasets with a sliding window for averaging over
+different dataset splits. For each window we also create a randomly split dataset.</p>
+<pre tabindex="0"><code> N val/test samples
+|---------------|-----------------------------------------------------------------------|  &lt;-- Whole set of instances
+
+
+         train-0              val-0         test-0
+|-----------------------|---------------|---------------|                                  &lt;-- Time Split 0 (random-0 is a shuffle of these instances)
+                         train-1              val-1           test-1
+|---------------|-----------------------|---------------|---------------|                  &lt;-- Time Split 1 (...)
+                                        train-2              val-2           test-2
+|---------------|---------------|-----------------------|---------------|---------------|  &lt;-- Time Split 2 (...)
+
+
+</code></pre>
+<h2 id="specific-dataset-notes">Specific Dataset Notes</h2>
+<p>We collect relevant discussion about dataset specifics that affect preprocessing in this section.</p>
+<h2 id="homesite-insurance-quotes">Homesite Insurance Quotes</h2>
+<p>We used information provided in the competition forum by the competition organizers to preprocess features.</p>
+<p><strong>Feature Types</strong></p>
+<p id="resource-0b05c7d5a104"><a href="https://www.kaggle.com/competitions/homesite-quote-conversion/discussion/17382#99973">https://www.kaggle.com/competitions/homesite-quote-conversion/discussion/17382#99973</a></p>
+<blockquote>
+<p>gpok, All of the fields ending in 'A' or 'B' are ordinal. In other words, PersonalField4A and
+PersonalField4B are different approaches for creating an ordinal variable out of PersonalField4.
+All other fields are either categorical or numeric and should be self-explanatory based on the
+corresponding values. Hope this helps. Thanks.</p>
+</blockquote>
+<p><strong>Missing value encoding</strong> </p>
+<p id="resource-29acba645761"><a href="https://www.kaggle.com/competitions/homesite-quote-conversion/discussion/17417">https://www.kaggle.com/competitions/homesite-quote-conversion/discussion/17417</a></p>
+<p>Q:</p>
+<blockquote>
+<p>Hi, should we interpret -1 as a missing value? Because that has quite a different meaning than
+letting it have a certain categorical value.</p>
+</blockquote>
+<p>A:</p>
+<blockquote>
+<p>Gerben, We did code our missing values as -1.</p>
+</blockquote>
+<blockquote>
+<p>Siva, For the ordinal variables that were bucketed we coded missing values as -1. There may also
+be some values for the numeric fields that are actually missing as you point out. There are a few
+reasons why the information might be missing. One possibility, like you suggest, is that the field
+is optional during the quote and the customer chooses not to provide it. Another reason this can
+happen is that the required fields for quoting change over time. The data spans several years and
+if we just started asking a particular question recently, the values will be missing for older
+quotes. A third reason that is very common with our data comes from the fact that we have
+different quoting platforms on multiple channels (i.e. Agents, Call Centers, Internet) across
+multiple partners. The questions asked in each of these platforms is often different and so if a
+question is not asked for Partner X, then the values for that field will be missing for all quotes
+with Partner X in the data.</p>
+</blockquote>
+<p>-1 in ordinal variables means missing values.
+We treat ordinal as numeric features by default</p>
+<p><strong>Splits</strong></p>
+<p>Default split:</p>
+<ul>
+<li>2 years in the training set (2013-01-01 to 2015-01-31)</li>
+<li>2 month in the validation set (2015-02-01 to 2015-03-31)</li>
+<li>2 month in the test set (2015-04-01 to 2015-05-18)</li>
+</ul>
+<p>Analysis splits:</p>
+<ul>
+<li>20k instances in test and validation sets (roughly 2-3 month time-frame). </li>
+<li>Window shifts by 20k instances</li>
+</ul>
+<h2 id="sberbank-housing-market-forecasting">Sberbank Housing Market Forecasting</h2>
+<p><strong>Fix errors in distance parameters</strong></p>
+<p id="resource-15dcede1610d"><a href="https://www.kaggle.com/c/sberbank-russian-housing-market/discussion/34364">https://www.kaggle.com/c/sberbank-russian-housing-market/discussion/34364</a></p>
+<blockquote>
+<p>For those who is not aware of the issue, there was a problem with coordinates for some properties which lead toerrors in distances parameters, because they were calculated from the heart of Moscow for such cases, which is wrong. The absence of the coordinates was due to wrong addresses or, which is the most common reason, due to the fact that for newly-built apartments the addresses were 'developer's' addreses, not yet official postal addresses.
+We tried to locate those development projects manually and found the closest ID from our train or test database and filled the GIS-related parameters with such of the closest ones. So this is a rough approximation of those features.
+Some properties unfortunately are still not known, they will be excluded from evaluation on test set.
+The file with the parameters is in the attachment, please feel free to use it and ask questions on it. Thanks and sorry for this issue!</p>
+</blockquote>
+<p>We use the provided fixed data for the 550 instances and remove 53 instances that have wrong <code>kremlin_km</code> values and were not correctted in the provided <code>BAD_ADDRESS_FIX.xlsx</code></p>
+<p><strong>Remove outliers and log-transform target</strong></p>
+<p id="resource-c07abe03abb8"><a href="https://www.kaggle.com/competitions/sberbank-russian-housing-market/discussion/35684">https://www.kaggle.com/competitions/sberbank-russian-housing-market/discussion/35684</a></p>
+<blockquote>
+<p>I didn't predict full apartment prices directly, but prices per 1 square meter.</p>
+</blockquote>
+<p>We also convert target to the price per square meter. We use <code>log(price_doc / full_sq)</code> as the final target.</p>
+<blockquote>
+<p>There are many low bad prices at the data. As they related to avoid tax purposes of sellers and we hadn't information about sellers enough to detect them, I decided to drop them. Fake prices were not only prices with 1-2-3 millions. In some areas 2 or 3 million were real prices, in other even 10 million were much lower than market. I used my investment model to find them (I guess that most of non-investment prices were real) and drop data were prediction and target were much different (2 times or more). And repeated process one more after first iteration to clean more. Totally I dropped near 10% of train set as data with bad prices.</p>
+</blockquote>
+<p id="resource-4983fd7694f2">We follow <a href="https://www.kaggle.com/johnpateha">@johnpateha</a>'s approach (from the above 1st place solution report) and filter <code>price_doc</code> outliers (with a simpler rule: <code>price_doc &lt;= 3_000_000</code> -- this filters out most outliers, more concretely we remove instances with <code>price_doc == 2kk</code> <code>price_doc == 3kk</code> and <code>price_doc &lt;= 1kk</code>).</p>
+<p>Zoomed-in prices chart with apparent outliers discussed above:</p>
+<img src="https://raw.githubusercontent.com/hallresearch-ai/tabred/8507b75b45395dadfc16964bd14b6dde0ab2c098/preprocessing/assets/sberbank-outliers.png" width="500" loading="lazy" alt="">
+
+<p id="resource-62e413b757c7">See also, another <a href="https://www.kaggle.com/competitions/sberbank-russian-housing-market/discussion/32717">discussion</a> of outliers in the <code>price_doc</code> target we've used.</p>
+<p id="resource-d494ebdd4832"><a href="https://www.kaggle.com/code/nickycan/feature-engineering-public-6th-private-9th">https://www.kaggle.com/code/nickycan/feature-engineering-public-6th-private-9th</a></p>
+<blockquote>
+<p>fill missing values in full_sq, life_sq, kitch_sq, num_room use apartment strategy to fill the most likely values</p>
+</blockquote>
+<p>Relevant code from the notebook:</p>
+<pre tabindex="0"><code class="language-python">df_new.loc[df_new.full_sq == 5326.0, 'full_sq'] = 53
+df_new.loc[df_new.full_sq &lt; 10, 'full_sq'] = np.nan
+df_new.loc[df_new.life_sq == 2, 'life_sq'] = np.nan
+df_new.loc[df_new.life_sq == 7478.0, 'life_sq'] = 48
+</code></pre>
+<p>There are a few errors (less than 100 samples) that nevertheless may significantly influence results when using full_sq variable (especially as a part of the target).
+We remove instances with <code>full_sq &lt;= 5</code> (26 instances) and one instance with <code>full_sq == 5326</code>.</p>
+<p><strong>Splits</strong></p>
+<p>Default Split:</p>
+<ul>
+<li>3 years in the training set (2011-08-20 to 2014-06-29)</li>
+<li>5 month in the validation set (2014-06-30 to 2014-11-29)</li>
+<li>7 month in the test set (2014-12-01 to 2015-06-30)</li>
+</ul>
+<p>Analysis splits:</p>
+<ul>
+<li>4.5k instances in test and validation sets (roughly 5-7 month time-frame).</li>
+<li>Window shifts by 4.5k instances</li>
+</ul>
+<h2 id="homecredit-default-stability-homecredit-20">Homecredit Default Stability (homecredit 2.0)</h2>
+<p>We adapt the preprocessing code from the following solution:</p>
+<ul>
+<li id="resource-ac5c4f35a850"><a href="https://www.kaggle.com/competitions/home-credit-credit-risk-model-stability/discussion/507946">https://www.kaggle.com/competitions/home-credit-credit-risk-model-stability/discussion/507946</a></li>
+<li id="resource-6ff997ab9826"><a href="https://www.kaggle.com/code/yuuniekiri/fork-of-home-credit-catboost-inference">https://www.kaggle.com/code/yuuniekiri/fork-of-home-credit-catboost-inference</a></li>
+</ul>
+<p><strong>Splits</strong></p>
+<p>Default Split:</p>
+<ul>
+<li>1 year in the training set (2019-01-01 to 2019-12-31)</li>
+<li>4 month in the validation set (2020-01-01 to 2020-04-30)</li>
+<li>4.5 month in the test set (2020-05-01 to 2020-10-05)</li>
+</ul>
+<p>Analysis Splits:</p>
+<ul>
+<li>50k instances in the test and validation sets (roughly 2-4 month)</li>
+<li>Window shifts by 50k instances</li>
+</ul>
+<h2 id="ecom-offers-acquire-valued-shoppers-by-dmdave">Ecom Offers (Acquire Valued Shoppers by DMDave)</h2>
+<p id="resource-e37eb2d0ec95">We base preprocessing on one of the top solutions from the competiton
+(<a href="https://github.com/MLWave/kaggle_acquire-valued-shoppers-challenge">code</a>). We rewrite the
+preprocessing code to make preprocessing faster, but make sure it outputs same features.</p>
+<p><strong>Splits</strong></p>
+<p>Default Split:</p>
+<ul>
+<li>1.5 month in train (2013-03-01 to 2013-04-19)</li>
+<li>4 days in val (2013-04-20 to 2013-04-24)</li>
+<li>5 days in test (2013-04-25 to 2013-04-30)</li>
+</ul>
+<p>Analysis Splits:</p>
+<ul>
+<li>20k instances in test and validation sets (5-15 days)</li>
+<li>Window shifted by 20k instances</li>
+</ul>
+<h2 id="cooking-time">Cooking Time</h2>
+<p><strong>Filtering and subsampling</strong></p>
+<ul>
+<li>Dataset is a 2.5% random sample of the original month log of data.</li>
+<li>~200 samples with cooking time of less than 1 minute are filtered</li>
+<li>All targets are log transformed. See the target distribution for the reasoning behind this.
+Training with the MSE error on a log transformed version of the dataset is ~equivalent to
+optimizing MAE error of the original data (which is close to the task metric of interest).</li>
+</ul>
+<p><strong>Feature Types</strong></p>
+<p>All features are already processed and categorized into numeric, categorical and binary. (<code>[num|bin|cat]_{i}</code>).</p>
+<p><strong>Splits</strong></p>
+<p>Default split:</p>
+<ul>
+<li>36 days in the train set (15.11.2023 -- 20.12.2023)</li>
+<li>1 week in the validation set (21.12.2023 -- 27.12.2023)</li>
+<li>1 week in the test set set (28.12.2023 -- 03.01.2024)</li>
+</ul>
+<p>Analysis splits:</p>
+<ul>
+<li>40k samples in the validation set and in the test set (approximately a week of orders). This
+leaves ~24-25 days in the train set.</li>
+<li>Window shifts by 40k instances.</li>
+</ul>
+<h2 id="delivery-eta">Delivery ETA</h2>
+<p><strong>Filtering and subsampling</strong></p>
+<ul>
+<li>Dataset is a 2.5% random sample of the original month log of data.</li>
+<li>Instances for which delivery time is less than a minute are filtered</li>
+<li>Targets are log-transformed. Similar to the Cooking Time targets.</li>
+</ul>
+<p><strong>Feature Types</strong></p>
+<p>All features are already processed and categorized into numeric, categorical and binary. (<code>[num|bin|cat]_{i}</code>). We only add 3 features based on timestamp</p>
+<p><strong>Splits</strong></p>
+<p>Default split:</p>
+<ul>
+<li>56 days in the train set (20.10.2023 -- 11.12.2023)</li>
+<li>1 week in the validation set (11.12.2023 -- 18.12.2023)</li>
+<li>1 week in the test set set (18.12.2023 -- 25.01.2024)</li>
+</ul>
+<p>Analysis splits:</p>
+<ul>
+<li>40k samples in the validation set and in the test set (approximately a week of orders). This
+leaves ~40-60 days in the train set.</li>
+<li>Window shifts by 40k instances.</li>
+</ul>
+<h2 id="weather">Weather</h2>
+<p><strong>Filtering and subsampling</strong></p>
+<ul>
+<li id="resource-0dcaa471de61">The full weather dataset contains instances for temperature prediction in the "A (Tropical)" climate zone by the <a href="https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification">Köppen climate classification</a>. We chose to focus on one climate zone to focus on temporal shift aspects only.</li>
+<li>Dataset used in the benchmark is a 2.5% random sample of the original year+ of data</li>
+</ul>
+<p><strong>Feature Types</strong></p>
+<p>All expect three <code>CMC_available, GFS_available, gfs_soil_temperature_available</code> features are numerical. Feature descriptions are in the datasheet. </p>
+<p><strong>Splits</strong></p>
+<p>Default split: </p>
+<ul>
+<li>11 month in the training set (01.07.2022 -- 31.05.2023)</li>
+<li>1 month in the validation set (01.06.2023 -- 30.06.2023)</li>
+<li>1 month in the test set (01.07.2023 -- 30.07.2023)</li>
+</ul>
+<p>Analysis splits:</p>
+<ul>
+<li>40k samples in the validation and test sets -- roughly one month of data</li>
+<li>window shifts by 40k instances</li>
+</ul>
+<h2 id="maps-router-eta">Maps Router ETA</h2>
+<p><strong>Filtering and subsampling</strong></p>
+<ul>
+<li>Dataset is a 2.5% random sample of the original month log of data.</li>
+</ul>
+<p><strong>Feature Types</strong></p>
+<p>All features are already processed and categorized into numeric, categorical and binary. (<code>[num|cat]_{i}</code>).</p>
+<p><strong>Splits</strong></p>
+<p>Default split: </p>
+<ul>
+<li>3 weeks in the training set (01.11.2023 -- 20.11.2023)</li>
+<li>1 week in the validation set (20.11.2023 -- 27.11.2023)</li>
+<li>1 week in the test set (27.11.2023 -- 04.12.2023)</li>
+</ul>
+<p>Analysis splits:</p>
+<ul>
+<li>60k samples in the validation and test sets -- roughly one month of data</li>
+<li>window shifts by 60k instances</li>
+</ul>
+</div><div class="provenance"><p><a href="https://github.com/hallresearch-ai/tabred/blob/8507b75b45395dadfc16964bd14b6dde0ab2c098/preprocessing/README.md">View the source document on GitHub</a> · Sources checked 2026-10-05 (UTC).</p><p>Apache-2.0. Source text is preserved; navigation and formatting are adapted for this website.</p></div></article></section></main><footer class="footer"><div class="footer-inner"><div><strong>HallResearch.ai Library</strong><p>Maintained by Patrick Hall and Daniel Atherton.<br>Curation sponsored by <a href="https://hallresearch.ai/">HallResearch.ai</a>.</p></div><nav aria-label="Footer navigation"><a href="../../about.html">About</a><a href="../../methodology.html">Methodology</a><a href="../../cite.html">How to cite</a><a href="https://github.com/hallresearch-ai">Source repositories on GitHub</a></nav></div></footer></div></div><script src="../../assets/js/site.js" defer></script></body></html>

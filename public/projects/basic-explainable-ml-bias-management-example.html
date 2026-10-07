@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Basic Explainable ML Example with Bias Management · HallResearch.ai Library</title><meta name="description" content="Train a monotonic TensorFlow Lattice model, inspect calibrator curves, and compare group fairness metrics and remediation strategies."><meta property="og:type" content="website"><meta property="og:site_name" content="HallResearch.ai Library"><meta property="og:title" content="Basic Explainable ML Example with Bias Management"><meta property="og:description" content="Train a monotonic TensorFlow Lattice model, inspect calibrator curves, and compare group fairness metrics and remediation strategies."><link rel="canonical" href="https://hallresearch-ai.github.io/projects/basic-explainable-ml-bias-management-example.html"><meta property="og:url" content="https://hallresearch-ai.github.io/projects/basic-explainable-ml-bias-management-example.html"><link rel="stylesheet" href="../assets/css/styles.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="nav"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">H</span><span class="brand-name">HallResearch<span class="brand-ai">.ai</span><span class="brand-library">Library</span></span></a><p class="masthead-note">Curated by Patrick Hall &amp; Daniel Atherton</p><button class="mobile-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Browse</button></div></header><div class="catalog-shell"><aside class="catalog-rail"><nav class="nav-links" id="main-navigation" aria-label="Main navigation"><p class="rail-label">The collection</p><a href="../index.html"><span>All collections</span></a><a href="../governance/index.html"><span>Governance</span><span class="rail-number" aria-hidden="true">01</span></a><a href="../assessment/index.html"><span>Assessment</span><span class="rail-number" aria-hidden="true">02</span></a><a href="../guides/index.html"><span>Research Guides</span><span class="rail-number" aria-hidden="true">03</span></a><p class="rail-label rail-separator">Companion materials</p><a href="index.html" aria-current="page" class="active"><span>Supporting projects</span></a><p class="rail-label rail-separator">Using the Library</p><a href="../about.html"><span>About</span></a><a href="../search.html"><span>Search</span></a><a href="../cite.html">How to cite</a><a href="../methodology.html">Methodology</a></nav><div class="rail-foot"><p>A working public collection.</p><a href="https://github.com/hallresearch-ai">Source repositories <span aria-hidden="true">↗</span></a></div></aside><div class="catalog-content"><main id="main-content" tabindex="-1"><section class="page-head"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Library</a></li><li><a href="index.html">Supporting projects</a></li><li><span aria-current="page">Basic Explainable ML Example with Bias Management</span></li></ol></nav><p class="eyebrow">Supporting repository</p><h1>Basic Explainable ML Example with Bias Management</h1><p class="lede">Train a monotonic TensorFlow Lattice model, inspect calibrator curves, and compare group fairness metrics and remediation strategies.</p></section><div class="content-layout"><aside class="sidebar" aria-label="Project navigation"><details class="section-nav" open><summary>Project navigation</summary><nav aria-label="Project navigation sections"><a href="index.html">All supporting projects</a><a href="basic-explainable-ml-bias-management-example.html" aria-current="page" class="current">Basic Explainable ML Example with Bias Management</a></nav></details><details class="local-toc" open><summary>On this page</summary><nav aria-label="On this page"><a class="level-2" href="#project-files">Project files</a><a class="level-2" href="#repository-documentation">Repository documentation</a><a class="level-3" href="#background-reading">Background Reading</a><a class="level-3" href="#contents">Contents</a><a class="level-3" href="#what-the-notebook-demonstrates">What the Notebook Demonstrates</a><a class="level-3" href="#setup">Setup</a><a class="level-3" href="#license">License</a></nav></details></aside><article class="prose"><dl class="project-facts"><dt>Artifact</dt><dd>Jupyter notebook, Python helpers, and example dataset</dd><dt>Useful for</dt><dd>Readers exploring interpretable supervised models and basic bias testing.</dd></dl><p><a class="button" href="https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example">View on GitHub</a></p><h2 id="project-files">Project files</h2><ul class="file-list"><li><a href="https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example/blob/7f7725ddee4e32cdd81df90f47fc8147548addad/LICENSE">LICENSE</a><span class="meta">View source file</span></li><li><a href="https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example/blob/7f7725ddee4e32cdd81df90f47fc8147548addad/Monotonic_TFL_Explainability_Bias_Code_Apache2.ipynb">Monotonic_TFL_Explainability_Bias_Code_Apache2.ipynb</a><span class="meta">View notebook</span></li><li><a href="basic-explainable-ml-bias-management-example.html">README.md</a><span class="meta">Read documentation</span></li><li><a href="https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example/blob/7f7725ddee4e32cdd81df90f47fc8147548addad/credit_line_increase.csv">credit_line_increase.csv</a><span class="meta">View source file</span></li><li><a href="https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example/blob/7f7725ddee4e32cdd81df90f47fc8147548addad/requirements.txt">requirements.txt</a><span class="meta">View source file</span></li><li><a href="https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example/blob/7f7725ddee4e32cdd81df90f47fc8147548addad/utils.py">utils.py</a><span class="meta">View source file</span></li></ul><h2 id="repository-documentation">Repository documentation</h2><div class="source-content" data-source-document="basic-explainable-ml-bias-management-example/README.md"><p>This repository is a small educational example for training an interpretable
+supervised model and checking basic group fairness metrics. It uses a credit
+line delinquency dataset, trains a monotonic calibrated linear TensorFlow
+Lattice model, explains the fitted model with calibrator curves, and compares a
+few simple bias remediation strategies.</p>
+<p>The notebook keeps demographic columns available for analysis, but excludes
+them from model training. The goal is to demonstrate a compact workflow for
+model transparency and bias management, not to provide compliance or legal
+advice.</p>
+<h3 id="background-reading">Background Reading</h3>
+<p>This example is related to monotonic, shape-constrained modeling and practical
+bias testing/remediation workflows. Useful background references include:</p>
+<ul>
+<li><p id="resource-9ed2cd65fc4f">"Fast and Flexible Monotonic Functions with Ensembles of Lattices":
+<a href="https://jmlr.org/papers/volume17/15-243/15-243.pdf">https://jmlr.org/papers/volume17/15-243/15-243.pdf</a></p>
+</li>
+<li><p id="resource-8918ec394fd6"><em>Machine Learning for High-Risk Applications</em>, Chapter 10, "Testing and
+Remediating Bias with XGBoost":
+<a href="https://www.oreilly.com/library/view/machine-learning-for/9781098102425/">https://www.oreilly.com/library/view/machine-learning-for/9781098102425/</a></p>
+</li>
+</ul>
+<h3 id="contents">Contents</h3>
+<ul>
+<li><code>Monotonic_TFL_Explainability_Bias_Code_Apache2.ipynb</code>: Jupyter notebook that
+trains the monotonic TensorFlow Lattice model, explains it, tests group
+fairness metrics, and compares remediation strategies.</li>
+<li><code>utils.py</code>: Helper functions for monotonicity detection, model construction,
+threshold selection, fairness tables, plotting, and model comparison.</li>
+<li><code>credit_line_increase.csv</code>: Example credit line delinquency dataset. The
+target column is <code>DELINQ_NEXT</code>; demographic columns are used for analysis and
+excluded from model features. (Modified version of Taiwanese credit data, from 
+UCI/Kaggle.)</li>
+<li><code>requirements.txt</code>: Python dependencies for running the notebook.</li>
+<li><code>LICENSE</code>: Apache License 2.0.</li>
+</ul>
+<h3 id="what-the-notebook-demonstrates">What the Notebook Demonstrates</h3>
+<p>The notebook walks through a basic explainability and bias management workflow:</p>
+<ol>
+<li>Load the credit line data and map coded demographic fields to readable
+labels.</li>
+<li>Define modeling columns so demographic fields are retained for analysis but
+excluded from model training.</li>
+<li>Split the data into training and validation sets.</li>
+<li>Derive simple monotonicity constraints from training-set Spearman
+correlations.</li>
+<li>Train a monotonic calibrated linear TensorFlow Lattice model.</li>
+<li>Explain the model with training curves, ROC and score-distribution plots,
+output weights, and learned calibrator curves.</li>
+<li>Compute validation-set group metrics by race, including adverse impact ratio
+(AIR), false positive rate (FPR), and false negative rate (FNR).</li>
+<li>Apply three simple remediation strategies:<ul>
+<li>race-based reweighing</li>
+<li>small one-feature-drop search</li>
+<li>small hyperparameter search</li>
+</ul>
+</li>
+<li>Compare validation AUC, selected cutoff, and group fairness metrics across
+the baseline and remediated model variants.</li>
+</ol>
+<h3 id="setup">Setup</h3>
+<p>From the repository root, create and activate a Python virtual environment:</p>
+<pre tabindex="0"><code class="language-bash">python3 -m venv .venv
+source .venv/bin/activate
+</code></pre>
+<p>Install the dependencies:</p>
+<pre tabindex="0"><code class="language-bash">python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+</code></pre>
+<p>Start Jupyter:</p>
+<pre tabindex="0"><code class="language-bash">jupyter notebook
+</code></pre>
+<p>Then open <code>Monotonic_TFL_Explainability_Bias_Code_Apache2.ipynb</code> and run the
+cells in order.</p>
+<h3 id="license">License</h3>
+<p>This repository is licensed under the Apache License, Version 2.0. See
+<code>LICENSE</code> for details.</p>
+</div><div class="provenance"><p><a href="https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example/blob/7f7725ddee4e32cdd81df90f47fc8147548addad/README.md">View the source document on GitHub</a> · Sources checked 2026-10-05 (UTC).</p><p>Apache-2.0. Source text is preserved; navigation and formatting are adapted for this website.</p></div></article></div></main><footer class="footer"><div class="footer-inner"><div><strong>HallResearch.ai Library</strong><p>Maintained by Patrick Hall and Daniel Atherton.<br>Curation sponsored by <a href="https://hallresearch.ai/">HallResearch.ai</a>.</p></div><nav aria-label="Footer navigation"><a href="../about.html">About</a><a href="../methodology.html">Methodology</a><a href="../cite.html">How to cite</a><a href="https://github.com/hallresearch-ai">Source repositories on GitHub</a></nav></div></footer></div></div><script src="../assets/js/site.js" defer></script></body></html>

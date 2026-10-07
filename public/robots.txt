@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hallresearch-ai.github.io/sitemap.xml

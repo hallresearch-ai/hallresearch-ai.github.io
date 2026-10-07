@@ -1,0 +1,7 @@
+{
+  "crc": "passed",
+  "path_safety": "passed",
+  "required_entries": "passed",
+  "archived_public_bytes": "identical",
+  "excluded": "node_modules, Python caches, downloaded browser binaries"
+}

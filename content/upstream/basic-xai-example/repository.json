@@ -1,0 +1,18 @@
+{
+  "name": "basic-xai-example",
+  "html_url": "https://github.com/hallresearch-ai/basic-xai-example",
+  "description": "Basic examples of XAI techniques.",
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "homepage": "",
+  "pushed_at": "2026-05-08T15:29:05Z",
+  "commit": "df8a8fe82acc36ef8c2ff8eb3e068aab1b1f6def",
+  "commit_date": "2026-05-08T15:28:56Z"
+}

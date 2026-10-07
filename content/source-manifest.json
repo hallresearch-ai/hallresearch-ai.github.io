@@ -1,0 +1,337 @@
+{
+  "checked_at_utc": "2026-10-05T01:04:10.023113+00:00",
+  "authority": "https://github.com/hallresearch-ai",
+  "repositories": [
+    {
+      "repo": ".github",
+      "commit": "778bd7e721f12bbf13e933ec107671b4f89d81bd",
+      "commit_date": "2026-09-02T06:40:20Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "profile/README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/.github/778bd7e721f12bbf13e933ec107671b4f89d81bd/profile/README.md",
+          "sha256": "e69d092e1b85810e413d315ad1fe8424938f0f4d956bd06ce3fadc89e754333a",
+          "bytes": 16864
+        }
+      ]
+    },
+    {
+      "repo": "ai_governance_policy_resources",
+      "commit": "c49c0d71b44cd7c6b9446346d32c2c13061e9649",
+      "commit_date": "2026-09-28T02:47:37Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "Code-of-Conduct.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai_governance_policy_resources/c49c0d71b44cd7c6b9446346d32c2c13061e9649/Code-of-Conduct.md",
+          "sha256": "74c68e34dcb32d1f72462875f41b31e43b8a896db416705c652e21f04ca9a629",
+          "bytes": 2861
+        },
+        {
+          "path": "Contributing.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai_governance_policy_resources/c49c0d71b44cd7c6b9446346d32c2c13061e9649/Contributing.md",
+          "sha256": "1570bcc3e5ab42ef32b98270f0c1c8d2159e31e274f8ff1617dc8c33020e2cb7",
+          "bytes": 1791
+        },
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai_governance_policy_resources/c49c0d71b44cd7c6b9446346d32c2c13061e9649/LICENSE",
+          "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+          "bytes": 18656
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai_governance_policy_resources/c49c0d71b44cd7c6b9446346d32c2c13061e9649/README.md",
+          "sha256": "c74bca07f7fd9de30a5e756936a129014dc29e5dd4eca4f1e06f6f0f15db1e8a",
+          "bytes": 307845
+        }
+      ]
+    },
+    {
+      "repo": "ai_assessment_implementation_resources",
+      "commit": "501c25936fade9c96bff91c17979c2b2a7b5b4e0",
+      "commit_date": "2026-07-29T03:08:14Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "Code-of-Conduct.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai_assessment_implementation_resources/501c25936fade9c96bff91c17979c2b2a7b5b4e0/Code-of-Conduct.md",
+          "sha256": "4c6ddeb72452f0d951b415f54f06e944aa0141e2148dc30135938bc4939ff139",
+          "bytes": 2862
+        },
+        {
+          "path": "Contributing.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai_assessment_implementation_resources/501c25936fade9c96bff91c17979c2b2a7b5b4e0/Contributing.md",
+          "sha256": "1570bcc3e5ab42ef32b98270f0c1c8d2159e31e274f8ff1617dc8c33020e2cb7",
+          "bytes": 1791
+        },
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai_assessment_implementation_resources/501c25936fade9c96bff91c17979c2b2a7b5b4e0/LICENSE",
+          "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+          "bytes": 18656
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai_assessment_implementation_resources/501c25936fade9c96bff91c17979c2b2a7b5b4e0/README.md",
+          "sha256": "b7fc329337eff922ec68577df2c1e4b4c31d2d9a61b23ed14bd1cc2bf9de1aff",
+          "bytes": 181665
+        }
+      ]
+    },
+    {
+      "repo": "ai_research_guides",
+      "commit": "d18daaf8c1c4f28b27c942f67dd1e458505a1c18",
+      "commit_date": "2026-09-02T06:37:10Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai_research_guides/d18daaf8c1c4f28b27c942f67dd1e458505a1c18/README.md",
+          "sha256": "7d697f5d152f65fcc14105f3d8f0b68ad60542b845fc638a670e9e0e0eaf1d18",
+          "bytes": 8872
+        }
+      ]
+    },
+    {
+      "repo": "basic-ml-security",
+      "commit": "99918959e3aaa0d5640108d98b39ccef9e1deaeb",
+      "commit_date": "2026-05-17T15:44:20Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-ml-security/99918959e3aaa0d5640108d98b39ccef9e1deaeb/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-ml-security/99918959e3aaa0d5640108d98b39ccef9e1deaeb/README.md",
+          "sha256": "9651c39e7878ba7bdbf932c07eeff8f7be82a920c0684f8c4469b95f5cfca367",
+          "bytes": 2569
+        }
+      ]
+    },
+    {
+      "repo": "basic-xai-example",
+      "commit": "df8a8fe82acc36ef8c2ff8eb3e068aab1b1f6def",
+      "commit_date": "2026-05-08T15:28:56Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-xai-example/df8a8fe82acc36ef8c2ff8eb3e068aab1b1f6def/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-xai-example/df8a8fe82acc36ef8c2ff8eb3e068aab1b1f6def/README.md",
+          "sha256": "e7cd6faabe63dae704f0052ccf20d3fbf82eca324e88f0644e4625ac0150b532",
+          "bytes": 3734
+        }
+      ]
+    },
+    {
+      "repo": "basic-model-testing-red-teaming-user-testing-example",
+      "commit": "373c55acd0cee6991db6008940d064a129e050db",
+      "commit_date": "2026-05-08T15:20:41Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "Field_Testing_Rubric_CC_By.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-model-testing-red-teaming-user-testing-example/373c55acd0cee6991db6008940d064a129e050db/Field_Testing_Rubric_CC_By.md",
+          "sha256": "0fb0cbe3ea62e2c86563179a2e7c8d06f1177d7e82235d8d6ba4f73abc75b9f2",
+          "bytes": 1378
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-model-testing-red-teaming-user-testing-example/373c55acd0cee6991db6008940d064a129e050db/README.md",
+          "sha256": "6404bb54f879f501523b2e0bc11904e21e3ff1f32bf8c4589237d259ced04c93",
+          "bytes": 4280
+        },
+        {
+          "path": "CODE_LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-model-testing-red-teaming-user-testing-example/373c55acd0cee6991db6008940d064a129e050db/CODE_LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "MATERIAL_LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-model-testing-red-teaming-user-testing-example/373c55acd0cee6991db6008940d064a129e050db/MATERIAL_LICENSE",
+          "sha256": "fe7b4ce83b8381cc5b216bbb4af73c570688d1b819c73bbaed8ca401f4677cd6",
+          "bytes": 18655
+        }
+      ]
+    },
+    {
+      "repo": "basic-explainable-ml-bias-management-example",
+      "commit": "7f7725ddee4e32cdd81df90f47fc8147548addad",
+      "commit_date": "2026-05-08T14:49:07Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-explainable-ml-bias-management-example/7f7725ddee4e32cdd81df90f47fc8147548addad/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-explainable-ml-bias-management-example/7f7725ddee4e32cdd81df90f47fc8147548addad/README.md",
+          "sha256": "8972729a8728a6c6a3f6a6d4d0a51b56f6de0b99fdc298c31fa499980fe318a4",
+          "bytes": 3423
+        }
+      ]
+    },
+    {
+      "repo": "basic-ml-eval-example",
+      "commit": "dd7b53ebc3e547db2bc30f76c15bb1d1d433ce95",
+      "commit_date": "2026-05-05T15:33:40Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-ml-eval-example/dd7b53ebc3e547db2bc30f76c15bb1d1d433ce95/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-ml-eval-example/dd7b53ebc3e547db2bc30f76c15bb1d1d433ce95/README.md",
+          "sha256": "8d40b6822edc59f0db6a13efac0a73a50f8c1f9d394ccef525c0fa592772e7c4",
+          "bytes": 2018
+        }
+      ]
+    },
+    {
+      "repo": "ai-rmf-rag-prototype",
+      "commit": "076bb97a3de5cbae24c37fefb84490bc19fdf299",
+      "commit_date": "2026-04-30T19:26:48Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai-rmf-rag-prototype/076bb97a3de5cbae24c37fefb84490bc19fdf299/LICENSE",
+          "sha256": "a1e079a1135162174bbe8503314e9456ee568d2925d015b4cbc4004b0007525c",
+          "bytes": 1072
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/ai-rmf-rag-prototype/076bb97a3de5cbae24c37fefb84490bc19fdf299/README.md",
+          "sha256": "76751be45c5c6cd372e145c9f29490553b88a135e320edbce4b64108ddf6359e",
+          "bytes": 2536
+        }
+      ]
+    },
+    {
+      "repo": "example-system-card",
+      "commit": "051f159961fbc6b1f708a7b769192e359a2bc79b",
+      "commit_date": "2026-04-24T10:05:02Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/example-system-card/051f159961fbc6b1f708a7b769192e359a2bc79b/LICENSE",
+          "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+          "bytes": 18656
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/example-system-card/051f159961fbc6b1f708a7b769192e359a2bc79b/README.md",
+          "sha256": "94c8bc1e5bacc1eae3bd7121d8946e34dac7fe46ddf82171fe1ebfb08276a024",
+          "bytes": 6588
+        }
+      ]
+    },
+    {
+      "repo": "bib-lib",
+      "commit": "b4b6aa5d50c134e1c885d9c2b7dc1d5d52a2edf3",
+      "commit_date": "2026-07-17T20:37:37Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/bib-lib/b4b6aa5d50c134e1c885d9c2b7dc1d5d52a2edf3/LICENSE",
+          "sha256": "60f3424f435a2123bc237ede52143e8d07be8509618d59a379fb9a8dfb1fa4bc",
+          "bytes": 1072
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/bib-lib/b4b6aa5d50c134e1c885d9c2b7dc1d5d52a2edf3/README.md",
+          "sha256": "d5b84f0d5fe6c947b04f7866c3df7bbd7d43f82821ddecce355dcf837d49ed98",
+          "bytes": 1999
+        }
+      ]
+    },
+    {
+      "repo": "basic-chatbot-guidance",
+      "commit": "711b23b69eee573eacb097e03e36a5503195a396",
+      "commit_date": "2026-09-29T14:11:41Z",
+      "default_branch": "main",
+      "archived": false,
+      "files": [
+        {
+          "path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-chatbot-guidance/711b23b69eee573eacb097e03e36a5503195a396/README.md",
+          "sha256": "e37ae820dee0505a5dbc2e7e7d199f1dd05cc48ebb190ffafd9ff4acd3e5048c",
+          "bytes": 411
+        },
+        {
+          "path": "prompt-library/dannys-guide.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/basic-chatbot-guidance/711b23b69eee573eacb097e03e36a5503195a396/prompt-library/dannys-guide.md",
+          "sha256": "37322871c60a2e0041e316310aeba3135e82e5b639394c1ae42d30122051d8cd",
+          "bytes": 15521
+        }
+      ]
+    },
+    {
+      "repo": "tabred",
+      "commit": "8507b75b45395dadfc16964bd14b6dde0ab2c098",
+      "commit_date": "2024-06-27T20:31:16Z",
+      "default_branch": "main",
+      "archived": true,
+      "files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/tabred/8507b75b45395dadfc16964bd14b6dde0ab2c098/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "datasheet.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/tabred/8507b75b45395dadfc16964bd14b6dde0ab2c098/datasheet.md",
+          "sha256": "19ce2fecbae8f581a69fd9b71285b9605388ae3f5ea5325b7565977d459eb032",
+          "bytes": 28040
+        },
+        {
+          "path": "preprocessing/README.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/tabred/8507b75b45395dadfc16964bd14b6dde0ab2c098/preprocessing/README.md",
+          "sha256": "e8e34c51de546247474325610ba9ff3913c526ada3acce7098c23b3c5f77e39c",
+          "bytes": 13377
+        },
+        {
+          "path": "readme.md",
+          "source_url": "https://raw.githubusercontent.com/hallresearch-ai/tabred/8507b75b45395dadfc16964bd14b6dde0ab2c098/readme.md",
+          "sha256": "190b3d643ce26e014c2412b7b41eb5efc8728137bf0bd489e50f3277b3fd16c9",
+          "bytes": 5027
+        }
+      ]
+    }
+  ],
+  "unclassified_repositories": []
+}

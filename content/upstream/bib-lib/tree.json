@@ -1,0 +1,555 @@
+{
+  "sha": "b4b6aa5d50c134e1c885d9c2b7dc1d5d52a2edf3",
+  "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/trees/b4b6aa5d50c134e1c885d9c2b7dc1d5d52a2edf3",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4481e6646b6fb2581d77ed632ac4f01da3248ffd",
+      "size": 4709,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/4481e6646b6fb2581d77ed632ac4f01da3248ffd"
+    },
+    {
+      "path": ".idea",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8fd600eed9cc128e259deabcd527f423570a3129",
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/trees/8fd600eed9cc128e259deabcd527f423570a3129"
+    },
+    {
+      "path": ".idea/.gitignore",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "26d33521af10bcc7fd8cea344038eaaeb78d0ef5",
+      "size": 47,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/26d33521af10bcc7fd8cea344038eaaeb78d0ef5"
+    },
+    {
+      "path": ".idea/bib-lib.iml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b13cf832a411fe5d4ca3ebb885836821b3a032a6",
+      "size": 396,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/b13cf832a411fe5d4ca3ebb885836821b3a032a6"
+    },
+    {
+      "path": ".idea/inspectionProfiles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fbc7cefd09bde7ce62949cc9cbea459025b6759c",
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/trees/fbc7cefd09bde7ce62949cc9cbea459025b6759c"
+    },
+    {
+      "path": ".idea/inspectionProfiles/profiles_settings.xml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "105ce2da2d6447d11dfe32bfb846c3d5b199fc99",
+      "size": 174,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/105ce2da2d6447d11dfe32bfb846c3d5b199fc99"
+    },
+    {
+      "path": ".idea/misc.xml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a3cf390d5bf6021885398a017b9786d1548cede1",
+      "size": 414,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/a3cf390d5bf6021885398a017b9786d1548cede1"
+    },
+    {
+      "path": ".idea/modules.xml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "23b44571a2f9586f81c5575e6169b96f7ab36780",
+      "size": 266,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/23b44571a2f9586f81c5575e6169b96f7ab36780"
+    },
+    {
+      "path": ".idea/vcs.xml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "35eb1ddfbbc029bcab630581847471d7f238ec53",
+      "size": 167,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/35eb1ddfbbc029bcab630581847471d7f238ec53"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d8bbe413b1e9f178bdd5ba3ccebf912e00548ebb",
+      "size": 1072,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/d8bbe413b1e9f178bdd5ba3ccebf912e00548ebb"
+    },
+    {
+      "path": "README.md",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b801d28f32be06f25315840f80eb4b0cb58faf8e",
+      "size": 1999,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/b801d28f32be06f25315840f80eb4b0cb58faf8e"
+    },
+    {
+      "path": "bib_files",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a086d6fbf88a3da2f16724f5c732ca524466628",
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/trees/2a086d6fbf88a3da2f16724f5c732ca524466628"
+    },
+    {
+      "path": "bib_files/lib-2026-07-17_1632.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3cdabcce6dc492b849cc8911ae4ec91c135963a",
+      "size": 266322,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/c3cdabcce6dc492b849cc8911ae4ec91c135963a"
+    },
+    {
+      "path": "bib_files/old",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6409d38d173e9d01d4f683e4f709168e97d3892",
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/trees/f6409d38d173e9d01d4f683e4f709168e97d3892"
+    },
+    {
+      "path": "bib_files/old/aaai2026.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "da1bbe03d84493fdc9b3c2489cebd355ac72c61a",
+      "size": 10298,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/da1bbe03d84493fdc9b3c2489cebd355ac72c61a"
+    },
+    {
+      "path": "bib_files/old/aaai2026.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7698781e7b527ccc40bf821aa04c0d1f725223a6",
+      "size": 8328,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/7698781e7b527ccc40bf821aa04c0d1f725223a6"
+    },
+    {
+      "path": "bib_files/old/aria-references.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ba1ea267def3ae38447a34d6d98aa43b39c8c615",
+      "size": 37567,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/ba1ea267def3ae38447a34d6d98aa43b39c8c615"
+    },
+    {
+      "path": "bib_files/old/aria-references.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "52f29604e9655ae8377492891e6447dfd930aea3",
+      "size": 32330,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/52f29604e9655ae8377492891e6447dfd930aea3"
+    },
+    {
+      "path": "bib_files/old/article-information-2019.bib.bak",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "123439e9395a46cee0ed334fcc035a880eb51409",
+      "size": 21980,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/123439e9395a46cee0ed334fcc035a880eb51409"
+    },
+    {
+      "path": "bib_files/old/article-information-2019.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a3cfe9a84ba75af6bbca586b04d7345f2952b9ca",
+      "size": 18425,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/a3cfe9a84ba75af6bbca586b04d7345f2952b9ca"
+    },
+    {
+      "path": "bib_files/old/combined.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7702803d4aec1eff9d4ad11d687c1a5fb8987820",
+      "size": 239296,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/7702803d4aec1eff9d4ad11d687c1a5fb8987820"
+    },
+    {
+      "path": "bib_files/old/combined_checked.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cb2ba9f3759d5fc44426ebd92e07f5b61d65705e",
+      "size": 189503,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/cb2ba9f3759d5fc44426ebd92e07f5b61d65705e"
+    },
+    {
+      "path": "bib_files/old/cri-memo-1-references.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ed3978489dc0b781c2d132aee250744d9cec25a4",
+      "size": 9124,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/ed3978489dc0b781c2d132aee250744d9cec25a4"
+    },
+    {
+      "path": "bib_files/old/cri-memo-1-references.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "669026c0986ff1355a75d16d08a27149b2fe71d1",
+      "size": 7653,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/669026c0986ff1355a75d16d08a27149b2fe71d1"
+    },
+    {
+      "path": "bib_files/old/cv-bibliography.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "574a50cabc38d76237d86386d6e97e30f8945b0e",
+      "size": 15743,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/574a50cabc38d76237d86386d6e97e30f8945b0e"
+    },
+    {
+      "path": "bib_files/old/cv-bibliography.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9c6c06d3bc61cc7ad67153d85b91f376bfc04053",
+      "size": 13210,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/9c6c06d3bc61cc7ad67153d85b91f376bfc04053"
+    },
+    {
+      "path": "bib_files/old/discover-bibliography.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5f764bffd7a84f7b1f22078106a8f696221c3ab9",
+      "size": 12480,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/5f764bffd7a84f7b1f22078106a8f696221c3ab9"
+    },
+    {
+      "path": "bib_files/old/discover-bibliography.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "98f6c349e2cd8593e5bed27d060b9790f37b7caa",
+      "size": 10436,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/98f6c349e2cd8593e5bed27d060b9790f37b7caa"
+    },
+    {
+      "path": "bib_files/old/hcml-bibliography.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fcf00bb6dfce92522c628b95a33c2cee7616d6b5",
+      "size": 16263,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/fcf00bb6dfce92522c628b95a33c2cee7616d6b5"
+    },
+    {
+      "path": "bib_files/old/hcml-bibliography.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8677d1bee1161fb0c4d650a43979aed2fdff2f9a",
+      "size": 13102,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/8677d1bee1161fb0c4d650a43979aed2fdff2f9a"
+    },
+    {
+      "path": "bib_files/old/jsm1-bibliography.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7e941fbb666c31732a720afa53b5d8f9dd48fe47",
+      "size": 4282,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/7e941fbb666c31732a720afa53b5d8f9dd48fe47"
+    },
+    {
+      "path": "bib_files/old/jsm1-bibliography.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c8d2a07897101fd96f944f8642967b5af950f00f",
+      "size": 3581,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/c8d2a07897101fd96f944f8642967b5af950f00f"
+    },
+    {
+      "path": "bib_files/old/jsm2-bibliography.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1b306c94c8837bc7a8976a944e793abbcde502e8",
+      "size": 20097,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/1b306c94c8837bc7a8976a944e793abbcde502e8"
+    },
+    {
+      "path": "bib_files/old/jsm2-bibliography.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "22872d4eb6cd296eb96d72e7e4c14d5297ae8440",
+      "size": 16564,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/22872d4eb6cd296eb96d72e7e4c14d5297ae8440"
+    },
+    {
+      "path": "bib_files/old/kdd-bibliography.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6801989696baf8643a6a7d302cfc8efa9e326397",
+      "size": 21966,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/6801989696baf8643a6a7d302cfc8efa9e326397"
+    },
+    {
+      "path": "bib_files/old/kdd-bibliography.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f3116eb081d2b5d5db64c791af722f75282e968e",
+      "size": 17954,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/f3116eb081d2b5d5db64c791af722f75282e968e"
+    },
+    {
+      "path": "bib_files/old/lecture_1.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1ec0ea82bd6ba1c150497bb9836576eff6c14e4e",
+      "size": 8120,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/1ec0ea82bd6ba1c150497bb9836576eff6c14e4e"
+    },
+    {
+      "path": "bib_files/old/lecture_1.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c2ee54b856ac58f19cf4b8233177e565ed6966c4",
+      "size": 6622,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/c2ee54b856ac58f19cf4b8233177e565ed6966c4"
+    },
+    {
+      "path": "bib_files/old/lecture_2.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "879149647ceae1486be7144141ee0c714a7c2cc0",
+      "size": 23075,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/879149647ceae1486be7144141ee0c714a7c2cc0"
+    },
+    {
+      "path": "bib_files/old/lecture_2.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b7f3e66176166376020b4e36c50c3e65c234d69",
+      "size": 18962,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/7b7f3e66176166376020b4e36c50c3e65c234d69"
+    },
+    {
+      "path": "bib_files/old/lecture_3.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bbae758808159ac55abc61611723f1d802fda120",
+      "size": 3968,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/bbae758808159ac55abc61611723f1d802fda120"
+    },
+    {
+      "path": "bib_files/old/lecture_3.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "22c9c60a1bd37eae940106627300aa659f8d6261",
+      "size": 3340,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/22c9c60a1bd37eae940106627300aa659f8d6261"
+    },
+    {
+      "path": "bib_files/old/lecture_4.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b14826952c75758d1f7dccb6852051b8072d8ad3",
+      "size": 3480,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/b14826952c75758d1f7dccb6852051b8072d8ad3"
+    },
+    {
+      "path": "bib_files/old/lecture_4.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "aeec47a4043a4b27721ef585d4369439b28bcf30",
+      "size": 2938,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/aeec47a4043a4b27721ef585d4369439b28bcf30"
+    },
+    {
+      "path": "bib_files/old/lecture_5.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1b306c94c8837bc7a8976a944e793abbcde502e8",
+      "size": 20097,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/1b306c94c8837bc7a8976a944e793abbcde502e8"
+    },
+    {
+      "path": "bib_files/old/lecture_5.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "22872d4eb6cd296eb96d72e7e4c14d5297ae8440",
+      "size": 16564,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/22872d4eb6cd296eb96d72e7e4c14d5297ae8440"
+    },
+    {
+      "path": "bib_files/old/lecture_6.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fcf00bb6dfce92522c628b95a33c2cee7616d6b5",
+      "size": 16263,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/fcf00bb6dfce92522c628b95a33c2cee7616d6b5"
+    },
+    {
+      "path": "bib_files/old/lecture_6.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8677d1bee1161fb0c4d650a43979aed2fdff2f9a",
+      "size": 13102,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/8677d1bee1161fb0c4d650a43979aed2fdff2f9a"
+    },
+    {
+      "path": "bib_files/old/lecture_7.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "01a9ad13e57a199310b51c71d06c06a523696d08",
+      "size": 6889,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/01a9ad13e57a199310b51c71d06c06a523696d08"
+    },
+    {
+      "path": "bib_files/old/lecture_7.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f39c346f915ff1efec1299e4253667cd6ad2ccc3",
+      "size": 5739,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/f39c346f915ff1efec1299e4253667cd6ad2ccc3"
+    },
+    {
+      "path": "bib_files/old/lib-2025-08-24_1113.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "de15a7fc745061eab69179953f539e11a4a881ca",
+      "size": 209960,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/de15a7fc745061eab69179953f539e11a4a881ca"
+    },
+    {
+      "path": "bib_files/old/lib-2025-12-29_1226.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "076ebd0c60ec0a4c83b8bc98157395601962c78b",
+      "size": 239641,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/076ebd0c60ec0a4c83b8bc98157395601962c78b"
+    },
+    {
+      "path": "bib_files/old/lib-2025-12-29_1226.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d31c3483259399a1f2bb21788abd449e4c44601",
+      "size": 214772,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/3d31c3483259399a1f2bb21788abd449e4c44601"
+    },
+    {
+      "path": "bib_files/old/lib-2026-02-14_1400.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1b6a0991994d02feea696adb2828ad3adb4e6ed",
+      "size": 215544,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/c1b6a0991994d02feea696adb2828ad3adb4e6ed"
+    },
+    {
+      "path": "bib_files/old/lib.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "64316362674fe491c0007c48e1d0c2acecfffbc8",
+      "size": 209747,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/64316362674fe491c0007c48e1d0c2acecfffbc8"
+    },
+    {
+      "path": "bib_files/old/mli-bibliography.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8b0fcab403b50a2065c409044ce53c5866f67af5",
+      "size": 17958,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/8b0fcab403b50a2065c409044ce53c5866f67af5"
+    },
+    {
+      "path": "bib_files/old/mli-bibliography.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "50559eb88903cb8cbc9f73b17dcbbaf6ea728086",
+      "size": 14294,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/50559eb88903cb8cbc9f73b17dcbbaf6ea728086"
+    },
+    {
+      "path": "bib_files/old/neurips-25.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cac565933784e586a835f134d1b769e9a7829876",
+      "size": 90327,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/cac565933784e586a835f134d1b769e9a7829876"
+    },
+    {
+      "path": "bib_files/old/neurips-25.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "060c125da1e9c590c48cc82ebcea5025403fd1c7",
+      "size": 76262,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/060c125da1e9c590c48cc82ebcea5025403fd1c7"
+    },
+    {
+      "path": "bib_files/old/responsible_xai.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b33de6db4286b59ea0f351042a930792e6f09c67",
+      "size": 18432,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/b33de6db4286b59ea0f351042a930792e6f09c67"
+    },
+    {
+      "path": "bib_files/old/responsible_xai.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ce7ece147849ecfac213c91a9f79e3b52d847bc2",
+      "size": 15120,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/ce7ece147849ecfac213c91a9f79e3b52d847bc2"
+    },
+    {
+      "path": "bib_files/old/secureml-bibliography.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b14826952c75758d1f7dccb6852051b8072d8ad3",
+      "size": 3480,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/b14826952c75758d1f7dccb6852051b8072d8ad3"
+    },
+    {
+      "path": "bib_files/old/secureml-bibliography.csv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "aeec47a4043a4b27721ef585d4369439b28bcf30",
+      "size": 2938,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/aeec47a4043a4b27721ef585d4369439b28bcf30"
+    },
+    {
+      "path": "bib_files/old/to_add_update.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11825f525087f877f2fef6462902bac77ec308d2",
+      "size": 1582,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/11825f525087f877f2fef6462902bac77ec308d2"
+    },
+    {
+      "path": "bib_files/to_add_update.bib",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e9d422e80ed58bfceeb637cc416b0f1a907841e9",
+      "size": 15,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/e9d422e80ed58bfceeb637cc416b0f1a907841e9"
+    },
+    {
+      "path": "load_all_csv.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4f4054b67458df3d55c5f6546df91f7f052f8752",
+      "size": 2730,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/4f4054b67458df3d55c5f6546df91f7f052f8752"
+    },
+    {
+      "path": "parser.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d2a0ed1bef977873af9151f9040f982234b06590",
+      "size": 4740,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/d2a0ed1bef977873af9151f9040f982234b06590"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "65ff417d06c19412ac61914f4ba66721fc063bac",
+      "size": 20,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/65ff417d06c19412ac61914f4ba66721fc063bac"
+    },
+    {
+      "path": "write_all.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "62a540df5320f86ec03668811707b36def6a073a",
+      "size": 4607,
+      "url": "https://api.github.com/repos/hallresearch-ai/bib-lib/git/blobs/62a540df5320f86ec03668811707b36def6a073a"
+    }
+  ],
+  "truncated": false
+}

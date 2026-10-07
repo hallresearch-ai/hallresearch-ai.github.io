@@ -1,0 +1,12 @@
+{
+  "name": ".github",
+  "html_url": "https://github.com/hallresearch-ai/.github",
+  "description": "Organizational configuration repo.",
+  "default_branch": "main",
+  "archived": false,
+  "license": null,
+  "homepage": "",
+  "pushed_at": "2026-09-02T06:40:21Z",
+  "commit": "778bd7e721f12bbf13e933ec107671b4f89d81bd",
+  "commit_date": "2026-09-02T06:40:20Z"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "tabred",
+  "html_url": "https://github.com/hallresearch-ai/tabred",
+  "description": "A Benchmark of Tabular Machine Learning in-the-Wild with real-world industry-grade tabular datasets",
+  "default_branch": "main",
+  "archived": true,
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "homepage": "https://arxiv.org/abs/2406.19380",
+  "pushed_at": "2024-06-27T20:31:28Z",
+  "commit": "8507b75b45395dadfc16964bd14b6dde0ab2c098",
+  "commit_date": "2024-06-27T20:31:16Z"
+}

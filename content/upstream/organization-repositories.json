@@ -1,0 +1,100 @@
+[
+  {
+    "name": "tabred",
+    "html_url": "https://github.com/hallresearch-ai/tabred",
+    "description": "A Benchmark of Tabular Machine Learning in-the-Wild with real-world industry-grade tabular datasets",
+    "archived": true,
+    "default_branch": "main"
+  },
+  {
+    "name": "ai-rmf-rag-prototype",
+    "html_url": "https://github.com/hallresearch-ai/ai-rmf-rag-prototype",
+    "description": "Prototype RAG system for NIST AI RMF materials. ",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "bib-lib",
+    "html_url": "https://github.com/hallresearch-ai/bib-lib",
+    "description": "HallResearch.ai public BibTex library.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "ai_governance_policy_resources",
+    "html_url": "https://github.com/hallresearch-ai/ai_governance_policy_resources",
+    "description": "This repository collects resources on AI governance, policy, regulation, institutions, incidents, accountability, labor, civil society critique, and the social consequences of AI deployment.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "ai_assessment_implementation_resources",
+    "html_url": "https://github.com/hallresearch-ai/ai_assessment_implementation_resources",
+    "description": "This repository collects practical resources for assessing, testing, documenting, and implementing responsible machine learning systems, including frameworks, evaluation tools, educational materials, and community guidance.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "example-system-card",
+    "html_url": "https://github.com/hallresearch-ai/example-system-card",
+    "description": "Example AI system card for trainings and presentations.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "basic-ml-eval-example",
+    "html_url": "https://github.com/hallresearch-ai/basic-ml-eval-example",
+    "description": "Example evaluation procedure for several ML model scores on a simple dataset.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "basic-model-testing-red-teaming-user-testing-example",
+    "html_url": "https://github.com/hallresearch-ai/basic-model-testing-red-teaming-user-testing-example",
+    "description": "Basic example of model testing, red teaming, and user/field testing for LLM-based systems. ",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": ".github",
+    "html_url": "https://github.com/hallresearch-ai/.github",
+    "description": "Organizational configuration repo.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "basic-explainable-ml-bias-management-example",
+    "html_url": "https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example",
+    "description": "Example explainable ML model with bias management.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "basic-xai-example",
+    "html_url": "https://github.com/hallresearch-ai/basic-xai-example",
+    "description": "Basic examples of XAI techniques.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "basic-ml-security",
+    "html_url": "https://github.com/hallresearch-ai/basic-ml-security",
+    "description": "Basic example of attacking an XGBoost classifier.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "basic-chatbot-guidance",
+    "html_url": "https://github.com/hallresearch-ai/basic-chatbot-guidance",
+    "description": "Recent presentation to NIST ITL on using chatbots for knowledge work.",
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "name": "ai_research_guides",
+    "html_url": "https://github.com/hallresearch-ai/ai_research_guides",
+    "description": "HallResearch.ai AI Research Guides offers curated, topic-focused pathways through the HallResearch.ai Library. Each guide brings together selected sources, questions, and orientation material to help users explore AI governance, policy, assessment, and implementation topics.",
+    "archived": false,
+    "default_branch": "main"
+  }
+]
