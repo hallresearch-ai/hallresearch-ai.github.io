@@ -4,7 +4,7 @@ This design opens directly onto the Library’s topics. The homepage lists all e
 
 ## Visual direction
 
-A dark masthead, warm white reading surface, brand-colored accents, sans-serif headings, square corners, and thin rules give the Library a clear typographic identity. The navigation rail separates the three collections from Library information and becomes an expandable menu on smaller screens.
+A white masthead carries the official horizontal Hall Research wordmark above a restrained blue-to-cyan rule. The supplied identity colors—blue `#2D6EBF`, cyan `#059BC0`, graphite `#5E5E5E`, and supporting gray `#848484`—shape links, navigation states, rules, and notices. Self-hosted Montserrat is reserved for headings and interface accents, while long-form source text retains a system sans serif for readability. Square corners and thin rules preserve the research-catalog character. The navigation rail separates the three collections from Library information and becomes an expandable menu on smaller screens.
 
 Collection pages retain their section navigation and source text, but use an open reference-directory layout. The reading area has no enclosing card. Research Guide previews state that they are coming soon and not yet available; no individual guide pages are published.
 
@@ -16,4 +16,4 @@ Run `python3 scripts/preview.py` from this directory and open <http://127.0.0.1:
 
 Edit `assets/css/styles.css` for the visual system and `scripts/build.py` for generated page layouts. Edit `assets/js/site.js` for menu behavior. Rebuild before publishing. Search matching and the commit-pinned source snapshots are retained from the supplied package. No source refresh was requested; the source check date remains October 5, 2026 (UTC).
 
-System fonts and locally served assets keep the design independent of third-party font and image requests. The website has no analytics, advertising, or remote UI dependencies.
+Locally served logo and font assets keep the design independent of third-party font and image requests. The website has no analytics, advertising, or remote UI dependencies.
