@@ -3,5 +3,6 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
+hr_branding/
 content/upstream-refresh-*/
 content/upstream-previous/

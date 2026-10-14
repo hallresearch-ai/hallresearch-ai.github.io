@@ -12,7 +12,7 @@ const server=spawn('python3',['scripts/preview.py','--port',String(port),'--dire
 await new Promise((resolve,reject)=>{server.stdout.once('data',resolve);server.once('exit',code=>reject(new Error(`Preview server exited ${code}`)));});
 let browser;
 const results={pages:[],searches:[],keyboard:[],errors:[],accessibility:[],subpath:basePath,viewports:[1440,1280,768,375,320]};
-const samples=['index.html','governance/government-and-multilateral-ai-policy-guidance.html','assessment/technical-resources.html','guides/index.html','guides/evidence-ai-performance.html','projects/tabred.html','projects/basic-model-testing-red-teaming-user-testing-example.html','cite.html','search.html'];
+const samples=['index.html','governance/government-and-multilateral-ai-policy-guidance.html','assessment/technical-resources.html','guides/index.html','cite.html','search.html'];
 function pages(folder){return fs.readdirSync(folder,{withFileTypes:true}).flatMap(x=>x.isDirectory()?pages(path.join(folder,x.name)):x.name.endsWith('.html')?[path.relative(directory,path.join(folder,x.name)).replaceAll(path.sep,'/')]:[]);}
 try {
  browser=await chromium.launch({...(executablePath?{executablePath}:{}),headless:true,args:['--no-sandbox','--disable-gpu','--disable-dev-shm-usage']});
@@ -37,21 +37,17 @@ try {
    results.accessibility.push({route,width:375,...mobileA});
    await page.screenshot({path:path.join(root,'verification',route.replaceAll('/','-')+'-mobile.png')});
    await page.setViewportSize({width:1440,height:1000});
-   if(route==='index.html' || route==='guides/index.html' || route==='projects/tabred.html')await page.screenshot({path:path.join(root,'verification',route.replaceAll('/','-')+'-desktop.png')});
+   if(route==='index.html' || route==='guides/index.html')await page.screenshot({path:path.join(root,'verification',route.replaceAll('/','-')+'-desktop.png')});
   }
   console.log('Checked '+route);
  }
- for(const q of ['prompt injection','red teaming','AI incidents','labor','NIST AI RMF','explainability','university policy','system card']) {
+ for(const q of ['prompt injection','red teaming','AI incidents','labor','NIST AI RMF','explainability','university policy']) {
   await page.goto(base+'search.html?q='+encodeURIComponent(q));
   await page.waitForFunction(()=>/results?\./.test(document.querySelector('#search-status').textContent));
   const count=await page.locator('.result').count();const destinations=await page.locator('.result h2 a').evaluateAll(nodes=>nodes.slice(0,5).map(n=>n.getAttribute('href')));
   results.searches.push({query:q,status:await page.locator('#search-status').innerText(),count,destinations});
   if(!count)throw new Error('No results for '+q);
  }
- await page.goto(base+'search.html?q=system+card');
- await page.waitForSelector('.result h2 a');
- await page.locator('.result h2 a').first().click();
- if(!page.url().includes('projects/example-system-card.html'))throw new Error('System card result destination incorrect');
  await page.goto(base+'search.html?q=prompt+injection');
  await page.waitForSelector('.result h2 a');
  await page.locator('.result h2 a').first().click();
@@ -79,7 +75,7 @@ try {
  await page.keyboard.press('Enter');if(await page.evaluate(()=>document.activeElement.id)!=='main-content')throw new Error('Skip navigation did not move focus');
  results.keyboard.push({check:'keyboard skip navigation',passed:true});
  await page.emulateMedia({reducedMotion:'reduce'});
- const motion=await page.locator('.card').first().evaluate(e=>getComputedStyle(e).transitionDuration);if(motion!=='0s')throw new Error('Reduced motion styling failed');
+ const motion=await page.locator('.catalog-row').first().evaluate(e=>getComputedStyle(e).transitionDuration);if(motion!=='0s')throw new Error('Reduced motion styling failed');
  const response=await page.goto(base+'nonexistent/deep/page.html');
  if(response.status()!==404||!await page.locator('h1').innerText().then(x=>x.includes('Page not found')))throw new Error('Custom 404 failed');
  await page.locator('a.button').click();if(new URL(page.url()).pathname!==(basePath||'')+'/index.html')throw new Error('404 return link escaped base path');

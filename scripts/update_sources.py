@@ -14,12 +14,7 @@ import urllib.request
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'content' / 'upstream'
 REQUIRED = ['.github', 'ai_governance_policy_resources',
-            'ai_assessment_implementation_resources', 'ai_research_guides',
-            'basic-ml-security', 'basic-xai-example',
-            'basic-model-testing-red-teaming-user-testing-example',
-            'basic-explainable-ml-bias-management-example', 'basic-ml-eval-example',
-            'ai-rmf-rag-prototype', 'example-system-card', 'bib-lib']
-OPTIONAL = ['basic-chatbot-guidance', 'tabred']
+            'ai_assessment_implementation_resources', 'ai_research_guides']
 
 def get(url):
     request = urllib.request.Request(url, headers={
@@ -53,7 +48,7 @@ def fetch_repo(repo, destination):
         path = item['path']
         basename = Path(path).name.upper()
         is_text = path.lower().endswith('.md') or basename.startswith(('LICENSE', 'COPYING')) or basename.endswith('_LICENSE')
-        is_notebook = path.endswith('.ipynb') and name != 'tabred'
+        is_notebook = path.endswith('.ipynb')
         is_bib = path.endswith('.bib')
         if not (is_text or is_notebook or is_bib):
             continue
@@ -89,12 +84,12 @@ def main():
     if len(repos) == 100:
         raise RuntimeError('Organization pagination required; refuse an incomplete inventory')
     staging = Path(tempfile.mkdtemp(prefix='upstream-refresh-', dir=ROOT / 'content'))
-    save_json(staging / 'organization-repositories.json', [{k: r.get(k) for k in ('name', 'html_url', 'description', 'archived', 'default_branch')} for r in repos])
     by_name = {r['name']: r for r in repos}
     missing = set(REQUIRED) - by_name.keys()
     if missing:
         raise RuntimeError(f'Required repositories missing: {missing}')
-    names = REQUIRED + [n for n in OPTIONAL if n in by_name]
+    names = REQUIRED
+    save_json(staging / 'organization-repositories.json', [{k: by_name[name].get(k) for k in ('name', 'html_url', 'description', 'archived', 'default_branch')} for name in names])
     try:
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
             snapshots = list(pool.map(lambda repo: fetch_repo(repo, staging), [by_name[n] for n in names]))
@@ -102,8 +97,7 @@ def main():
         shutil.rmtree(staging)
         raise
     manifest = {'checked_at_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
-                'authority': 'https://github.com/hallresearch-ai', 'repositories': snapshots,
-                'unclassified_repositories': sorted(by_name.keys() - set(names))}
+                'authority': 'https://github.com/hallresearch-ai', 'repositories': snapshots}
     manifest_path = ROOT / 'content' / 'source-manifest.json'
     temporary_manifest = manifest_path.with_suffix('.json.tmp')
     save_json(temporary_manifest, manifest)

@@ -82,7 +82,7 @@ async function initializeSearch() {
       history.replaceState(null, '', location.pathname + (params.size ? '?' + params : ''));
     }
     limit = 30; more.hidden = true;
-    if (!q) { results.replaceChildren(); status.textContent = 'Enter search terms to find resources, guide summaries, and project documentation.'; return; }
+    if (!q) { results.replaceChildren(); status.textContent = 'Enter search terms to find resources and preview forthcoming Research Guide topics.'; return; }
     matches = searchIndex(index, q, area.value, archived.checked); render();
   }
   async function load() {

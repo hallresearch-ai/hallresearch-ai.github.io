@@ -22,7 +22,6 @@ CONFIG = json.loads((ROOT / 'site-config.json').read_text())
 SITE_URL = (os.environ.get('SITE_URL') or CONFIG.get('site_url', '')).rstrip('/')
 MANIFEST = json.loads((ROOT / 'content/source-manifest.json').read_text())
 CHECKED = MANIFEST['checked_at_utc'][:10]
-PROJECTS = json.loads((ROOT / 'content/projects.json').read_text())
 BRANCHES = {
     'ai_governance_policy_resources': ('governance', 'AI Governance and Policy Resources', 'AI governance, public policy, law, institutional guidance, incidents, accountability, labor, and social impact.'),
     'ai_assessment_implementation_resources': ('assessment', 'AI Assessment and Implementation Resources', 'Responsible machine learning assessment, implementation, evaluation, auditing, testing, tooling, documentation, and education.')}
@@ -77,10 +76,8 @@ def init_sources():
                     DOC_URLS[key] = 'library-overview.html'
                 elif name == 'ai_research_guides' and path.lower() == 'readme.md':
                     DOC_URLS[key] = 'guides/index.html'
-                elif name in {p['repo'] for p in PROJECTS} and '/' not in path and path.lower() == 'readme.md':
-                    DOC_URLS[key] = 'projects/' + name + '.html'
                 else:
-                    area = BRANCHES[name][0] if name in BRANCHES else 'guides/materials' if name == 'ai_research_guides' else 'projects/' + name
+                    area = BRANCHES[name][0] if name in BRANCHES else 'guides/materials'
                     DOC_URLS[key] = area + '/' + slug(str(Path(path).with_suffix('')).replace('/', '-')) + '.html'
     result = subprocess.run(['node', str(ROOT / 'scripts/render-markdown.mjs')], input=json.dumps(sources), text=True, capture_output=True, check=True)
     raw = json.loads(result.stdout)
@@ -236,8 +233,6 @@ def provenance(key):
     repo, path = key.split('/', 1)
     license_info = REPOS[repo].get('license')
     license_label = license_info.get('spdx_id') if license_info else 'No repository-wide license identified'
-    if repo == 'basic-model-testing-red-teaming-user-testing-example':
-        license_label = 'Apache-2.0 (code); CC-BY-4.0 (other materials)'
     return f'<div class="provenance"><p><a href="{esc(source_url(repo, path))}">View the source document on GitHub</a> · Sources checked {CHECKED} (UTC).</p><p>{esc(license_label)}. Source text is preserved; navigation and formatting are adapted for this website.</p></div>'
 
 def add_page(path, title, description, body, area='', breadcrumbs=None, noindex=False):
@@ -310,77 +305,25 @@ def guide_rows():
 def build_guides():
     key = 'ai_research_guides/README.md'; rows = guide_rows()
     doc = deepcopy(DOCUMENTS[key])
-    table = doc.xpath('.//table')[0]
-    table.xpath('.//thead/tr/th')[0].text = 'Topic'
-    for tr, route in zip(table.xpath('.//tbody/tr'), GUIDE_SLUGS):
-        cell = tr.findall('td')[1]
-        a = html.Element('a', href='guides/' + route + '.html')
-        a.set('data-site-link', 'true')
-        a.text = text(cell); cell.clear(); cell.append(a)
+    doc.xpath('.//table')[0].xpath('.//thead/tr/th')[0].text = 'Topic'
     # The GitHub tagline is a subtitle, not a heading below the site title.
     for h in doc.xpath('.//h3'):
         if text(h) == 'Curated pathways through the HallResearch.ai Library': h.tag='p'; h.set('class','source-subtitle')
-    body = head('AI Research Guides', 'Curated pathways through selected material from the two broad Library collections.', 'Main Library branch', [('AI Research Guides',None)])
-    body += '<div class="content-layout">' + sidebar('Research Guides', [(r['title'], 'guides/'+s+'.html',False) for r,s in zip(rows,GUIDE_SLUGS)])
-    body += '<article class="prose"><p class="notice">The pages below are catalog summaries. The upstream collection remains under construction; source counts are reported by its catalog. Individual source manifests and interactive notebooks have not yet been published in the repository.</p>' + source_fragment(list(doc), key, remove_title=True) + provenance(key) + '</article></div>'
-    add_page('guides/index.html', 'AI Research Guides', 'Six topic-focused research guides under active development, with reported corpus sizes and current publication status.', body, 'guides')
-    guide_sections=parts(DOCUMENTS[key])[1]
-    environment=next(s for s in guide_sections if s['title']=='What is an AI Research Guide?')
-    planned=next(n for n in environment['nodes'] if n.tag=='ul')
-    for row, route in zip(rows, GUIDE_SLUGS):
-        title=row['title']; provisional='[INSERT' in title
-        body=head(title, row['description'], row['count']+' · Under construction', [('AI Research Guides','guides/index.html'),(title,None)])
-        body+='<div class="content-layout">'+sidebar('Research Guides',[('Guide catalog','guides/index.html',False)]+[(r['title'],'guides/'+s+'.html',s==route) for r,s in zip(rows,GUIDE_SLUGS)])+'<article class="prose">'
-        if provisional:body+='<p class="notice"><strong>Title pending.</strong> The placeholder above is retained from the public source. A final title has not been supplied.</p>'
-        body+='<h2>Scope</h2><p>'+esc(row['description'])+'</p><h2>Current public status</h2><p>The catalog reports a corpus of '+esc(row['count'])+'. The public repository currently contains the catalog README. Individual guide manifests, interactive notebook links, review dates, and changelogs remain pending.</p><h2>Planned guide materials</h2>'+source_fragment([planned],key)+'<h2>Continue in the Library</h2><p><a href="governance/index.html">AI Governance and Policy Resources</a> and <a href="assessment/index.html">AI Assessment and Implementation Resources</a> contain the larger collections from which guides draw selected material.</p><p><a href="'+esc(source_url('ai_research_guides','README.md'))+'#launch-collection">Read the upstream guide catalog on GitHub</a></p>'+provenance(key)+'</article></div>'
-        add_page('guides/'+route+'.html',title,row['description'],body,'guides')
-
-def project_file_links(repo):
-    result=[]
-    for path,item in TREES[repo].items():
-        if item['type']!='blob' or any(p.startswith('.') for p in Path(path).parts):continue
-        if repo=='tabred' and path.startswith(('exp/','bin/','lib/','tool/')):continue
-        if path.endswith(('.ipynb','.md','.pdf','.bib','.txt','.py','.tex','.csv','.yaml')) or Path(path).name.upper().endswith('LICENSE'):
-            if '/old/' in path:continue
-            doc_key=repo+'/'+path
-            result.append((path,DOC_URLS.get(doc_key,source_url(repo,path))))
-    return result
-
-def build_projects():
-    body=head('Supporting Project Repositories','Examples, prototypes, notebooks, documentation models, and reference tools connected to the Library.','Companion materials',[('Supporting projects',None)])
-    body+='<section class="wrap"><p class="notice">These repositories support the three Library branches. Each page identifies its artifacts and links to the source, with repository instructions preserved below the overview.</p>'
-    for group in dict.fromkeys(p['group'] for p in PROJECTS):
-        body+='<h2>'+esc(group)+'</h2><div class="project-list">'
-        for p in [p for p in PROJECTS if p['group']==group]:
-            body+=f'<article class="project-row"><h3><a href="projects/{p["repo"]}.html">{esc(p["title"])}</a></h3><p>{esc(p["summary"])}</p><p class="meta">{esc(p["artifact"])}</p></article>'
-        body+='</div>'
-    body+='<p><a href="library-overview.html#supporting-project-repositories">Read the Library’s overview of its supporting repositories</a>.</p></section>'
-    add_page('projects/index.html','Supporting Project Repositories','Public examples, prototypes, notebooks, documentation models, teaching materials, and reference tools supporting the HallResearch.ai Library.',body,'projects')
-    for p in PROJECTS:
-        repo=p['repo']; key=next(k for k in DOC_URLS if k.startswith(repo+'/') and '/' not in k[len(repo)+1:] and Path(k).name.lower()=='readme.md')
-        body=head(p['title'],p['summary'],'Supporting repository'+(' · Archived' if REPOS[repo]['archived'] else ''),[('Supporting projects','projects/index.html'),(p['title'],None)])
-        raw=source_fragment(list(DOCUMENTS[key]),key,base_level=3,remove_title=True)
-        toc=[(text(h),h.get('id'),int(h.tag[1])) for h in fragment(raw).xpath('.//h3')]
-        body+='<div class="content-layout">'+sidebar('Project navigation',[('All supporting projects','projects/index.html',False),(p['title'],'projects/'+repo+'.html',True)], [('Project files','project-files',2),('Repository documentation','repository-documentation',2)]+toc)+'<article class="prose">'
-        if REPOS[repo]['archived']:body+='<p class="notice"><strong>Archived on GitHub.</strong> This repository is retained as a historical research resource.</p>'
-        body+=f'<dl class="project-facts"><dt>Artifact</dt><dd>{esc(p["artifact"])}</dd><dt>Useful for</dt><dd>{esc(p["audience"])}</dd></dl><p><a class="button" href="https://github.com/hallresearch-ai/{repo}">View on GitHub</a></p><h2 id="project-files">Project files</h2><ul class="file-list">'
-        for path,url in project_file_links(repo):
-            kind='View notebook' if path.endswith('.ipynb') else 'View PDF' if path.endswith('.pdf') else 'Read documentation' if path.endswith('.md') else 'View source file'
-            body+=f'<li><a href="{esc(url)}">{esc(path)}</a><span class="meta">{kind}</span></li>'
-        body+='</ul><h2 id="repository-documentation">Repository documentation</h2>'+raw+provenance(key)+'</article></div>'
-        add_page('projects/'+repo+'.html',p['title'],p['summary'],body,'projects')
+    body = head('AI Research Guides', 'Focused research pathways are in development and not yet available.', 'Coming soon', [('AI Research Guides',None)])
+    body += '<div class="content-layout">' + sidebar('Research Guides', [('Guide catalog', 'guides/index.html', True)])
+    body += '<article class="prose"><p class="notice guide-coming-soon"><strong>Coming soon.</strong> The AI Research Guides are under construction and have not yet been released. The catalog below previews the planned initial collection; guide content and public access will be added as each guide is completed.</p>' + source_fragment(list(doc), key, remove_title=True) + provenance(key) + '</article></div>'
+    add_page('guides/index.html', 'AI Research Guides — Coming soon', 'Planned topic-focused research guides. Guide content is under construction and not yet available.', body, 'guides')
 
 def build_extra_documents():
     primary={r+'/README.md' for r in BRANCHES}|{'ai_research_guides/README.md','.github/profile/README.md'}
-    primary|={k for k in DOC_URLS if '/'+Path(k).name==k[k.find('/'):] and Path(k).name.lower()=='readme.md' and k.split('/')[0] in {p['repo'] for p in PROJECTS}}
     for key,url in DOC_URLS.items():
         if url in PAGES or key in primary:continue
         repo,path=key.split('/',1); doc=DOCUMENTS[key]
         hs=doc.xpath('.//h1|.//h2'); title=text(hs[0]) if hs else Path(path).stem.replace('-',' ')
         if 'Code-of-Conduct' in path:title='Contributor Code of Conduct'
-        area=BRANCHES[repo][0] if repo in BRANCHES else 'guides' if repo == 'ai_research_guides' else 'projects'
-        parent=BRANCHES[repo][1] if repo in BRANCHES else 'AI Research Guides' if repo == 'ai_research_guides' else next(p['title'] for p in PROJECTS if p['repo']==repo)
-        parent_url=area+'/index.html' if repo in BRANCHES or repo == 'ai_research_guides' else 'projects/'+repo+'.html'
+        area=BRANCHES[repo][0] if repo in BRANCHES else 'guides'
+        parent=BRANCHES[repo][1] if repo in BRANCHES else 'AI Research Guides'
+        parent_url=area+'/index.html'
         body=head(title,'',parent,[(parent,parent_url),(title,None)])+'<section class="wrap"><article class="prose">'+source_fragment(list(doc),key,remove_title=bool(doc.xpath('./h1')))+provenance(key)+'</article></section>'
         add_page(url,title+' · '+parent,f'{title}: source documentation from {parent}.',body,area)
 
@@ -388,7 +331,7 @@ def build_about():
     key='.github/profile/README.md'; intro,sections=parts(DOCUMENTS[key]); by_title={s['title']:s for s in sections}
     overview=head('HallResearch.ai Library','The complete Library overview, with its philosophy, organization, maintenance notes, and suggested citations.','About the Library',[('About','about.html'),('Library overview',None)])
     overview+='<div class="content-layout">'+about_sidebar('library-overview.html')+'<article class="prose">'+source_fragment(list(DOCUMENTS[key]),key,remove_title=True)+provenance(key)+'</article></div>'
-    add_page('library-overview.html','HallResearch.ai Library overview','The authoritative Library overview, including its branches, supporting repositories, philosophy, maintenance, and citations.',overview,'about')
+    add_page('library-overview.html','HallResearch.ai Library overview','The authoritative Library overview, including its three collections, philosophy, maintenance, and citations.',overview,'about')
     nodes=[]
     for section_title in ['Library Philosophy','Repository Organization','Legacy Note','Maintenance Note']:nodes.extend(by_title[section_title]['nodes'])
     about=head('A working research library.','A public collection maintained by Patrick Hall and Daniel Atherton, with curation sponsored by HallResearch.ai.','About the Library',[('About',None)])
@@ -402,7 +345,7 @@ def build_about():
     body+='<div class="content-layout">'+about_sidebar('cite.html')+'<article class="prose">'+source_fragment(citation,key,citations=True)+provenance(key)+'</article></div>'
     add_page('cite.html','How to cite the Library','Source-preserved MLA, APA, Chicago, ACM, and BibTeX citation examples for the Library and each main branch.',body,'about')
     body=head('How the Library is maintained','The website presents the research collection maintained in HallResearch.ai’s public repositories.','Curation and publishing',[('About','about.html'),('Methodology',None)])
-    body+='<div class="content-layout">'+about_sidebar('methodology.html')+'''<article class="prose"><h2>Source of truth</h2><p>The main GitHub repositories remain authoritative. The website preserves their editorial text and resource links while adding browsing, cross-links, and search.</p><h2>Curation</h2><p>The Library is maintained as an ongoing public resource. Suggestions, corrections, and additions continue through the relevant repository’s issue tracker or pull request process. The Library’s <a href="about.html#maintenance-note">maintenance note</a> includes its AI-assistance disclosure.</p><h2>Publication status</h2><p>Archived collections remain labelled. Research Guide summaries preserve the public catalog’s reported counts and unfinished titles. They link to published material when it is available.</p><h2>Search</h2><p>Search covers both broad resource collections, Research Guides, and supporting projects. Results identify their Library context, link to the matching item on the site, and provide the resource’s original URL. Archived items can be filtered separately.</p><h2>Source freshness</h2>'''+f'<p>Public source files were checked on {CHECKED} (UTC). The website is a snapshot of those files; subsequent repository changes will appear after the next update. See the <a href="library-overview.html">Library overview</a> for scope and maintenance information.</p><h2>Website adaptation</h2><p>This verification and repair pass used Codex to inspect and transform the public source files and repair the website. The source repositories’ own editorial disclosures are preserved. Website navigation and project orientation summaries are presentation additions.</p></article></div>'
+    body+='<div class="content-layout">'+about_sidebar('methodology.html')+'''<article class="prose"><h2>Source of truth</h2><p>The three main GitHub repositories remain authoritative. The website preserves their editorial text and resource links while adding browsing, cross-links, and search.</p><h2>Curation</h2><p>The Library is maintained as an ongoing public resource. Suggestions, corrections, and additions continue through the relevant repository’s issue tracker or pull request process. The Library’s <a href="about.html#maintenance-note">maintenance note</a> includes its AI-assistance disclosure.</p><h2>Publication status</h2><p>Archived collections remain labelled. AI Research Guides are clearly marked as coming soon: their planned catalog is visible, but guide content is not yet available.</p><h2>Search</h2><p>Search covers the Governance and Assessment collections and the Research Guide catalog. Results identify their Library context, link to the matching item on the site, and provide the resource’s original URL. Archived items can be filtered separately.</p><h2>Source freshness</h2>'''+f'<p>Public source files were checked on {CHECKED} (UTC). The website is a snapshot of those files; subsequent repository changes will appear after the next update. See the <a href="library-overview.html">Library overview</a> for scope and maintenance information.</p><h2>Website adaptation</h2><p>This website uses automated tooling to inspect and transform public source files. The source repositories’ own editorial disclosures are preserved; website navigation and orientation text are presentation additions.</p></article></div>'
     add_page('methodology.html','Methodology','The website’s authoritative sources, content preservation, search, publication status, source freshness, and adaptation disclosure.',body,'about')
 
 def build_home():
@@ -429,20 +372,17 @@ def build_home():
             display='Archived Assessment Materials' if st=='Archived' else st
             body+=f'<a class="catalog-row'+(' archived-row' if archived else '')+f'" href="{area}/{slug(st)}.html"><span class="row-number" aria-hidden="true">{number}.{i:02}</span><div class="row-content"><h4>{esc(display)}</h4><span class="row-description">{esc(description)}</span></div><span class="row-count"><strong>{links:,}</strong><span>source links</span></span><span class="row-arrow" aria-hidden="true">↗</span></a>'
         body+='</div></section>'
-    body+='''<section class="catalog-group guide-group" aria-labelledby="catalog-guides"><div class="catalog-group-head"><h3 id="catalog-guides"><span class="group-number" aria-hidden="true">03</span><a href="guides/index.html">AI Research Guides</a></h3><a class="group-link" href="guides/index.html">Guide catalog <span aria-hidden="true">↗</span></a></div><p class="guide-intro">Focused pathways through the Library. The initial guide collection is under construction.</p><div class="guide-preview-list">'''
+    body+='''<section class="catalog-group guide-group" aria-labelledby="catalog-guides"><div class="catalog-group-head"><h3 id="catalog-guides"><span class="group-number" aria-hidden="true">03</span><a href="guides/index.html">AI Research Guides — Coming soon</a></h3><a class="group-link" href="guides/index.html">Preview catalog <span aria-hidden="true">↗</span></a></div><p class="notice guide-coming-soon"><strong>Not yet available.</strong> The initial Research Guide collection is under construction. These topics preview what is coming first.</p><div class="guide-preview-list">'''
     for row,route in zip(guide_rows(),GUIDE_SLUGS):
         provisional='[INSERT' in row['title'];display=re.sub(r'\s+(and|&)$','',row['title'].split('[')[0].strip())
-        body+=f'<a class="guide-preview card" href="guides/{route}.html"><div class="guide-preview-main"><h4>{esc(display)}</h4><span class="row-description">{esc(row["description"])}</span></div><span class="guide-state">'+('Title pending · ' if provisional else '')+'Under construction</span><span class="row-arrow" aria-hidden="true">↗</span></a>'
-    body+='</div></section><section class="supporting-home" aria-labelledby="supporting-heading"><div class="section-title"><h2 id="supporting-heading">From resources to practice</h2><a class="group-link" href="projects/index.html">Supporting projects <span aria-hidden="true">↗</span></a></div><p>Companion repositories provide practical examples and reference tools.</p><div class="project-list">'
-    for p in [p for p in PROJECTS if p['repo'] in ('example-system-card','basic-model-testing-red-teaming-user-testing-example')]:
-        body+=f'<article class="project-row"><p class="meta">{esc(p["artifact"])}</p><h3><a href="projects/{p["repo"]}.html">{esc(p["title"])}</a></h3><p>{esc(p["summary"])}</p></article>'
+        body+=f'<div class="guide-preview"><div class="guide-preview-main"><h4>{esc(display)}</h4><span class="row-description">{esc(row["description"])}</span></div><span class="guide-state">'+('Title pending · ' if provisional else '')+'Coming soon</span></div>'
     body+='</div></section><details class="home-orientation"><summary>How the Library is organized</summary><div>'+source_fragment(how['nodes'],key)+'</div></details></section>'
     add_page('index.html','HallResearch.ai Library',CONFIG['description'],body,'home')
 
 def build_search_and_404():
-    body=head('Search the Library','Find resources across Governance, Assessment, Research Guides, and supporting projects.','Search',[('Search',None)])+'''<section class="search-page"><form id="search-form" action="search.html" method="get" role="search"><label for="q">Search terms</label><div class="search-box"><input id="q" name="q" type="search" placeholder="Try prompt injection or university policy"><button type="submit">Search</button></div><div class="search-filters"><label for="area">Library area<select id="area" name="area"><option value="">All areas</option><option value="governance">Governance and Policy</option><option value="assessment">Assessment and Implementation</option><option value="guides">Research Guides</option><option value="projects">Supporting projects</option></select></label><label class="checkbox-label"><input id="include-archived" type="checkbox" checked>Include archived material</label></div></form><p id="search-status" role="status" aria-live="polite">Loading search…</p><div id="results" class="results" role="region" aria-label="Search results"></div><button id="more-results" type="button" hidden>Show more results</button><button id="retry-search" type="button" hidden>Retry loading search</button><noscript><p>Search needs JavaScript. Browse <a href="governance/index.html">Governance</a>, <a href="assessment/index.html">Assessment</a>, <a href="guides/index.html">Research Guides</a>, or <a href="projects/index.html">Supporting projects</a>.</p></noscript></section>'''
-    add_page('search.html','Search the Library','Search curated AI governance, policy, assessment, implementation, Research Guide, and supporting project resources.',body,'search',noindex=True)
-    body=head('Page not found','The requested page could not be found.','404',[('Page not found',None)])+'''<section class="wrap"><p><a class="button" href="index.html">Return to the Library</a></p><p>Browse <a href="governance/index.html">Governance</a>, <a href="assessment/index.html">Assessment</a>, <a href="guides/index.html">Research Guides</a>, or <a href="projects/index.html">Supporting projects</a>.</p><form class="hero-search" action="search.html" method="get" role="search"><label class="sr-only" for="missing-query">Search the Library</label><input id="missing-query" type="search" name="q" required><button type="submit">Search</button></form></section>'''
+    body=head('Search the Library','Find resources across Governance, Assessment, and the forthcoming Research Guide catalog.','Search',[('Search',None)])+'''<section class="search-page"><form id="search-form" action="search.html" method="get" role="search"><label for="q">Search terms</label><div class="search-box"><input id="q" name="q" type="search" placeholder="Try prompt injection or university policy"><button type="submit">Search</button></div><div class="search-filters"><label for="area">Library area<select id="area" name="area"><option value="">All areas</option><option value="governance">Governance and Policy</option><option value="assessment">Assessment and Implementation</option><option value="guides">Research Guides — Coming soon</option></select></label><label class="checkbox-label"><input id="include-archived" type="checkbox" checked>Include archived material</label></div></form><p id="search-status" role="status" aria-live="polite">Loading search…</p><div id="results" class="results" role="region" aria-label="Search results"></div><button id="more-results" type="button" hidden>Show more results</button><button id="retry-search" type="button" hidden>Retry loading search</button><noscript><p>Search needs JavaScript. Browse <a href="governance/index.html">Governance</a>, <a href="assessment/index.html">Assessment</a>, or preview the <a href="guides/index.html">forthcoming Research Guides</a>.</p></noscript></section>'''
+    add_page('search.html','Search the Library','Search curated AI governance, policy, assessment, implementation, and forthcoming Research Guide resources.',body,'search',noindex=True)
+    body=head('Page not found','The requested page could not be found.','404',[('Page not found',None)])+'''<section class="wrap"><p><a class="button" href="index.html">Return to the Library</a></p><p>Browse <a href="governance/index.html">Governance</a>, <a href="assessment/index.html">Assessment</a>, or preview the <a href="guides/index.html">forthcoming Research Guides</a>.</p><form class="hero-search" action="search.html" method="get" role="search"><label class="sr-only" for="missing-query">Search the Library</label><input id="missing-query" type="search" name="q" required><button type="submit">Search</button></form></section>'''
     add_page('404.html','Page not found','The requested Library page could not be found.',body,noindex=True)
 
 def relative_urls(raw,path):
@@ -462,12 +402,11 @@ def write_pages():
     if OUT.exists():shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
     shutil.copytree(ROOT/'assets',OUT/'assets',ignore=shutil.ignore_patterns('search-index.json'))
-    nav_items=[('home','Home','index.html'),('governance','Governance','governance/index.html'),('assessment','Assessment','assessment/index.html'),('guides','Research Guides','guides/index.html'),('projects','Supporting projects','projects/index.html'),('about','About','about.html'),('search','Search','search.html')]
+    nav_items=[('home','Home','index.html'),('governance','Governance','governance/index.html'),('assessment','Assessment','assessment/index.html'),('guides','Research Guides — Coming soon','guides/index.html'),('about','About','about.html'),('search','Search','search.html')]
     for path,p in PAGES.items():
-        nav='<header class="site-header"><div class="nav"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">H</span><span class="brand-name">HallResearch<span class="brand-ai">.ai</span><span class="brand-library">Library</span></span></a><p class="masthead-note">Curated by Patrick Hall &amp; Daniel Atherton</p><button class="mobile-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Browse</button></div></header><div class="catalog-shell"><aside class="catalog-rail"><nav class="nav-links" id="main-navigation" aria-label="Main navigation"><p class="rail-label">The collection</p>'
+        nav='<header class="site-header"><div class="nav"><a class="brand" href="index.html"><img class="brand-logo" src="assets/logo.svg" alt="Hall Research"><span class="brand-library">Library</span></a><p class="masthead-note">Curated by Patrick Hall &amp; Daniel Atherton</p><button class="mobile-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Browse</button></div></header><div class="catalog-shell"><aside class="catalog-rail"><nav class="nav-links" id="main-navigation" aria-label="Main navigation"><p class="rail-label">The collection</p>'
         rail_numbers={'governance':'01','assessment':'02','guides':'03'}
         for area,title,url in nav_items:
-            if area=='projects':nav+='<p class="rail-label rail-separator">Companion materials</p>'
             if area=='about':nav+='<p class="rail-label rail-separator">Using the Library</p>'
             display='All collections' if area=='home' else title
             number=rail_numbers.get(area,'')
@@ -507,7 +446,7 @@ def build_index():
     for path,page in PAGES.items():
         if page['noindex'] or not page['area'] or page['area'] in ('home','about'):continue
         area=page['area'];doc=html.parse(str(OUT/path));article=doc.xpath('//article[contains(@class,"prose")]')
-        archived='archived' in path or path=='projects/tabred.html' or path.startswith('projects/tabred/')
+        archived='archived' in path
         records.append({'title':page['title'],'url':path,'area':area,'section':page['title'],'summary':page['description'],'kind':'page','archived':archived})
         for article_node in article:
             heading=page['title']
@@ -546,7 +485,7 @@ def build_index():
 def main():
     if SITE_URL and (urlsplit(SITE_URL).scheme!='https' or not urlsplit(SITE_URL).netloc):
         raise RuntimeError('SITE_URL must be the actual absolute HTTPS deployment URL.')
-    init_sources();register_branch_urls();build_branches();build_guides();build_projects();build_extra_documents();build_about();build_home();build_search_and_404();write_pages();index=build_index()
+    init_sources();register_branch_urls();build_branches();build_guides();build_extra_documents();build_about();build_home();build_search_and_404();write_pages();index=build_index()
     verification=ROOT/'verification';verification.mkdir(exist_ok=True)
     (verification/'build-transformations.json').write_text(json.dumps(NOTES,ensure_ascii=False,indent=2)+'\n')
     (ROOT/'content/document-map.json').write_text(json.dumps(DOC_URLS,ensure_ascii=False,indent=2)+'\n')

@@ -2,7 +2,7 @@
 
 The **HallResearch.ai Library** is a curated public collection of resources for understanding, governing, assessing, and implementing artificial intelligence systems in the world.
 
-The Library grew out of the original [*Awesome Machine Learning Interpretability*](https://github.com/jphall663/awesome-machine-learning-interpretability) repository and now serves as a broader research library. Its three main branches are maintained as separate GitHub repositories: two broad resource collections and a companion research-guide branch that creates curated pathways through selected Library materials.
+The Library grew out of the original [*Awesome Machine Learning Interpretability*](https://github.com/jphall663/awesome-machine-learning-interpretability) repository and now serves as a broader research library. Its three main branches are maintained as separate GitHub repositories: two broad resource collections and a research-guide branch that will create curated pathways through selected Library materials.
 
 Maintenance and curation are sponsored by [HallResearch.ai](https://www.hallresearch.ai).
 
@@ -13,7 +13,6 @@ Maintenance and curation are sponsored by [HallResearch.ai](https://www.hallrese
 | Section | Description |
 |---|---|
 | [Main Branches](#main-branches) | Governance/policy resources, assessment/implementation resources, and curated AI Research Guides |
-| [Supporting Project Repositories](#supporting-project-repositories) | Public examples, prototypes, notebooks, and reference tools connected to the Library |
 | [How to Use the Library](#how-to-use-the-library) | Guidance for choosing the right starting point |
 | [Library Philosophy](#library-philosophy) | The purpose and scope of the collection |
 | [Legacy Note](#legacy-note) | Relationship to the original AMLI repository |
@@ -94,30 +93,6 @@ Use this branch when you are asking questions such as:
 
 ---
 
-## Supporting Project Repositories
-
-The repositories below are public HallResearch.ai projects that support the Library’s teaching, demonstration, prototyping, and reference functions. They are not separate Library branches. Instead, they should be understood as companion materials alongside the three main branches above.
-
-### Assessment, Testing, and Implementation Examples
-
-| Repository | Description |
-|---|---|
-| [basic-ml-security](https://github.com/hallresearch-ai/basic-ml-security) | Basic example of attacking an XGBoost classifier. |
-| [basic-xai-example](https://github.com/hallresearch-ai/basic-xai-example) | Basic examples of XAI techniques. |
-| [basic-model-testing-red-teaming-user-testing-example](https://github.com/hallresearch-ai/basic-model-testing-red-teaming-user-testing-example) | Basic example of model testing, red teaming, and user/field testing for LLM-based systems. |
-| [basic-explainable-ml-bias-management-example](https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example) | Example explainable ML model with bias management. |
-| [basic-ml-eval-example](https://github.com/hallresearch-ai/basic-ml-eval-example) | Example evaluation procedure for several ML model scores on a simple dataset. |
-
-### Governance, Documentation, and Reference Prototypes
-
-| Repository | Description |
-|---|---|
-| [ai-rmf-rag-prototype](https://github.com/hallresearch-ai/ai-rmf-rag-prototype) | Prototype RAG system for NIST AI RMF materials. |
-| [example-system-card](https://github.com/hallresearch-ai/example-system-card) | Example AI system card for trainings and presentations. |
-| [bib-lib](https://github.com/hallresearch-ai/bib-lib) | HallResearch.ai public BibTeX library. |
-
----
-
 ## How to Use the Library
 
 The Library’s branches overlap in places because AI governance and AI implementation are not cleanly separable. A policy document may imply technical assessment requirements; an auditing framework may have legal or institutional consequences. The structure is meant to help readers find a useful starting point, not to enforce rigid boundaries.
@@ -127,7 +102,6 @@ As a general rule:
 - Start with **AI Governance and Policy Resources** if your question concerns institutions, law, regulation, public policy, accountability, or social impact.
 - Start with **AI Assessment and Implementation Resources** if your question concerns evaluation, implementation, auditing, testing, tooling, or technical practice.
 - Start with **AI Research Guides** if you want a smaller, curated pathway through selected Library materials organized around a specific research question or topic.
-- Use the **Supporting Project Repositories** when you want examples, prototypes, notebooks, training materials, or reference files connected to the broader Library.
 
 Readers working on responsible AI, trustworthy AI, AI safety, AI governance, AI accountability, AI incident analysis, or machine learning assessment may find themselves moving among all three branches.
 
@@ -152,9 +126,6 @@ This top-level page is the main public entry point for the HallResearch.ai Libra
 | Main Library Branch | Governance, policy, law, accountability, institutions, and social impact | [ai_governance_policy_resources](https://github.com/hallresearch-ai/ai_governance_policy_resources) |
 | Main Library Branch | Assessment, implementation, evaluation, tooling, auditing, and education | [ai_assessment_implementation_resources](https://github.com/hallresearch-ai/ai_assessment_implementation_resources) |
 | Main Library Branch | Curated, topic-focused pathways through selected resources from across the Library | [ai_research_guides](https://github.com/hallresearch-ai/ai_research_guides) |
-| Supporting Project Repository | Examples, prototypes, notebooks, documentation models, and reference files | [basic-ml-security](https://github.com/hallresearch-ai/basic-ml-security), [basic-xai-example](https://github.com/hallresearch-ai/basic-xai-example), [basic-model-testing-red-teaming-user-testing-example](https://github.com/hallresearch-ai/basic-model-testing-red-teaming-user-testing-example), [basic-explainable-ml-bias-management-example](https://github.com/hallresearch-ai/basic-explainable-ml-bias-management-example), [basic-ml-eval-example](https://github.com/hallresearch-ai/basic-ml-eval-example), [ai-rmf-rag-prototype](https://github.com/hallresearch-ai/ai-rmf-rag-prototype), [example-system-card](https://github.com/hallresearch-ai/example-system-card), [bib-lib](https://github.com/hallresearch-ai/bib-lib) |
-
-Future branches and supporting repositories may be added as the Library develops.
 
 ---
 

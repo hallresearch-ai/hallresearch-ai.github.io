@@ -1,12 +1,10 @@
 # HallResearch.ai Library website — Option 2: Research Catalog
 
-This is a separate design option based on the supplied website package. The original design remains in the supplied ZIP. This package is a static public interface to the HallResearch.ai Library. It preserves three main Library branches: **AI Governance and Policy Resources**, **AI Assessment and Implementation Resources**, and **AI Research Guides**. Supporting repositories have their own area for examples, prototypes, documentation, teaching materials, and reference tools.
+This package is a static public interface to the HallResearch.ai Library. It presents **AI Governance and Policy Resources**, **AI Assessment and Implementation Resources**, and a preview of the forthcoming **AI Research Guides**.
 
-The complete deployable website is already built in `public/`. It has 46 pages, six guide catalog summaries, ten supporting project pages, and a browser search index. See `VERIFICATION_REPORT.md` for this design’s QA results and `DESIGN_NOTES.md` for its visual direction. The original repair report is retained as `BASELINE_VERIFICATION_REPORT.md`; its evidence lives in `baseline-verification/`.
+The complete deployable website is built in `public/`. It includes the two available resource collections, a clearly marked coming-soon Research Guide catalog, and browser search. See `VERIFICATION_REPORT.md` for current QA results and `DESIGN_NOTES.md` for the visual direction.
 
 ## Preview the built website
-
-Open `DESIGN_PREVIEW.html` for a self-contained visual review. Its controls show desktop and mobile screenshots of the homepage, a resource directory, the guide catalog, and search. To interact with the actual website, start the server below.
 
 From this package directory:
 
@@ -51,7 +49,7 @@ python3 scripts/audit.py
 python3 scripts/check_fidelity.py
 ```
 
-The updater inventories the public organization, obtains current commit IDs and complete repository trees, and downloads the authoritative Markdown and license files. It also inspects notebook source and bibliography metadata. Refreshes are staged before replacing the snapshots. Review the source changes before committing and publishing them; the deploy workflow intentionally uses the reviewed snapshots rather than fetching editorial changes during deployment.
+The updater obtains current commit IDs and complete repository trees for the three Library collections and organization profile, then downloads their authoritative Markdown and license files. Refreshes are staged before replacing the snapshots. Review source changes before committing and publishing them; the deploy workflow intentionally uses reviewed snapshots rather than fetching editorial changes during deployment.
 
 The three broad source locations are:
 
@@ -59,7 +57,7 @@ The three broad source locations are:
 - <https://github.com/hallresearch-ai/ai_assessment_implementation_resources>
 - <https://github.com/hallresearch-ai/ai_research_guides>
 
-The organization overview comes from `.github/profile/README.md`. Supporting repository documentation remains authoritative in each project repository. `content/source-manifest.json` records the complete repository inventory, source commits, file hashes, and retrieval date.
+The organization overview comes from `.github/profile/README.md`. `content/source-manifest.json` records the included source repositories, commits, file hashes, and retrieval date.
 
 ## What is generated and what is maintained by hand
 
@@ -68,23 +66,20 @@ The organization overview comes from `.github/profile/README.md`. Supporting rep
 | `public/` | Generated HTML, CSS, JavaScript, favicon, search index, robots file, and deployment metadata |
 | `content/upstream/` | Current commit-pinned source documents, licenses, repository trees, and inspection records |
 | `content/source-manifest.json` | Snapshot provenance and integrity hashes; written by the updater |
-| `content/projects.json` | Short, source-grounded project orientation, audience, and artifact labels |
 | `content/document-map.json` | Generated mapping from source Markdown to public pages |
 | `scripts/build.py` | Page layout, source transformation, cross-link routing, guide catalog summaries, and indexing |
 | `scripts/render-markdown.mjs` | GitHub-flavored Markdown conversion using Marked |
 | `assets/` | Website styles, behavior, and favicon; copied into the public output |
 | `site-config.json` | Deployment URL configuration and website metadata |
 | `verification/` | Current design QA evidence, screenshots, and check results; never deployed |
-| `baseline-verification/` | Historical evidence from the supplied design; never deployed |
 
-Resource lists are generated from upstream Markdown. Thousands of links do not need a second manual copy. New H2 sections in the broad collections become pages automatically. A new supporting repository requires an entry in `content/projects.json` and the updater's repository list. A changed guide catalog requires an editorial review of its status and access language; the current landing pages faithfully describe the six guides still under construction. The build refuses an unexpected guide count rather than silently assigning the wrong page routes.
+Resource lists are generated from upstream Markdown. Thousands of links do not need a second manual copy. New H2 sections in the broad collections become pages automatically. A changed guide catalog requires editorial review of its status and access language; the website deliberately presents the six planned guides as coming soon and does not publish individual guide pages.
 
 ## Repeat the QA checks
 
 ```bash
 python3 scripts/audit.py
 python3 scripts/check_fidelity.py
-python3 scripts/check_external.py --sample 280
 ```
 
 `audit.py` checks every internal page, fragment, asset, and search destination, parses HTML5/JSON/SVG, checks heading order and duplicate IDs, and validates Pages workflow structure. `check_fidelity.py` independently compares source text blocks, exact code blocks, and external URLs with the published documents. Presentation-only badges and their leftover delimiters are excluded from the text comparison.
@@ -101,10 +96,8 @@ The browser check starts its own preview server. It checks all pages on desktop,
 
 To test a repository subpath, build to a temporary output directory with a test `SITE_URL`, then set `QA_DIRECTORY` and `QA_BASE_PATH` for the browser check. The domain in such a test is a fixture, not a production setting.
 
-`external-url-inventory.csv` inventories every public external URL. `external-urls-broken-or-uncertain.csv` includes HTTP errors, access challenges, network failures, and links outside the HTTP sample. `not_checked` means exactly that; it does not mean a link is broken. Original upstream URLs remain preserved.
-
 ## Attribution and licensing
 
 Patrick Hall and Daniel Atherton maintain the Library, with maintenance and curation sponsored by HallResearch.ai. Source citation examples and editorial AI-assistance disclosures are preserved on the public site. Website adaptations are described on its Methodology page.
 
-Source licenses remain attached to their individual repositories and are included with their snapshots. The model-testing/red-teaming project has separate code and material licenses; both are retained. No single new license is asserted over the collected third-party resources. See `LICENSES.md` for the source license inventory.
+Source licenses remain attached to their individual repositories and are included with their snapshots. No single new license is asserted over the collected third-party resources. See `LICENSES.md` for the source license inventory.

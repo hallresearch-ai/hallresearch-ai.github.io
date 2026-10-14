@@ -1,15 +1,15 @@
 {
-  "source_documents": 22,
-  "text_blocks": 4119,
-  "code_blocks": 45,
-  "external_links": 2484,
+  "source_documents": 8,
+  "text_blocks": 3229,
+  "code_blocks": 5,
+  "external_links": 2441,
   "missing_text_blocks": 0,
   "missing_code_blocks": 0,
   "missing_external_links": 0,
   "documents": [
     {
       "source_document": ".github/profile/README.md",
-      "source_text_blocks": 134,
+      "source_text_blocks": 106,
       "source_code_blocks": 4,
       "source_external_links": 7,
       "missing_text_blocks": [],
@@ -75,132 +75,6 @@
       "source_text_blocks": 79,
       "source_code_blocks": 1,
       "source_external_links": 1,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "basic-ml-security/README.md",
-      "source_text_blocks": 25,
-      "source_code_blocks": 3,
-      "source_external_links": 3,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "basic-xai-example/README.md",
-      "source_text_blocks": 36,
-      "source_code_blocks": 6,
-      "source_external_links": 2,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "basic-model-testing-red-teaming-user-testing-example/Field_Testing_Rubric_CC_By.md",
-      "source_text_blocks": 50,
-      "source_code_blocks": 0,
-      "source_external_links": 0,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "basic-model-testing-red-teaming-user-testing-example/README.md",
-      "source_text_blocks": 28,
-      "source_code_blocks": 6,
-      "source_external_links": 1,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "basic-explainable-ml-bias-management-example/README.md",
-      "source_text_blocks": 33,
-      "source_code_blocks": 3,
-      "source_external_links": 2,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "basic-ml-eval-example/README.md",
-      "source_text_blocks": 26,
-      "source_code_blocks": 3,
-      "source_external_links": 1,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "ai-rmf-rag-prototype/README.md",
-      "source_text_blocks": 14,
-      "source_code_blocks": 1,
-      "source_external_links": 0,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "example-system-card/README.md",
-      "source_text_blocks": 80,
-      "source_code_blocks": 0,
-      "source_external_links": 0,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "bib-lib/README.md",
-      "source_text_blocks": 38,
-      "source_code_blocks": 1,
-      "source_external_links": 3,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "basic-chatbot-guidance/README.md",
-      "source_text_blocks": 5,
-      "source_code_blocks": 0,
-      "source_external_links": 0,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "basic-chatbot-guidance/prompt-library/dannys-guide.md",
-      "source_text_blocks": 115,
-      "source_code_blocks": 13,
-      "source_external_links": 0,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "tabred/datasheet.md",
-      "source_text_blocks": 207,
-      "source_code_blocks": 0,
-      "source_external_links": 12,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "tabred/preprocessing/README.md",
-      "source_text_blocks": 135,
-      "source_code_blocks": 4,
-      "source_external_links": 11,
-      "missing_text_blocks": [],
-      "missing_code_blocks": [],
-      "missing_external_links": []
-    },
-    {
-      "source_document": "tabred/readme.md",
-      "source_text_blocks": 70,
-      "source_code_blocks": 0,
-      "source_external_links": 8,
       "missing_text_blocks": [],
       "missing_code_blocks": [],
       "missing_external_links": []

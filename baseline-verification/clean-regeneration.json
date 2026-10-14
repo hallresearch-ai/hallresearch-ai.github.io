@@ -1,5 +1,0 @@
-{
-  "public_files": 53,
-  "byte_identical": true,
-  "dependencies": "npm ci --omit=dev --ignore-scripts; declared Python versions already installed"
-}
